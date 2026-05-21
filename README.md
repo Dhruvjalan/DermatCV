@@ -101,6 +101,7 @@ If checkpoints are absent, models run with **random weights** (demo mode — out
 ```bash
 # Development (with auto-reload)
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
+ 
 
 # OR use the __main__ block directly
 python app.py

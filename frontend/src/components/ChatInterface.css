@@ -10,7 +10,7 @@
 
 .chat-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: black;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -22,12 +22,14 @@
 .chat-header h2 {
   margin: 0;
   font-size: 1.3rem;
+  color: black;
 }
 
 .chat-header p {
   margin: 5px 0 0;
   font-size: 0.85rem;
   opacity: 0.9;
+  color: black;
 }
 
 .context-badge {
@@ -46,12 +48,14 @@
   flex-direction: column;
   gap: 15px;
   background: #f8f9fa;
+  color: black;
 }
 
 .message {
   display: flex;
   gap: 12px;
   animation: slideIn 0.3s ease;
+  
 }
 
 @keyframes slideIn {

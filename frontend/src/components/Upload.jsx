@@ -248,6 +248,10 @@ export default function Upload({ currentUserId }) {
                   <span className="meta-val">{scanResult.segmentation.detected_body_region}</span>
                 </div>
                 <div className="meta-card">
+                  <span className="meta-lbl">Classification State</span>
+                  <span className="meta-val style-condition-text">{scanResult.segmentation.detected_condition_inference}</span>
+                </div>
+                <div className="meta-card">
                   <span className="meta-lbl">Image Integrity</span>
                   <span className="meta-val highlight-green">{scanResult.quality_metrics.status}</span>
                 </div>

@@ -55,7 +55,9 @@ const UserDashboard = ({ userId }) => {
         <h3>Overall Wellness Score</h3>
         <div className="score-display">
           <div className="score-circle" style={{ borderColor: getScoreColor(score) }}>
-            <span className="score-number">{score}</span>
+            <span className="score-number" style={{ color: 'black' }}>
+              {score}
+            </span>
             <span className="score-max">/100</span>
           </div>
           <div className="score-status" style={{ color: getScoreColor(score) }}>
@@ -192,7 +194,7 @@ const UserDashboard = ({ userId }) => {
 
           {/* Recommendations */}
           <div className="dashboard-section">
-            <h2>Personalized Recommendations</h2>
+            <h2>Personalized Recommendations <p style={{ color: 'red' }}>These are Dummy AI Generated</p></h2>
             <div className="recommendations-list">
               {latestScan.recommendations.map((rec, idx) => (
                 <div key={idx} className="recommendation-item">
@@ -207,7 +209,7 @@ const UserDashboard = ({ userId }) => {
         <div className="empty-state">
           <div className="empty-icon">📸</div>
           <h3>No Scans Yet</h3>
-          <p>Start your wellness journey by uploading your first scan through the chat interface!</p>
+          <p>Start your wellness journey by uploading your first scan through the <a href="/upload">Wellness Scan</a> interface!</p>
           <p className="empty-hint">💡 Tip: Click on the Chat tab and ask the AI assistant to help you upload an image</p>
         </div>
       )}

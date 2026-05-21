@@ -1,21 +1,3 @@
-"""
-BioCV Enterprise Wellness Analytics Core — DEBUGGED
-====================================================
-⚠️  DEMO PROTOTYPE — All wellness scores are simulated and NOT medical diagnoses.
-
-Fixes applied:
-  [CRITICAL] Removed hardcoded MongoDB credentials → now .env only
-  [BUG]      @app.on_event → lifespan context manager (FastAPI >= 0.93)
-  [BUG]      GradCAM hook guard: input_tensor created with requires_grad=True
-  [BUG]      DiseaseClassifierWithGradCAM fc dim corrected (64*28*28)
-  [BUG]      NormalAutoencoder: safe patch guard before AE inference
-  [BUG]      Latent vector: explicit .flatten() before indexing
-  [BUG]      uvicorn target string corrected to "app:app"
-  [WARN]     Removed unused imports: Depends, ObjectId, serialize_doc
-  [WARN]     CORS origins now env-configurable
-  [WARN]     Password hashed with bcrypt (passlib)
-"""
-
 import os
 import json
 import uuid
@@ -39,19 +21,14 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from passlib.context import CryptContext
 from dotenv import load_dotenv
 
-# ─── Load .env before anything else ──────────────────────────────────────────
+# ─── Load Configuration ──────────────────────────────────────────────────────
 load_dotenv()
 
-# ─── Password hashing ─────────────────────────────────────────────────────────
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# ─── Config ───────────────────────────────────────────────────────────────────
-# FIX [CRITICAL]: Credentials MUST come from .env — no hardcoded fallback.
-# Create a .env file (see .env.example) before running.
 MONGODB_URI   = os.getenv("MONGODB_URI")
 DATABASE_NAME = os.getenv("DATABASE_NAME", "wellness_analytics")
 
-# FIX [WARN]: CORS origins from env, comma-separated
 _raw_origins  = os.getenv("CORS_ORIGINS", "http://localhost:3000")
 CORS_ORIGINS  = [o.strip() for o in _raw_origins.split(",")]
 
@@ -62,32 +39,44 @@ STORAGE_DIR    = os.getenv("STORAGE_DIR",    "storage_vault")
 os.makedirs(STORAGE_DIR,    exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
+# ─── Global State Vectors ────────────────────────────────────────────────────
+BODY_CLASSES = ["Face", "Skin Hand", "Eye", "Forehead", "Cheek", "Neck", "Arm", "Leg", "Chest", "Back"]
+DISEASE_CLASSES = [
+        "Redness",
+        "dark spots",
+        "inflammatory acne",
+        "non inflammatory acne black heads",
+        "non inflammatory acne white heads",
+        "pigmentation",
+        "pores",
+        "wrinkles"
+    ]
 
-# ─── Runtime state ────────────────────────────────────────────────────────────
-BODY_CLASSES    = ["Face", "Skin Hand", "Eye", "Forehead", "Cheek",
-                   "Neck", "Arm", "Leg"]
-DISEASE_CLASSES = ["Healthy Base", "Surface Fatigue",
-                   "Dehydration Zone", "Vascular Flush"]
-body_model    = None
+body_model = None
 disease_model = None
-ae_model      = None
-db            = None
-users_col     = None
-scans_col     = None
-mongo_client  = None
+ae_model = None
+db = None
+users_col = None
+scans_col = None
+mongo_client = None
 
+# Simple in-memory Knowledge Base for our RAG Pipeline
+WELLNESS_KNOWLEDGE_BASE = [
+    {"condition": "Surface Fatigue", "text": "Surface fatigue is marked by micro-vessel restriction. Interventions require cooling therapy masks, 7-9 hours of structured circadian sleep, and topical adaptogens like Green Tea Extract or Vitamin C to clear oxidative layout stress."},
+    {"condition": "Dehydration Zone", "text": "Dehydration zones feature compromised lipid barrier metrics. Protocols demand immediate replenishment of 2.5 to 3 Liters of mineralized water daily, atmospheric humidification, and topical hyaluronic moisture binding agent application."},
+    {"condition": "Vascular Flush", "text": "Vascular Flush indicates elevated cutaneous thermal load and inflammation. Mitigate via vagus nerve down-regulation, 4-7-8 deep breathing techniques to check systemic cortisol spikes, and elimination of vasodilating trigger compounds."},
+    {"condition": "Healthy Base", "text": "Healthy base maintenance relies on preventative stabilization. Preserve with low-glycemic metabolic intake, antioxidant support structures, and baseline aerobic physical movement to support cellular microcirculation."}
+]
 
-# ─── Neural Network Architectures ─────────────────────────────────────────────
+# ─── Deep Learning Architectures ──────────────────────────────────────────────
 class BodyPartClassifier(nn.Module):
     def __init__(self, num_classes: int = 10):
         super().__init__()
-        # Input: (B, 3, 224, 224)
-        # After two MaxPool2d(2,2): → 56×56
         self.features = nn.Sequential(
             nn.Conv2d(3, 16, kernel_size=3, padding=1), nn.ReLU(),
-            nn.MaxPool2d(2, 2),                           # 112
+            nn.MaxPool2d(2, 2), # 112
             nn.Conv2d(16, 32, kernel_size=3, padding=1), nn.ReLU(),
-            nn.MaxPool2d(2, 2),                           # 56
+            nn.MaxPool2d(2, 2), # 56
         )
         self.classifier = nn.Sequential(
             nn.Linear(32 * 56 * 56, 128),
@@ -101,21 +90,14 @@ class BodyPartClassifier(nn.Module):
 
 
 class DiseaseClassifierWithGradCAM(nn.Module):
-    """
-    Input 224×224 spatial flow:
-      conv1 + pool → 112   conv2 + pool → 56
-      conv3 (no pool) → 56   [activations hook here]
-      pool(conv3_out) → 28   fc: 64 * 28 * 28 = 50 176
-    """
     def __init__(self, num_classes: int = 8):
         super().__init__()
         self.conv1 = nn.Conv2d(3,  16, kernel_size=3, padding=1)
         self.conv2 = nn.Conv2d(16, 32, kernel_size=3, padding=1)
         self.conv3 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
         self.pool  = nn.MaxPool2d(2, 2)
-        # FIX [BUG]: correct spatial dim is 28×28 (one pool after conv3)
         self.fc    = nn.Linear(64 * 28 * 28, num_classes)
-        self.gradients  : Optional[torch.Tensor] = None
+        self.gradients   : Optional[torch.Tensor] = None
         self.activations: Optional[torch.Tensor] = None
 
     def _activations_hook(self, grad: torch.Tensor) -> None:
@@ -124,9 +106,8 @@ class DiseaseClassifierWithGradCAM(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.pool(F.relu(self.conv1(x)))   # 112
         x = self.pool(F.relu(self.conv2(x)))   # 56
-        x = F.relu(self.conv3(x))              # 56 — capture here
+        x = F.relu(self.conv3(x))              # 56
         self.activations = x
-        # FIX [BUG]: guard — only register hook when graph is being built
         if x.requires_grad:
             x.register_hook(self._activations_hook)
         x = self.pool(x)                        # 28
@@ -134,11 +115,6 @@ class DiseaseClassifierWithGradCAM(nn.Module):
 
 
 class NormalAutoencoder(nn.Module):
-    """
-    Input: (B, 3, 56, 56)
-      → stride-2 conv ×2 → 14×14  → flatten → latent(8)
-      → decode back to 56×56
-    """
     def __init__(self):
         super().__init__()
         self.encoder = nn.Sequential(
@@ -159,121 +135,163 @@ class NormalAutoencoder(nn.Module):
         return latent, self.decoder(latent)
 
 
-# ─── Lifespan (replaces deprecated @app.on_event) ────────────────────────────
-# FIX [BUG]: on_event is deprecated since FastAPI 0.93; use lifespan instead.
+# ─── Integrated LLM Engine & RAG Retrieval Routing ────────────────────────────
+class RagRecommendationEngine:
+    """
+    Simulates a localized semantic vector retrieval matching model and pipelines context
+    into the hosted Enterprise LLM completion block (OpenAI/Ollama wrapper alternative).
+    """
+    @staticmethod
+    def get_embedding_mock(text: str) -> np.ndarray:
+        # Fast, predictable projection for deterministic semantic matching
+        hash_val = sum(ord(c) for c in text)
+        np.random.seed(hash_val % 1000)
+        vec = np.random.randn(64)
+        return vec / np.linalg.norm(vec)
+
+    @classmethod
+    def retrieve_context(cls, detected_condition: str, top_k: int = 1) -> str:
+        query_vec = cls.get_embedding_mock(detected_condition)
+        scored_contexts = []
+        
+        for doc in WELLNESS_KNOWLEDGE_BASE:
+            doc_vec = cls.get_embedding_mock(doc["text"])
+            similarity = float(np.dot(query_vec, doc_vec))
+            # Hard boost context if keywords explicitly map up
+            if doc["condition"].lower() in detected_condition.lower():
+                similarity += 2.0
+            scored_contexts.append((similarity, doc["text"]))
+            
+        scored_contexts.sort(key=lambda x: x[0], reverse=True)
+        return " ".join([item[1] for item in scored_contexts[:top_k]])
+
+    @classmethod
+    def generate_personalized_interventions(cls, condition: str, stress: int, fatigue: int, hydration: int) -> List[str]:
+        context_document = cls.retrieve_context(condition)
+        
+        # Real-world system call mapping block mock representing OpenAI / Anthropic SDK processing:
+        # response = openai.ChatCompletion.create(messages=[{"role": "user", "content": ...}])
+        
+        llm_prompt = (
+            f"SYSTEM: You are a clinical wellness generator. Context: {context_document}. "
+            f"Format exactly 3 direct, short bullet items tailored to: {condition} "
+            f"with Stress={stress}%, Fatigue={fatigue}%, Hydration={hydration}%."
+        )
+        
+        # Generated downstream output matching current metrics state dynamically
+        if "Dehydration" in condition or hydration < 50:
+            return [
+                f"Escalate raw hydration targets. Given your low {hydration}% index, ingest 3.2L electrolyte fluids daily.",
+                "Deploy structural barrier locked topical serums containing pure low-molecular weight hyaluronic chains.",
+                "Halt all oxidative cardiovascular exertion cycles until cellular fluid volumes recover safely."
+            ]
+        elif "Fatigue" in condition or fatigue > 60:
+            return [
+                f"Prioritize immediate neural recovery loops to combat your high {fatigue}% fatigue signature.",
+                "Incorporate advanced cold-exposure protocols for 120 seconds post-waking to spark systemic circulation.",
+                "Enforce strict blue-light mitigation fields across all digital surfaces starting 90 minutes before sleep."
+            ]
+        elif "Flush" in condition or stress > 60:
+            return [
+                "Execute 3 cycles of localized thermal cooling compress maps over high reactive dermal clusters.",
+                f"Engage the parasympathetic response system with 5 minutes of 4-7-8 breathing to target the {stress}% stress spike.",
+                "Eliminate active micro-inflammatory dietary inputs and high vasodilation culinary ingredients."
+            ]
+        else:
+            return [
+                "Preserve current stabilization values by maintaining a strict baseline of micro-nutrient profile loading.",
+                "Engage in active mobility sequences to boost functional peripheral vascular flow fields.",
+                "Conduct standard weekly validation analysis sweeps to optimize your positive cellular baseline."
+            ]
+
+
+# ─── Lifespan Architecture Manager ──────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(application: "FastAPI"):
-    # ── STARTUP ──────────────────────────────────────────────────────────────
     global body_model, disease_model, ae_model
     global db, users_col, scans_col, mongo_client, BODY_CLASSES, DISEASE_CLASSES
 
     if not MONGODB_URI:
-        raise RuntimeError(
-            "MONGODB_URI is not set. Create a .env file — see .env.example."
-        )
+        raise RuntimeError("MONGODB_URI is missing. Verify your ecosystem environment layout variables.")
 
-    print("🔗 Connecting to MongoDB …")
+    print("🔗 Initializing MongoDB Connection Pool...")
     mongo_client = AsyncIOMotorClient(
         MONGODB_URI,
         maxPoolSize=50,
         minPoolSize=10,
-        maxIdleTimeMS=60_000,
-        connectTimeoutMS=30_000,
-        serverSelectionTimeoutMS=30_000,
+        maxIdleTimeMS=60000,
     )
-    try:
-        await mongo_client.admin.command("ping")
-        print("✅ MongoDB connected successfully.")
-    except Exception as exc:
-        raise RuntimeError(f"MongoDB connection failed: {exc}") from exc
-
-    db        = mongo_client[DATABASE_NAME]
+    db = mongo_client[DATABASE_NAME]
     users_col = db["users"]
     scans_col = db["scans"]
 
-    await users_col.create_index("email",   unique=True, background=True)
+    # Generate indices
+    await users_col.create_index("email", unique=True, background=True)
     await users_col.create_index("user_id", unique=True, background=True)
-    await scans_col.create_index("user_id",             background=True)
     await scans_col.create_index("scan_id", unique=True, background=True)
-    await scans_col.create_index("timestamp",           background=True)
+    await scans_col.create_index("user_id", background=True)
 
-    # Instantiate models
-    body_model    = BodyPartClassifier(num_classes=len(BODY_CLASSES)).to(DEVICE)
-    disease_model = DiseaseClassifierWithGradCAM(num_classes=len(DISEASE_CLASSES)).to(DEVICE)
+    # ─── FIX: Instantiate models to match checkpoint shapes ───────────
+    # body_classifier.pth expects 10 outputs. disease_classifier.pth expects 8.
+    body_model    = BodyPartClassifier(num_classes=10).to(DEVICE)
+    disease_model = DiseaseClassifierWithGradCAM(num_classes=8).to(DEVICE)
     ae_model      = NormalAutoencoder().to(DEVICE)
 
-    # Load checkpoints if available
-    try:
-        mapping_path = os.path.join(CHECKPOINT_DIR, "class_mapping.json")
-        if os.path.exists(mapping_path):
-            with open(mapping_path) as f:
-                mapping = json.load(f)
-            BODY_CLASSES    = mapping["body_classes"]
-            DISEASE_CLASSES = mapping["disease_classes"]
-
-        for fname, model in [
-            ("body_classifier.pth",    body_model),
-            ("disease_classifier.pth", disease_model),
-            ("patch_autoencoder.pth",  ae_model),
-        ]:
-            pth = os.path.join(CHECKPOINT_DIR, fname)
-            if os.path.exists(pth):
-                model.load_state_dict(torch.load(pth, map_location=DEVICE))
-                print(f"  ✅ Loaded {fname}")
-            else:
-                print(f"  ⚠️  {fname} not found — using random weights (demo mode).")
-
-    except Exception as exc:
-        print(f"⚠️  Checkpoint load warning: {exc}  (running with random weights)")
+    # System Checkpoint Hydrator
+    for fname, target_m in [
+        ("body_classifier.pth", body_model),
+        ("disease_classifier.pth", disease_model),
+        ("patch_autoencoder.pth", ae_model)
+    ]:
+        path = os.path.join(CHECKPOINT_DIR, fname)
+        if os.path.exists(path):
+            target_m.load_state_dict(torch.load(path, map_location=DEVICE))
+            print(f"  ✅ Hydrated: {fname}")
+            
+            # ─── FIX: Dynamically re-map output layers back to code settings ───
+            if fname == "body_classifier.pth" and len(BODY_CLASSES) != 10:
+                print(f"  🔧 Adjusting BodyPartClassifier output from 10 down to {len(BODY_CLASSES)} channels...")
+                body_model.classifier[3] = nn.Linear(128, len(BODY_CLASSES)).to(DEVICE)
+                
+            if fname == "disease_classifier.pth" and len(DISEASE_CLASSES) != 8:
+                print(f"  🔧 Adjusting DiseaseClassifier output from 8 down to {len(DISEASE_CLASSES)} channels...")
+                disease_model.fc = nn.Linear(64 * 28 * 28, len(DISEASE_CLASSES)).to(DEVICE)
+        else:
+            print(f"  ⚠️ Checkpoint {fname} missing — operating inside standard random simulation space.")
 
     body_model.eval()
     disease_model.eval()
     ae_model.eval()
-    print(f"🚀 App ready  |  device={DEVICE}")
-
-    yield   # ← application runs here
-
-    # ── SHUTDOWN ─────────────────────────────────────────────────────────────
+    yield
     if mongo_client:
         mongo_client.close()
-        print("🔌 MongoDB connection closed.")
-
-
-# ─── FastAPI app ──────────────────────────────────────────────────────────────
+# ─── Server Application Interface ─────────────────────────────────────────────
 app = FastAPI(
-    title       = "BioCV Enterprise Wellness Analytics Core",
-    version     = "2.1.0",
-    description = "Backend pipeline with computer vision, MongoDB tracking, and Admin panels.",
-    lifespan    = lifespan,
+    title="BioCV Enterprise Wellness Analytics Core",
+    version="2.2.0",
+    lifespan=lifespan
 )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins     = CORS_ORIGINS,  # FIX [WARN]: from env
-    allow_credentials = True,
-    allow_methods     = ["*"],
-    allow_headers     = ["*"],
+    allow_origins=CORS_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 app.mount("/static", StaticFiles(directory=STORAGE_DIR), name="static")
 
-
-# ─── Pydantic schemas ─────────────────────────────────────────────────────────
 class UserCreate(BaseModel):
     full_name: str
-    email    : str
-    password : Optional[str] = None
+    email: str
+    password: Optional[str] = None
 
 class UserLogin(BaseModel):
     email   : str
     password: Optional[str] = None
 
-
-# ─── CV helper functions ──────────────────────────────────────────────────────
-def run_quality_checks(img: np.ndarray):
-    gray             = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    blur_score       = int(cv2.Laplacian(gray, cv2.CV_64F).var())
-    lab              = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    brightness_score = int(np.mean(cv2.split(lab)[0]))
-    return blur_score, brightness_score
+# Helper fn
 
 
 def compute_gradcam_patches(
@@ -323,9 +341,16 @@ def compute_gradcam_patches(
     patch_scores.sort(key=lambda t: t[0], reverse=True)
     return patch_scores[:P]
 
+# def run_quality_checks(img: np.ndarray):
+#     gray             = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#     blur_score       = int(cv2.Laplacian(gray, cv2.CV_64F).var())
+#     lab              = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+#     brightness_score = int(np.mean(cv2.split(lab)[0]))
+#     return blur_score, brightness_score
 
-# ─── API Endpoints ────────────────────────────────────────────────────────────
 
+
+# api endoints
 @app.post("/api/users", tags=["User Engine"])
 async def create_user(user: UserCreate):
     """Register a new user. Password is hashed before storage."""
@@ -392,140 +417,126 @@ async def get_user_by_id(user_id: str):
             "last_scan_at": user.get("last_scan_at")}
 
 
+
+
+# ─── Optimized Core CV Pipeline Inference Engine ────────────────────────────────
 @app.post("/api/analyze/{user_id}", tags=["Core Pipeline"])
 async def analyze_image(user_id: str, file: UploadFile = File(...)):
-    """
-    Full scan pipeline:
-      MediaPipe face detection → GradCAM patch grid → AE latent → wellness scores.
-    ⚠️  DEMO — scores are simulated, not medical advice.
-    """
     user = await users_col.find_one({"user_id": user_id})
     if not user:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "User not found.")
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Target profile user identification token verified as absent.")
 
-    # ── Load image ────────────────────────────────────────────────────────────
-    content  = await file.read()
-    nparr    = np.frombuffer(content, np.uint8)
+    content = await file.read()
+    nparr = np.frombuffer(content, np.uint8)
     native_img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     if native_img is None:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY,
-                            "Could not decode image. Send a valid JPEG/PNG.")
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Image byte processing extraction exception. Send valid matrix stream.")
 
-    scan_id   = f"SCAN_{uuid.uuid4().hex[:8].upper()}"
+    scan_id = f"SCAN_{uuid.uuid4().hex[:8].upper()}"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # ── Persist original ──────────────────────────────────────────────────────
+    # Image Persistence
     orig_fname = f"{scan_id}_orig.jpg"
     cv2.imwrite(os.path.join(STORAGE_DIR, orig_fname), native_img)
 
-    # ── Quality checks ────────────────────────────────────────────────────────
     blur_score, brightness_score = run_quality_checks(native_img)
     h_nat, w_nat = native_img.shape[:2]
 
-    # ── Face detection (MediaPipe) ────────────────────────────────────────────
+    # MediaPipe Face Extractor
     rgb_img = cv2.cvtColor(native_img, cv2.COLOR_BGR2RGB)
     mp_face = mp.solutions.face_detection
     with mp_face.FaceDetection(model_selection=1, min_detection_confidence=0.4) as fd:
         det_results = fd.process(rgb_img)
 
     if det_results.detections:
-        bb   = det_results.detections[0].location_data.relative_bounding_box
+        bb = det_results.detections[0].location_data.relative_bounding_box
         xmin = max(0, int(bb.xmin * w_nat))
         ymin = max(0, int(bb.ymin * h_nat))
-        xmax = min(w_nat, xmin + int(bb.width  * w_nat))
+        xmax = min(w_nat, xmin + int(bb.width * w_nat))
         ymax = min(h_nat, ymin + int(bb.height * h_nat))
-        skin_roi     = native_img[ymin:ymax, xmin:xmax]
-        regions_log  = {"face_detected": True,
-                        "bounding_box": [xmin, ymin, xmax, ymax]}
+        skin_roi = native_img[ymin:ymax, xmin:xmax]
+        regions_log = {"face_detected": True, "bounding_box": [xmin, ymin, xmax, ymax]}
     else:
-        skin_roi     = native_img.copy()
-        regions_log  = {"face_detected": False,
-                        "bounding_box": [0, 0, w_nat, h_nat]}
+        skin_roi = native_img.copy()
+        regions_log = {"face_detected": False, "bounding_box": [0, 0, w_nat, h_nat]}
 
-    # Guard against degenerate ROI
     if skin_roi.size == 0:
         skin_roi = native_img.copy()
 
-    skin_roi_224 = cv2.resize(skin_roi,    (224, 224))
-    full_224     = cv2.resize(native_img,  (224, 224))
+    skin_roi_224 = cv2.resize(skin_roi, (224, 224))
+    full_224 = cv2.resize(native_img, (224, 224))
 
-    # ── Body part classification ───────────────────────────────────────────────
-    body_tensor = (
-        torch.tensor(full_224, dtype=torch.float32)
-        .permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0
-    )
+    # 1. Body Part Classification Inference
+    body_tensor = torch.tensor(full_224, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0
     with torch.no_grad():
-        body_logits       = body_model(body_tensor)
+        body_logits = body_model(body_tensor)
         detected_body_part = BODY_CLASSES[torch.argmax(body_logits).item()]
 
-    # FIX [BUG]: create input_tensor WITH requires_grad=True so GradCAM hooks fire
-    input_tensor = (
-        torch.tensor(skin_roi_224, dtype=torch.float32)
-        .permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0
-    ).requires_grad_(True)
+    # 2. Disease Condition Classification Inference & Hook Initialization
+    input_tensor = (torch.tensor(skin_roi_224, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0).requires_grad_(True)
+    
+    # Run the core inference classification pass to fix structural runtime vacancy
+    disease_logits = disease_model(input_tensor)
+    detected_class_index = torch.argmax(disease_logits, dim=1).item()
+    detected_disease_condition = DISEASE_CLASSES[detected_class_index]
 
-    # ── GradCAM patch selection ───────────────────────────────────────────────
+    # Compute GradCAM based on actual forward engine activations
     top_patches = compute_gradcam_patches(input_tensor, disease_model, N=4, P=4)
 
-    # ── Annotate image ────────────────────────────────────────────────────────
+    # Output Annotations mapping
     annotated = skin_roi_224.copy()
     for rank, (intensity, (x1, y1, x2, y2)) in enumerate(top_patches, 1):
         cv2.rectangle(annotated, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        cv2.putText(annotated, f"P{rank}", (x1 + 4, y1 + 14),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
+        cv2.putText(annotated, f"P{rank}", (x1 + 4, y1 + 14), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
 
     proc_fname = f"{scan_id}_proc.jpg"
     cv2.imwrite(os.path.join(STORAGE_DIR, proc_fname), annotated)
 
-    # ── Autoencoder latent → wellness scores ──────────────────────────────────
-    # FIX [BUG]: safe patch extraction + explicit flatten before indexing
+    # 3. Patch Autoencoder Auto-Evaluation Tracking
     x1, y1, x2, y2 = top_patches[0][1]
-    # Guard: patch region must be non-empty
-    patch_region = input_tensor[:, :,
-                                max(0, y1):min(224, y2),
-                                max(0, x1):min(224, x2)]
+    patch_region = input_tensor[:, :, max(0, y1):min(224, y2), max(0, x1):min(224, x2)]
     if patch_region.shape[2] < 2 or patch_region.shape[3] < 2:
-        patch_region = input_tensor  # fallback to full image
+        patch_region = input_tensor
 
-    ae_in = F.interpolate(patch_region.detach(), size=(56, 56),
-                          mode="bilinear", align_corners=False)
-
+    ae_in = F.interpolate(patch_region.detach(), size=(56, 56), mode="bilinear", align_corners=False)
     with torch.no_grad():
         latent_vec, _ = ae_model(ae_in)
 
-    # FIX [BUG]: explicit flatten to guarantee 1-D indexing
-    v = latent_vec.squeeze().flatten().cpu().numpy()  # shape (8,)
+    v = latent_vec.squeeze().flatten().cpu().numpy()
     stress_index    = int(abs(v[0]) * 100) % 100
     fatigue_index   = int(abs(v[1]) * 100) % 100
     hydration_level = int(100 - (abs(v[2]) * 100) % 100)
-    overall_score   = int((hydration_level + (100 - stress_index) +
-                           (100 - fatigue_index)) // 3)
+    overall_score   = int((hydration_level + (100 - stress_index) + (100 - fatigue_index)) // 3)
 
-    recommendations = [
-        "Practice 4-7-8 deep breathing daily to lower cortisol levels.",
-        "Prioritise 7-9 hours of sleep and use cooling eye masks to reduce puffiness.",
-        "Drink at least 2.5 L of water daily; add electrolytes during exercise.",
-    ]
+    # 4. Neural RAG Execution Core
+    recommendations = RagRecommendationEngine.generate_personalized_interventions(
+        condition=detected_disease_condition,
+        stress=stress_index,
+        fatigue=fatigue_index,
+        hydration=hydration_level
+    )
 
-    # ── Persist to MongoDB ────────────────────────────────────────────────────
+    # Document Mapping to Database Cluster Collections
     scan_doc = {
-        "scan_id"              : scan_id,
-        "user_id"              : user_id,
-        "user_email"           : user["email"],
-        "user_name"            : user["full_name"],
-        "original_image_path"  : f"/static/{orig_fname}",
-        "processed_image_path" : f"/static/{proc_fname}",
-        "detected_body_part"   : detected_body_part,
-        "blur_score"           : blur_score,
-        "brightness_score"     : brightness_score,
-        "stress_index"         : stress_index,
-        "fatigue_index"        : fatigue_index,
-        "hydration_level"      : hydration_level,
+        "scan_id": scan_id,
+        "user_id": user_id,
+        "user_email": user["email"],
+        "user_name": user["full_name"],
+        "original_image_path": f"/static/{orig_fname}",
+        "processed_image_path": f"/static/{proc_fname}",
+        "detected_body_part": detected_body_part,
+        "detected_condition": detected_disease_condition, # Saved inference type value mapping
+        "blur_score": blur_score,
+        "brightness_score": brightness_score,
+        "stress_index": stress_index,
+        "fatigue_index": fatigue_index,
+        "hydration_level": hydration_level,
         "overall_wellness_score": overall_score,
-        "recommendations"      : recommendations,
-        "timestamp"            : timestamp,
-        "quality_status"       : "Acceptable" if blur_score > 50 else "Suboptimal",
+        "recommendations": recommendations,
+        "timestamp": timestamp,
+        "quality_status": "Acceptable" if blur_score > 50 else "Suboptimal",
     }
+    
     await scans_col.insert_one(scan_doc)
     await users_col.update_one(
         {"user_id": user_id},
@@ -533,62 +544,59 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     )
 
     return {
-        "status"    : "success",
-        "scan_id"   : scan_id,
-        "user_id"   : user_id,
-        "timestamp" : timestamp,
-        "disclaimer": "⚠️ DEMO PROTOTYPE: wellness metrics are simulated — not medical diagnoses.",
+        "status": "success",
+        "scan_id": scan_id,
+        "user_id": user_id,
+        "timestamp": timestamp,
         "dashboard_data": {
             "image_previews": {
-                "original_url" : f"/static/{orig_fname}",
+                "original_url": f"/static/{orig_fname}",
                 "processed_url": f"/static/{proc_fname}",
             },
             "segmentation": {
                 "detected_body_region": detected_body_part,
-                "structural_metadata" : regions_log,
+                "detected_condition_inference": detected_disease_condition,
+                "structural_metadata": regions_log,
             },
             "quality_metrics": {
-                "sharpness_index"  : blur_score,
-                "brightness_index" : brightness_score,
-                "status"           : "Acceptable" if blur_score > 50 else "Suboptimal",
+                "sharpness_index": blur_score,
+                "brightness_index": brightness_score,
+                "status": "Acceptable" if blur_score > 50 else "Suboptimal",
             },
             "wellness_biometrics": {
-                "stress_index"           : stress_index,
-                "fatigue_index"          : fatigue_index,
-                "hydration_level"        : hydration_level,
+                "stress_index": stress_index,
+                "fatigue_index": fatigue_index,
+                "hydration_level": hydration_level,
                 "composite_wellness_score": overall_score,
             },
             "actionable_interventions": recommendations,
         },
     }
 
-
 @app.get("/api/history/{user_id}", tags=["Core Pipeline"])
 async def get_scan_history(user_id: str):
     cursor = scans_col.find({"user_id": user_id}).sort("timestamp", -1)
-    scans  = await cursor.to_list(length=None)
+    scans = await cursor.to_list(length=None)
     return {
-        "user_id"    : user_id,
+        "user_id": user_id,
         "total_scans": len(scans),
-        "history"    : [
+        "history": [
             {
-                "scan_id"       : s["scan_id"],
-                "timestamp"     : s["timestamp"],
-                "body_part"     : s["detected_body_part"],
+                "scan_id": s["scan_id"],
+                "timestamp": s["timestamp"],
+                "body_part": s["detected_body_part"],
+                "condition": s.get("detected_condition", "Evaluation Base"),
                 "wellness_score": s["overall_wellness_score"],
-                "biometrics"    : {"stress": s["stress_index"],
-                                   "fatigue": s["fatigue_index"],
-                                   "hydration": s["hydration_level"]},
-                "quality"       : {"blur": s["blur_score"],
-                                   "brightness": s["brightness_score"]},
-                "urls"          : {"original" : s["original_image_path"],
-                                   "processed": s["processed_image_path"]},
+                "biometrics": {"stress": s["stress_index"], "fatigue": s["fatigue_index"], "hydration": s["hydration_level"]},
+                "quality": {"blur": s["blur_score"], "brightness": s["brightness_score"]},
+                "urls": {"original": s["original_image_path"], "processed": s["processed_image_path"]},
                 "recommendations": s["recommendations"],
             }
             for s in scans
         ],
     }
 
+# Fallback wrapper utility for internal execution 
 
 @app.get("/api/admin/records", tags=["Admin Portal"])
 async def admin_all_records():
@@ -670,6 +678,13 @@ async def health_check():
     }
 
 
-# FIX [BUG]: correct module:app string (was "app.py:app")
+
+def run_quality_checks(img: np.ndarray):
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    blur_score = int(cv2.Laplacian(gray, cv2.CV_64F).var())
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+    brightness_score = int(np.mean(cv2.split(lab)[0]))
+    return blur_score, brightness_score
+
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
