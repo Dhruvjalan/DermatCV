@@ -624,6 +624,9 @@ async def admin_all_records():
         ]
     }
 
+@app.get("/api/helloworld", tags=["Admin Portal"])
+async def hello_world():
+    return {"message": "Hello, World!"}
 
 @app.get("/api/admin/summary", tags=["Admin Portal"])
 async def admin_summary():
@@ -676,6 +679,8 @@ async def health_check():
         "device"                : str(DEVICE),
         "timestamp"             : datetime.now().isoformat(),
     }
+
+
 
 
 
