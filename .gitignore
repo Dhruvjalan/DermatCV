@@ -1,0 +1,43 @@
+frontend/node_modules/
+__pycache__/
+*.pyc
+.env
+backend/uploads/
+backend/checkpoints/
+backend/storage_vault/
+backend/.venv/
+backend/__pycache__/
+
+backend/wellness.db
+frontend/dist/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# MongoDB data
+mongodb_data/
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Storage
+storage_vault/*
+!storage_vault/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Logs
+*.log
