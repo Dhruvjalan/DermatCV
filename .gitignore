@@ -3,8 +3,8 @@ __pycache__/
 *.pyc
 .env
 backend/uploads/
-backend/checkpoints/
 backend/storage_vault/
+backend/folio-backend.pem
 backend/.venv/
 backend/__pycache__/
 
