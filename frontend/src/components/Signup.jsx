@@ -45,7 +45,7 @@ const Signup = ({ onLogin }) => {
         <div className="signup-header">
           <div className="logo">🌟</div>
           <h1>Create Account</h1>
-          <p>Join Wellness Analytics to track your health journey</p>
+          <p>Join DermatCV to track your health journey</p>
         </div>
 
         <form onSubmit={handleSubmit} className="signup-form">

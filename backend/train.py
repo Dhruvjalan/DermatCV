@@ -7,8 +7,8 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from torchvision import datasets, transforms
 
-BODY_PARTS_DIR = "/content/drive/MyDrive/AI Projects Hackathons/BioCV/Body Parts Dataset"
-FACIAL_SKIN_DIR = "/content/drive/MyDrive/AI Projects Hackathons/BioCV/skin-diseases"
+BODY_PARTS_DIR = "/content/drive/MyDrive/AI Projects Hackathons/DermatCV/Body Parts Dataset"
+FACIAL_SKIN_DIR = "/content/drive/MyDrive/AI Projects Hackathons/DermatCV/skin-diseases"
 CHECKPOINT_DIR = "checkpoints"
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -104,9 +104,6 @@ class SkinPatchDataset(Dataset):
         patch = image[:, y1:y2, x1:x2]
         return patch, patch
 
-# =====================================================================
-# TRAINING EXECUTION RUNNER
-# =====================================================================
 def run_training_pipeline(epochs=10, batch_size=16):
     print(f" usando dispositivo execution: {DEVICE}")
     os.makedirs(CHECKPOINT_DIR, exist_ok=True)

@@ -62,7 +62,7 @@ export default function Upload({ currentUserId }) {
 
       const data = await response.json();
       setScanResult(data.dashboard_data);
-      fetchHistory(); // Refresh the lower metrics log
+      fetchHistory(); 
     } catch (err) {
       setError(err.message || 'An unexpected error occurred during CV analysis.');
     } finally {
@@ -73,14 +73,13 @@ export default function Upload({ currentUserId }) {
   const downloadReport = () => {
     if (!scanResult) return;
     
-    // Quick, dependency-free print/report generator utilizing a standalone window layout
     const reportWindow = window.open('', '_blank');
     const { wellness_biometrics, segmentation, quality_metrics, actionable_interventions } = scanResult;
 
     reportWindow.document.write(`
       <html>
         <head>
-          <title>BioCV Analytics Executive Wellness Report</title>
+          <title>DermatCV Analytics Executive Wellness Report</title>
           <style>
             body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; color: #1e293b; }
             .header { border-bottom: 2px solid #3b82f6; padding-bottom: 20px; margin-bottom: 30px; }
@@ -98,7 +97,7 @@ export default function Upload({ currentUserId }) {
         </head>
         <body>
           <div class="header">
-            <div class="title">BioCV Enterprise Wellness Analytics Core</div>
+            <div class="title">DermatCV Enterprise Wellness Analytics Core</div>
             <div class="meta">Report Generated: ${new Date().toLocaleString()} | User Target: ${userId}</div>
           </div>
           
@@ -139,17 +138,17 @@ export default function Upload({ currentUserId }) {
   };
 
   return (
-    <div className="biocv-container">
+    <div className="DermatCV-container">
       {/* Top Banner Header */}
-      <header className="biocv-header">
+      <header className="DermatCV-header">
         <div className="brand">
           <span className="pulse-indicator"></span>
-          <h1>BioCV Enterprise</h1>
+          <h1>DermatCV Enterprise</h1>
         </div>
         <div className="badge">Wellness Analytics Pipeline v2.1.0</div>
       </header>
 
-      <div className="biocv-grid">
+      <div className="DermatCV-grid">
         {/* Left Side: File Upload Panel */}
         <section className="panel upload-panel">
           <h2>Computer Vision Input</h2>

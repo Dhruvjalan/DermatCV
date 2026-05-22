@@ -16,12 +16,10 @@ const ChatInterface = ({ userId }) => {
   const [userContext, setUserContext] = useState(null);
   const messagesEndRef = useRef(null);
 
-  // Scroll to bottom whenever messages change
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  // Load user context when userId changes
   useEffect(() => {
     if (userId) {
       loadUserContext();
@@ -44,7 +42,6 @@ const ChatInterface = ({ userId }) => {
           totalScans: history.total_scans
         });
         
-        // Add contextual message
         addBotMessage(`I see you've had ${history.total_scans} wellness scan(s). Your latest wellness score was ${latestScan.wellness_score}. Would you like to discuss your results?`);
       } else {
         setUserContext({ hasScans: false });
@@ -68,7 +65,6 @@ const ChatInterface = ({ userId }) => {
   const getBotResponse = (userInput) => {
     const input = userInput.toLowerCase();
     
-    // Wellness score related queries
     if (input.includes('wellness score') || input.includes('my score')) {
       if (userContext?.latestWellnessScore) {
         const score = userContext.latestWellnessScore;
@@ -86,7 +82,6 @@ const ChatInterface = ({ userId }) => {
       }
     }
     
-    // Stress related queries
     if (input.includes('stress') || input.includes('anxiety')) {
       if (userContext?.latestBiometrics) {
         const stress = userContext.latestBiometrics.stress;
@@ -101,7 +96,6 @@ const ChatInterface = ({ userId }) => {
       return "I can help with stress management techniques. Would you like to learn some breathing exercises or meditation tips?";
     }
     
-    // Fatigue queries
     if (input.includes('fatigue') || input.includes('tired') || input.includes('energy')) {
       if (userContext?.latestBiometrics) {
         const fatigue = userContext.latestBiometrics.fatigue;
@@ -116,7 +110,6 @@ const ChatInterface = ({ userId }) => {
       return "Fatigue can be managed with proper sleep, nutrition, and stress management. Would you like specific advice?";
     }
     
-    // Hydration queries
     if (input.includes('hydrat') || input.includes('water') || input.includes('drink')) {
       if (userContext?.latestBiometrics) {
         const hydration = userContext.latestBiometrics.hydration;
@@ -131,12 +124,10 @@ const ChatInterface = ({ userId }) => {
       return "Staying hydrated is crucial for wellness. Aim for 2-3 liters of water daily. Would you like tips on tracking your water intake?";
     }
     
-    // Recommendations
     if (input.includes('recommend') || input.includes('advice') || input.includes('improve')) {
       return "Based on wellness best practices, I recommend:\n• Stay hydrated (2-3L water daily)\n• Get 7-8 hours of quality sleep\n• Practice daily stress management (meditation, deep breathing)\n• Take regular movement breaks\n• Maintain a balanced diet rich in antioxidants\n\nWould you like detailed guidance on any of these?";
     }
     
-    // Scan history
     if (input.includes('history') || input.includes('previous') || input.includes('past scan')) {
       if (userContext?.totalScans) {
         return `You have ${userContext.totalScans} scan(s) in your history. Your most recent wellness score was ${userContext.latestWellnessScore}. Would you like to see a detailed comparison of your progress?`;
@@ -144,7 +135,6 @@ const ChatInterface = ({ userId }) => {
       return "You don't have any scan history yet. Start with a wellness scan to track your progress over time!";
     }
     
-    // General health tips
     if (input.includes('health tip') || input.includes('wellness tip')) {
       const tips = [
         "Take a 5-minute breathing break every 2 hours to reset your nervous system.",
@@ -156,24 +146,20 @@ const ChatInterface = ({ userId }) => {
       return tips[Math.floor(Math.random() * tips.length)];
     }
     
-    // Greetings
     if (input.includes('hello') || input.includes('hi') || input.includes('hey')) {
       return "Hello! How are you feeling today? I can help analyze your wellness metrics or provide health tips.";
     }
     
-    // Help
     if (input.includes('help') || input.includes('what can you do')) {
       return "I can help you with:\n• Understanding your wellness scores\n• Managing stress and fatigue\n• Hydration advice\n• Wellness recommendations\n• Scan history analysis\n• Daily health tips\n\nJust ask me about any of these topics!";
     }
     
-    // Default response
     return "I'm here to support your wellness journey. You can ask me about your wellness scores, stress levels, fatigue, hydration, or general health tips. What would you like to know?";
   };
 
   const sendMessage = async () => {
     if (!inputMessage.trim()) return;
 
-    // Add user message
     const userMsg = {
       id: messages.length + 1,
       text: inputMessage,
@@ -184,7 +170,6 @@ const ChatInterface = ({ userId }) => {
     setInputMessage('');
     setIsTyping(true);
 
-    // Simulate bot thinking
     setTimeout(() => {
       const response = getBotResponse(inputMessage);
       const botMsg = {

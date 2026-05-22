@@ -21,7 +21,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from passlib.context import CryptContext
 from dotenv import load_dotenv
 
-# ─── Load Configuration ──────────────────────────────────────────────────────
 load_dotenv()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -39,7 +38,6 @@ STORAGE_DIR    = os.getenv("STORAGE_DIR",    "storage_vault")
 os.makedirs(STORAGE_DIR,    exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
-# ─── Global State Vectors ────────────────────────────────────────────────────
 BODY_CLASSES = ["Face", "Skin Hand", "Eye", "Forehead", "Cheek", "Neck", "Arm", "Leg", "Chest", "Back"]
 DISEASE_CLASSES = [
         "Redness",
@@ -60,7 +58,6 @@ users_col = None
 scans_col = None
 mongo_client = None
 
-# Simple in-memory Knowledge Base for our RAG Pipeline
 WELLNESS_KNOWLEDGE_BASE = [
     {"condition": "Surface Fatigue", "text": "Surface fatigue is marked by micro-vessel restriction. Interventions require cooling therapy masks, 7-9 hours of structured circadian sleep, and topical adaptogens like Green Tea Extract or Vitamin C to clear oxidative layout stress."},
     {"condition": "Dehydration Zone", "text": "Dehydration zones feature compromised lipid barrier metrics. Protocols demand immediate replenishment of 2.5 to 3 Liters of mineralized water daily, atmospheric humidification, and topical hyaluronic moisture binding agent application."},
@@ -68,15 +65,14 @@ WELLNESS_KNOWLEDGE_BASE = [
     {"condition": "Healthy Base", "text": "Healthy base maintenance relies on preventative stabilization. Preserve with low-glycemic metabolic intake, antioxidant support structures, and baseline aerobic physical movement to support cellular microcirculation."}
 ]
 
-# ─── Deep Learning Architectures ──────────────────────────────────────────────
 class BodyPartClassifier(nn.Module):
     def __init__(self, num_classes: int = 10):
         super().__init__()
         self.features = nn.Sequential(
             nn.Conv2d(3, 16, kernel_size=3, padding=1), nn.ReLU(),
-            nn.MaxPool2d(2, 2), # 112
+            nn.MaxPool2d(2, 2), 
             nn.Conv2d(16, 32, kernel_size=3, padding=1), nn.ReLU(),
-            nn.MaxPool2d(2, 2), # 56
+            nn.MaxPool2d(2, 2), 
         )
         self.classifier = nn.Sequential(
             nn.Linear(32 * 56 * 56, 128),
@@ -104,13 +100,13 @@ class DiseaseClassifierWithGradCAM(nn.Module):
         self.gradients = grad
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.pool(F.relu(self.conv1(x)))   # 112
-        x = self.pool(F.relu(self.conv2(x)))   # 56
-        x = F.relu(self.conv3(x))              # 56
+        x = self.pool(F.relu(self.conv1(x)))   
+        x = self.pool(F.relu(self.conv2(x)))   
+        x = F.relu(self.conv3(x))              
         self.activations = x
         if x.requires_grad:
             x.register_hook(self._activations_hook)
-        x = self.pool(x)                        # 28
+        x = self.pool(x)                        
         return self.fc(x.view(x.size(0), -1))
 
 
@@ -118,8 +114,8 @@ class NormalAutoencoder(nn.Module):
     def __init__(self):
         super().__init__()
         self.encoder = nn.Sequential(
-            nn.Conv2d(3,  16, 3, stride=2, padding=1), nn.ReLU(),   # 28
-            nn.Conv2d(16, 32, 3, stride=2, padding=1), nn.ReLU(),   # 14
+            nn.Conv2d(3,  16, 3, stride=2, padding=1), nn.ReLU(),   
+            nn.Conv2d(16, 32, 3, stride=2, padding=1), nn.ReLU(),   
             nn.Flatten(),
             nn.Linear(32 * 14 * 14, 8),
         )
@@ -135,7 +131,6 @@ class NormalAutoencoder(nn.Module):
         return latent, self.decoder(latent)
 
 
-# ─── Integrated LLM Engine & RAG Retrieval Routing ────────────────────────────
 class RagRecommendationEngine:
     """
     Simulates a localized semantic vector retrieval matching model and pipelines context
@@ -143,7 +138,6 @@ class RagRecommendationEngine:
     """
     @staticmethod
     def get_embedding_mock(text: str) -> np.ndarray:
-        # Fast, predictable projection for deterministic semantic matching
         hash_val = sum(ord(c) for c in text)
         np.random.seed(hash_val % 1000)
         vec = np.random.randn(64)
@@ -157,7 +151,6 @@ class RagRecommendationEngine:
         for doc in WELLNESS_KNOWLEDGE_BASE:
             doc_vec = cls.get_embedding_mock(doc["text"])
             similarity = float(np.dot(query_vec, doc_vec))
-            # Hard boost context if keywords explicitly map up
             if doc["condition"].lower() in detected_condition.lower():
                 similarity += 2.0
             scored_contexts.append((similarity, doc["text"]))
@@ -169,8 +162,6 @@ class RagRecommendationEngine:
     def generate_personalized_interventions(cls, condition: str, stress: int, fatigue: int, hydration: int) -> List[str]:
         context_document = cls.retrieve_context(condition)
         
-        # Real-world system call mapping block mock representing OpenAI / Anthropic SDK processing:
-        # response = openai.ChatCompletion.create(messages=[{"role": "user", "content": ...}])
         
         llm_prompt = (
             f"SYSTEM: You are a clinical wellness generator. Context: {context_document}. "
@@ -178,7 +169,6 @@ class RagRecommendationEngine:
             f"with Stress={stress}%, Fatigue={fatigue}%, Hydration={hydration}%."
         )
         
-        # Generated downstream output matching current metrics state dynamically
         if "Dehydration" in condition or hydration < 50:
             return [
                 f"Escalate raw hydration targets. Given your low {hydration}% index, ingest 3.2L electrolyte fluids daily.",
@@ -205,7 +195,6 @@ class RagRecommendationEngine:
             ]
 
 
-# ─── Lifespan Architecture Manager ──────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(application: "FastAPI"):
     global body_model, disease_model, ae_model
@@ -225,19 +214,15 @@ async def lifespan(application: "FastAPI"):
     users_col = db["users"]
     scans_col = db["scans"]
 
-    # Generate indices
     await users_col.create_index("email", unique=True, background=True)
     await users_col.create_index("user_id", unique=True, background=True)
     await scans_col.create_index("scan_id", unique=True, background=True)
     await scans_col.create_index("user_id", background=True)
 
-    # ─── FIX: Instantiate models to match checkpoint shapes ───────────
-    # body_classifier.pth expects 10 outputs. disease_classifier.pth expects 8.
     body_model    = BodyPartClassifier(num_classes=10).to(DEVICE)
     disease_model = DiseaseClassifierWithGradCAM(num_classes=8).to(DEVICE)
     ae_model      = NormalAutoencoder().to(DEVICE)
 
-    # System Checkpoint Hydrator
     for fname, target_m in [
         ("body_classifier.pth", body_model),
         ("disease_classifier.pth", disease_model),
@@ -248,7 +233,6 @@ async def lifespan(application: "FastAPI"):
             target_m.load_state_dict(torch.load(path, map_location=DEVICE))
             print(f"  ✅ Hydrated: {fname}")
             
-            # ─── FIX: Dynamically re-map output layers back to code settings ───
             if fname == "body_classifier.pth" and len(BODY_CLASSES) != 10:
                 print(f"  🔧 Adjusting BodyPartClassifier output from 10 down to {len(BODY_CLASSES)} channels...")
                 body_model.classifier[3] = nn.Linear(128, len(BODY_CLASSES)).to(DEVICE)
@@ -265,9 +249,8 @@ async def lifespan(application: "FastAPI"):
     yield
     if mongo_client:
         mongo_client.close()
-# ─── Server Application Interface ─────────────────────────────────────────────
 app = FastAPI(
-    title="BioCV Enterprise Wellness Analytics Core",
+    title="DermatCV Enterprise Wellness Analytics Core",
     version="2.2.0",
     lifespan=lifespan
 )
@@ -291,7 +274,7 @@ class UserLogin(BaseModel):
     email   : str
     password: Optional[str] = None
 
-# Helper fn
+
 
 
 def compute_gradcam_patches(
@@ -316,8 +299,8 @@ def compute_gradcam_patches(
     combined_heatmap = torch.zeros(H, W, device=DEVICE)
 
     if model.gradients is not None and model.activations is not None:
-        pooled_grads = model.gradients.mean(dim=[2, 3], keepdim=True)  # (1, C, 1, 1)
-        cam = F.relu((pooled_grads * model.activations).sum(dim=1))    # (1, h, w)
+        pooled_grads = model.gradients.mean(dim=[2, 3], keepdim=True)  
+        cam = F.relu((pooled_grads * model.activations).sum(dim=1))    
         combined_heatmap = (
             F.interpolate(cam.unsqueeze(0), size=(H, W), mode="bilinear", align_corners=False)
             .squeeze()
@@ -350,14 +333,12 @@ def compute_gradcam_patches(
 
 
 
-# api endoints
 @app.post("/api/users", tags=["User Engine"])
 async def create_user(user: UserCreate):
     """Register a new user. Password is hashed before storage."""
     if await users_col.find_one({"email": user.email}):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Email already registered.")
 
-    # FIX [WARN]: hash password before storing
     hashed_pw = pwd_context.hash(user.password) if user.password else None
     user_id   = str(uuid.uuid4())[:8]
     now       = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -387,7 +368,6 @@ async def login_user(login: UserLogin):
     if not user:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "User not found.")
 
-    # Verify password (allow None password for demo users created without one)
     if user.get("password") and login.password:
         if not pwd_context.verify(login.password, user["password"]):
             raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Incorrect password.")
@@ -419,7 +399,6 @@ async def get_user_by_id(user_id: str):
 
 
 
-# ─── Optimized Core CV Pipeline Inference Engine ────────────────────────────────
 @app.post("/api/analyze/{user_id}", tags=["Core Pipeline"])
 async def analyze_image(user_id: str, file: UploadFile = File(...)):
     user = await users_col.find_one({"user_id": user_id})
@@ -435,14 +414,12 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     scan_id = f"SCAN_{uuid.uuid4().hex[:8].upper()}"
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Image Persistence
     orig_fname = f"{scan_id}_orig.jpg"
     cv2.imwrite(os.path.join(STORAGE_DIR, orig_fname), native_img)
 
     blur_score, brightness_score = run_quality_checks(native_img)
     h_nat, w_nat = native_img.shape[:2]
 
-    # MediaPipe Face Extractor
     rgb_img = cv2.cvtColor(native_img, cv2.COLOR_BGR2RGB)
     mp_face = mp.solutions.face_detection
     with mp_face.FaceDetection(model_selection=1, min_detection_confidence=0.4) as fd:
@@ -466,24 +443,19 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     skin_roi_224 = cv2.resize(skin_roi, (224, 224))
     full_224 = cv2.resize(native_img, (224, 224))
 
-    # 1. Body Part Classification Inference
     body_tensor = torch.tensor(full_224, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0
     with torch.no_grad():
         body_logits = body_model(body_tensor)
         detected_body_part = BODY_CLASSES[torch.argmax(body_logits).item()]
 
-    # 2. Disease Condition Classification Inference & Hook Initialization
     input_tensor = (torch.tensor(skin_roi_224, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0).requires_grad_(True)
     
-    # Run the core inference classification pass to fix structural runtime vacancy
     disease_logits = disease_model(input_tensor)
     detected_class_index = torch.argmax(disease_logits, dim=1).item()
     detected_disease_condition = DISEASE_CLASSES[detected_class_index]
 
-    # Compute GradCAM based on actual forward engine activations
     top_patches = compute_gradcam_patches(input_tensor, disease_model, N=4, P=4)
 
-    # Output Annotations mapping
     annotated = skin_roi_224.copy()
     for rank, (intensity, (x1, y1, x2, y2)) in enumerate(top_patches, 1):
         cv2.rectangle(annotated, (x1, y1), (x2, y2), (0, 255, 0), 2)
@@ -492,7 +464,6 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     proc_fname = f"{scan_id}_proc.jpg"
     cv2.imwrite(os.path.join(STORAGE_DIR, proc_fname), annotated)
 
-    # 3. Patch Autoencoder Auto-Evaluation Tracking
     x1, y1, x2, y2 = top_patches[0][1]
     patch_region = input_tensor[:, :, max(0, y1):min(224, y2), max(0, x1):min(224, x2)]
     if patch_region.shape[2] < 2 or patch_region.shape[3] < 2:
@@ -508,7 +479,6 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     hydration_level = int(100 - (abs(v[2]) * 100) % 100)
     overall_score   = int((hydration_level + (100 - stress_index) + (100 - fatigue_index)) // 3)
 
-    # 4. Neural RAG Execution Core
     recommendations = RagRecommendationEngine.generate_personalized_interventions(
         condition=detected_disease_condition,
         stress=stress_index,
@@ -516,7 +486,6 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
         hydration=hydration_level
     )
 
-    # Document Mapping to Database Cluster Collections
     scan_doc = {
         "scan_id": scan_id,
         "user_id": user_id,
@@ -525,7 +494,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
         "original_image_path": f"/static/{orig_fname}",
         "processed_image_path": f"/static/{proc_fname}",
         "detected_body_part": detected_body_part,
-        "detected_condition": detected_disease_condition, # Saved inference type value mapping
+        "detected_condition": detected_disease_condition, 
         "blur_score": blur_score,
         "brightness_score": brightness_score,
         "stress_index": stress_index,
@@ -596,7 +565,6 @@ async def get_scan_history(user_id: str):
         ],
     }
 
-# Fallback wrapper utility for internal execution 
 
 @app.get("/api/admin/records", tags=["Admin Portal"])
 async def admin_all_records():

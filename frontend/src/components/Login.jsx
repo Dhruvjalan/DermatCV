@@ -31,7 +31,7 @@ const Login = ({ onLogin }) => {
       <div className="login-card">
         <div className="login-header">
           <div className="logo">🧘‍♀️</div>
-          <h1>Wellness Analytics</h1>
+          <h1>DermatCV Wellness Analytics</h1>
           <p>Welcome back! Please login to your account</p>
         </div>
 

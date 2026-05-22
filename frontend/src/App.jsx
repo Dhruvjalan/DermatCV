@@ -8,7 +8,6 @@ import { getCurrentUser, logout } from './components/api';
 import './index.css';
 import Upload from './components/Upload';
 
-// Protected Route Component
 const ProtectedRoute = ({ children, isAuthenticated }) => {
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
@@ -16,7 +15,6 @@ const ProtectedRoute = ({ children, isAuthenticated }) => {
   return children;
 };
 
-// Main App Layout with Navigation
 const AppLayout = ({ children, userId, onLogout }) => {
   const navigate = useNavigate();
 
