@@ -35,9 +35,10 @@ __pycache__/
 
 # Storage
 backend/storage_vault/*
-!backend/storage_vault/.gitkeep
 backend/checkpoints/*
-!backend/checkpoints/.gitkeep
-
+backend/checkpoints/body_classifier.pth
+backend/checkpoints/class_mapping.json
+backend/checkpoints/disease_classifier.pth
+backend/checkpoints/patch_autoencoder.pth
 # Logs
 *.log

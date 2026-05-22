@@ -119,8 +119,15 @@ The system is built on an asynchronous, decouple-ready architecture controlled b
 * Localized Neural RAG Automation: Upon receiving an inferred condition from the model, its label is projected into a localized hash space vector. This vector runs a cosine similarity calculation against a structured medical text matrix to retrieve highly relevant clinical context. The extracted context block is fed into an execution pipeline template to generate three personalized, biometric-aligned wellness interventions for the user dashboard.
 
 
+### Datasets
 
-### users Collection Document Structure
+For training the autoencoder on detecting the facial skin conditions, I used the [Facial Skin Dataset](https://www.kaggle.com/datasets/shijo96john/facial-skin-acne-pigmentation-pores-wrinkles) from Kaggle, which contains 4200+ images of 8 different skin conditions. 
+
+For training the body part classifier, I used the Kaggle [Body Parts Dataset](https://www.kaggle.com/datasets/linkanjarad/body-parts-dataset) which contains 2000+ images of 10 different body parts.
+
+### 
+
+### Users Collection Document Structure
 
  ```bash
 
