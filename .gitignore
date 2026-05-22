@@ -34,10 +34,10 @@ __pycache__/
 *.swo
 
 # Storage
-storage_vault/*
-!storage_vault/.gitkeep
-checkpoints/*
-!checkpoints/.gitkeep
+backend/storage_vault/*
+!backend/storage_vault/.gitkeep
+backend/checkpoints/*
+!backend/checkpoints/.gitkeep
 
 # Logs
 *.log

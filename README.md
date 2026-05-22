@@ -169,13 +169,14 @@ SCAN RECORD SCHEMA:
 ### Step 1 — Clone / place files
 
 ```bash
-mkdir backend && cd backend
-# Place app.py, requirements.txt, .env.example here
+git clone https://github.com/Dhruvjalan/DermatCV.git
+cd DermatCV/
 ```
 
 ### Step 2 — Create a virtual environment
 
 ```bash
+cd backend/
 python3 -m venv .venv
 
 # Activate:
@@ -199,11 +200,14 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Open `.env` and fill in **at minimum**:
+Open `.env` and fill in:
 
 ```
 MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/?retryWrites=true&w=majority
-DATABASE_NAME=wellness_analytics
+DATABASE_NAME=wellness_analytics  # Change or keep as it is
+CORS_ORIGINS=http://localhost:3000,http://localhost:5173 # Keep as it is
+CHECKPOINT_DIR=checkpoints # Keep as it is
+STORAGE_DIR=storage_vault   # Keep as it is
 ```
 
 **How to get your MongoDB URI:**
@@ -212,7 +216,6 @@ DATABASE_NAME=wellness_analytics
 3. Choose **Drivers** → Python → copy the connection string
 4. Replace `<password>` with your actual Atlas password
 
-> ⚠️ **Never commit `.env` to git.** It's already in `.gitignore`.
 
 ### Step 5 — (Optional) Add model checkpoints
 
@@ -226,7 +229,7 @@ checkpoints/
 └── class_mapping.json     ← optional; overrides default class lists
 ```
 
-If checkpoints are absent, models run with **random weights** (demo mode — outputs are still generated).
+These checkpoints can be downloaded from My Huggingface Model Hub [here](https://huggingface.co/DhruvJalan/DermatCV-wellness-analytics/tree/main) or trained locally using `train.py` (see `train.py` for training instructions) or be run without training (model weights will be randomly initialised, but the API will still function with simulated scores).
 
 ### Step 6 — Run the server
 
@@ -240,6 +243,16 @@ python app.py
 ```
 
 Server starts at: **http://localhost:8000**
+
+
+### Step 7 — Run the frontend
+
+```bash
+cd ../frontend/
+npm install
+npm run dev
+```
+Frontend starts at: **http://localhost:5173**
 
 ---
 

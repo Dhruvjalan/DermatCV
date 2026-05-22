@@ -7,8 +7,8 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from torchvision import datasets, transforms
 
-BODY_PARTS_DIR = "/content/drive/MyDrive/AI Projects Hackathons/DermatCV/Body Parts Dataset"
-FACIAL_SKIN_DIR = "/content/drive/MyDrive/AI Projects Hackathons/DermatCV/skin-diseases"
+BODY_PARTS_DIR = "link to Body Parts Dataset"
+FACIAL_SKIN_DIR = "link to Facial Skin Dataset"
 CHECKPOINT_DIR = "checkpoints"
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
