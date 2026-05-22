@@ -236,7 +236,7 @@ checkpoints/
 └── class_mapping.json     ← optional; overrides default class lists
 ```
 
-These checkpoints can be downloaded from My Huggingface Model Hub [here](https://huggingface.co/DhruvJalan/DermatCV-wellness-analytics/tree/main) or trained locally using `train.py` (see `train.py` for training instructions) or be run without training (model weights will be randomly initialised, but the API will still function with simulated scores).
+These checkpoints can be downloaded from my [Huggingface Model Hub](https://huggingface.co/DhruvJalan/DermatCV-wellness-analytics/tree/main) and add it in the `backend/checkpoints/` directory or trained locally using `train.py` (see `train.py` for training instructions) or be run without training (model weights will be randomly initialised, but the API will still function with simulated scores).
 
 ### Step 6 — Run the server
 
