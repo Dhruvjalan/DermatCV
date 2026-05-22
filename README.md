@@ -3,7 +3,7 @@
 > ⚠️ **DEMO PROTOTYPE** — All wellness scores are simulated and are **NOT** medical diagnoses.
 
 ---
-![Dashboard](test_imgs\dashboard.png)
+![Dashboard](https://github.com/Dhruvjalan/DermatCV/blob/main/test_imgs/dashboard.png)
 
 
 ---
@@ -71,7 +71,7 @@ Below is a link to the Demo video, with me using the appplication, and explainin
 
 ### Wellness Scan
 
-![Wellness Scanner](test_imgs\Wellness_Scanner.png)
+![Wellness Scanner](https://github.com/Dhruvjalan/DermatCV/blob/main/test_imgs/Wellness_Scanner.png)
 
 The DermatCV platform implements an enterprise-grade, multi-stage computer vision and deep learning inference pipeline engineered to classify anatomical entry-points, identify specific dermal conditions, localize localized regions of analytical interest via targeted back-activation hooks, and formulate semantic clinical interventions utilizing a localized Retrieval-Augmented Generation (RAG) structure.
 
