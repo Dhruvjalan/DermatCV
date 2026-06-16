@@ -25,11 +25,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import transforms
 from torchvision.models import efficientnet_b3
-import mediapipe as mp
 from PIL import Image
 from groq import Groq
 
-# ── ENVIRONMENT & CONFIG SETUP ──────────────────────────────────────────
 
 load_dotenv()
 
@@ -48,7 +46,6 @@ STORAGE_DIR    = os.getenv("STORAGE_DIR",    "storage_vault")
 os.makedirs(STORAGE_DIR,    exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
-# ── GROQ & GRAPH CONFIG ─────────────────────────────────────────────────
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "disease_graph")
 SESSION_DIR = os.path.join(BASE_DIR, "sessions")
@@ -72,7 +69,31 @@ else:
     G = nx.DiGraph()
     print("Warning: Graph file not found. Created empty graph.")
 
-# ── ML MODEL DEFINITIONS ────────────────────────────────────────────────
+
+
+BASE_DIR = os.path.join(os.path.dirname(__file__), "disease_graph")
+SESSION_DIR = os.path.join(BASE_DIR, "sessions")
+GRAPH_GRAPHML_PATH = os.path.join(BASE_DIR, "disease_symptom_graph.graphml")
+GRAPH_HTML_PATH = os.path.join(BASE_DIR, "graph_interactive.html")
+GRAPH_STATIC_PATH = os.path.join(BASE_DIR, "graph_static.png")
+
+Path(SESSION_DIR).mkdir(parents=True, exist_ok=True)
+
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+groq_client = Groq(api_key=GROQ_API_KEY)
+LLM_MODEL = "llama-3.3-70b-versatile"
+SMALL_MODEL = "llama-3.1-8b-instant"
+
+if os.path.exists(GRAPH_GRAPHML_PATH):
+    G = nx.read_graphml(GRAPH_GRAPHML_PATH)
+    if not isinstance(G, nx.DiGraph):
+        G = nx.DiGraph(G)
+    print(f"Loaded Graph: {G.number_of_nodes()} nodes.")
+else:
+    G = nx.DiGraph()
+    print("Warning: Graph file not found. Created empty graph.")
+
+
 
 BODY_CLASSES = ["Face", "Skin Hand", "Eye", "Forehead", "Cheek", "Neck", "Arm", "Leg", "Chest", "Back"]
 
@@ -101,14 +122,17 @@ class BodyPartClassifier(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.classifier(self.features(x).view(x.size(0), -1))
 
+
+
+
 class SkinDiseaseModelWithGradCAM(nn.Module):
     def __init__(self, num_classes: int = 10):
         super().__init__()
         base = efficientnet_b3(weights=None)
-        
+ 
         self.features = base.features
         self.avgpool = base.avgpool
-        
+
         self.classifier = nn.Sequential(
             nn.Dropout(p=0.4, inplace=True),
             nn.Linear(1536, 512), 
@@ -127,11 +151,13 @@ class SkinDiseaseModelWithGradCAM(nn.Module):
         self.activations = x
         if x.requires_grad:
             x.register_hook(self._activations_hook)
-        
+ 
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+
 
 class NormalAutoencoder(nn.Module):
     def __init__(self):
@@ -159,13 +185,12 @@ notebook_transform = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
-# ── RAG ENGINE (GROQ DRIVEN) ────────────────────────────────────────────
 
 WELLNESS_KNOWLEDGE_BASE = [
-    {"condition": "Surface Fatigue", "text": "Surface fatigue is marked by micro-vessel restriction. Interventions require cooling therapy masks, 7-9 hours of structured circadian sleep, and topical adaptogens like Green Tea Extract or Vitamin C to clear oxidative layout stress."},
-    {"condition": "Dehydration Zone", "text": "Dehydration zones feature compromised lipid barrier metrics. Protocols demand immediate replenishment of 2.5 to 3 Liters of mineralized water daily, atmospheric humidification, and topical hyaluronic moisture binding agent application."},
-    {"condition": "Vascular Flush", "text": "Vascular Flush indicates elevated cutaneous thermal load and inflammation. Mitigate via vagus nerve down-regulation, 4-7-8 deep breathing techniques to check systemic cortisol spikes, and elimination of vasodilating trigger compounds."},
-    {"condition": "Healthy Base", "text": "Healthy base maintenance relies on preventative stabilization. Preserve with low-glycemic metabolic intake, antioxidant support structures, and baseline aerobic physical movement to support cellular microcirculation."}
+    {"condition": "Surface Fatigue", "text": "Surface fatigue is marked by micro-vessel restriction. Interventions require cooling therapy masks, 7-9 hours of structure>"},
+    {"condition": "Dehydration Zone", "text": "Dehydration zones feature compromised lipid barrier metrics. Protocols demand immediate replenishment of 2.5 to 3 Liters >"},
+    {"condition": "Vascular Flush", "text": "Vascular Flush indicates elevated cutaneous thermal load and inflammation. Mitigate via vagus nerve down-regulation, 4-7-8 >"},
+    {"condition": "Healthy Base", "text": "Healthy base maintenance relies on preventative stabilization. Preserve with low-glycemic metabolic intake, antioxidant suppo>"}
 ]
 
 class RagRecommendationEngine:
@@ -177,7 +202,7 @@ class RagRecommendationEngine:
     @classmethod
     def generate_personalized_interventions(cls, condition: str, stress: int, fatigue: int, hydration: int) -> List[str]:
         context_document = cls.retrieve_context(condition)
-        
+ 
         prompt = (
             f"CLINICAL CONTEXT: {context_document}\n\n"
             f"PATIENT DATA:\n- Detected Condition: {condition}\n- Stress Level: {stress}%\n"
@@ -186,7 +211,7 @@ class RagRecommendationEngine:
             "clinical wellness bullet points tailored specifically to this user's current biometrics. "
             "Format as a plain list without numbers or markdown bullets."
         )
-        
+
         try:
             resp = groq_client.chat.completions.create(
                 model=SMALL_MODEL,
@@ -200,7 +225,7 @@ class RagRecommendationEngine:
             response_text = resp.choices[0].message.content.strip()
             bullets = [line.strip().lstrip('-').lstrip('*').strip() for line in response_text.split('\n') if line.strip()]
             return bullets[:3] if len(bullets) >= 3 else bullets
-            
+	    
         except Exception as e:
             print(f"Groq API Error in RAG: {e}")
             return [
@@ -209,7 +234,6 @@ class RagRecommendationEngine:
                 f"Maintain deep hydration frameworks considering your {hydration}% fluid index."
             ]
 
-# ── LIFESPAN & FASTAPI INITIALIZATION ───────────────────────────────────
 
 body_model = None
 disease_model = None
@@ -283,9 +307,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 app.mount("/static", StaticFiles(directory=STORAGE_DIR), name="static")
 
-# ── UTILS ───────────────────────────────────────────────────────────────
 
 def run_quality_checks(img: np.ndarray):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -324,7 +348,6 @@ def compute_gradcam_patches(
 
     heatmap_cpu = combined_heatmap.cpu().numpy()
     patch_scores: List[tuple] = []
-
     for i in range(N):
         for j in range(N):
             y1 = i * patch_h;  y2 = (i + 1) * patch_h
@@ -337,8 +360,6 @@ def compute_gradcam_patches(
     patch_scores.sort(key=lambda t: t[0], reverse=True)
     return patch_scores[:P]
 
-
-# ── SCHEMAS ─────────────────────────────────────────────────────────────
 
 class UserCreate(BaseModel):
     full_name: str
@@ -369,7 +390,7 @@ class AnswerRequest(BaseModel):
     session_id: str
     answer: str
 
-# ── CORE ROUTES ─────────────────────────────────────────────────────────
+
 
 @app.get("/api/reports/download/{filename}", tags=["System"])
 async def download_report(filename: str):
@@ -410,7 +431,7 @@ async def get_scan_history(user_id: str):
                     "brightness": s["brightness_score"]
                 },
                 "urls": {
-                    "original": s["original_image_path"], 
+                   "original": s["original_image_path"], 
                     "processed": s["processed_image_path"]
                 },
                 "recommendations": s["recommendations"],
@@ -418,6 +439,7 @@ async def get_scan_history(user_id: str):
             for s in scans
         ],
     }
+
 
 @app.post("/api/users", tags=["User Engine"])
 async def create_user(user: UserCreate):
@@ -427,7 +449,7 @@ async def create_user(user: UserCreate):
     user_id   = str(uuid.uuid4())[:8]
     now       = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    doc = {"user_id": user_id, "full_name": user.full_name, "email": user.email,"age": user.age,"height": user.height,"gender": user.gender, "password": hashed_pw, "created_at": now, "total_scans": 0, "last_scan_at": None}
+    doc = {"user_id": user_id, "full_name": user.full_name, "email": user.email,"age": user.age,"height": user.height,"gender": user.gender, "password": hashed_pw, "created_at": now}
     await users_col.insert_one(doc)
     return {"status": "success", "user_id": user_id, "full_name": user.full_name, "created_at": now}
 
@@ -449,6 +471,9 @@ async def get_user_by_id(user_id: str):
     user["_id"] = str(user["_id"])
     return user
 
+
+
+
 @app.post("/api/analyze/{user_id}", tags=["Core Pipeline"])
 async def analyze_image(user_id: str, file: UploadFile = File(...)):
     user = await users_col.find_one({"user_id": user_id})
@@ -469,24 +494,31 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
 
     blur_score, brightness_score = run_quality_checks(native_img)
     h_nat, w_nat = native_img.shape[:2]
+    # Ensure grayscale for OpenCV cascade
+    gray_img = cv2.cvtColor(native_img, cv2.COLOR_BGR2GRAY)
+    
+    # Load standard OpenCV face detector
+    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    faces = face_cascade.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-    rgb_img = cv2.cvtColor(native_img, cv2.COLOR_BGR2RGB)
-    mp_face = mp.solutions.face_detection
-    with mp_face.FaceDetection(model_selection=1, min_detection_confidence=0.4) as fd:
-        det_results = fd.process(rgb_img)
+    if len(faces) > 0:
+        # Grab the first face found
+                (x, y, w, h) = faces[0]
+ 
+        # Add a small buffer around the face for better ML context
+                pad_x, pad_y = int(w * 0.1), int(h * 0.1)
+                xmin = max(0, x - pad_x)
+                ymin = max(0, y - pad_y)
+                xmax = min(w_nat, x + w + pad_x)
+                ymax = min(h_nat, y + h + pad_y)
+ 
+                skin_roi = native_img[ymin:ymax, xmin:xmax]
+                regions_log = {"face_detected": True, "bounding_box": [int(xmin), int(ymin), int(xmax), int(ymax)]}
 
-    if det_results.detections:
-        bb = det_results.detections[0].location_data.relative_bounding_box
-        xmin = max(0, int(bb.xmin * w_nat))
-        ymin = max(0, int(bb.ymin * h_nat))
-        xmax = min(w_nat, xmin + int(bb.width * w_nat))
-        ymax = min(h_nat, ymin + int(bb.height * h_nat))
-        skin_roi = native_img[ymin:ymax, xmin:xmax]
-        regions_log = {"face_detected": True, "bounding_box": [xmin, ymin, xmax, ymax]}
+
     else:
         skin_roi = native_img.copy()
         regions_log = {"face_detected": False, "bounding_box": [0, 0, w_nat, h_nat]}
-
     if skin_roi.size == 0:
         skin_roi = native_img.copy()
 
@@ -504,6 +536,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     detected_disease_condition = DISEASE_CLASSES[detected_class_index]
 
     top_patches = compute_gradcam_patches(input_tensor, disease_model, N=4, P=4)
+
 
     annotated = cv2.resize(skin_roi, (224, 224)).copy()
     for rank, (intensity, (x1, y1, x2, y2)) in enumerate(top_patches, 1):
@@ -543,8 +576,9 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
         "stress_index": stress_index, "fatigue_index": fatigue_index, "hydration_level": hydration_level,
         "overall_wellness_score": overall_score, "recommendations": recommendations,
         "timestamp": timestamp, "quality_status": "Acceptable" if blur_score > 50 else "Suboptimal",
-    }
-    
+
+	}
+
     await scans_col.insert_one(scan_doc)
     await users_col.update_one({"user_id": user_id}, {"$inc": {"total_scans": 1}, "$set": {"last_scan_at": timestamp}})
 
@@ -559,7 +593,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
         },
     }
 
-# ── DIAGNOSTIC GRAPH / RL ROUTES ────────────────────────────────────────
+
 
 class DiagnosticSession:
     def __init__(self, session_id: str,user_id: str, ml_predictions: list, hyperparams: dict, user_query: str = "", scan_context: str = ""):
@@ -572,7 +606,7 @@ class DiagnosticSession:
         self.scan_context = scan_context      
         self.confirmed_symptoms = []
         self.denied_symptoms = []
-        self.qa_log = []                      
+        self.qa_log = []
         self.score_history = []
         self.final_diagnosis = None
         self.termination_reason = ""
@@ -610,7 +644,7 @@ def compute_scores(candidate_diseases, confirmed, denied, ml_preds, hp: dict):
         total_syms = max(len(graph_syms), 1)
         raw_score = (prior * 5) + confirmed_hit - denied_hit
         results.append({"disease": disease, "score": round(max(raw_score / total_syms, 0.0), 5), "prior": round(prior, 4)})
-        
+
     results.sort(key=lambda x: x["score"], reverse=True)
     if results:
         top_score = results[0]["score"]
@@ -636,7 +670,7 @@ async def fetch_user_scan_context(user_id: Optional[str]) -> str:
     print(f"Fetching scan context for user_id: {user_id}")
     if not user_id: return "No prior computer vision scan data given."
     cursor = scans_col.find({"user_id": user_id}).sort("timestamp", -1).limit(2)
-    user  = users_col.findOne({"user_id":user_id})
+    user  = users_col.find_one({"user_id":user_id})
     scans = await cursor.to_list(length=None)
     print(f"Retrieved {len(scans)} scans for user_id: {user_id}")
     if not scans: return "No prior computer vision scan data available."
@@ -647,9 +681,9 @@ async def fetch_user_scan_context(user_id: Optional[str]) -> str:
             f"Scan {i+1} ({s['timestamp']}): ML detected '{s.get('detected_condition', 'Unknown')}' "
             f"on {s.get('detected_body_part', 'Unknown')} (Stress: {s.get('stress_index', 0)}%, "
             f"Hydration: {s.get('hydration_level', 0)}%)."
-            f"The User specified their medical gender as {user.gender}, an age of {user.age}, having height {user.height} and weight {"60kg"} "
-        )
+             )
     return " | ".join(context_parts)
+
 
 def generate_contextual_question(symptom: str, top_diseases: list, session: DiagnosticSession) -> str:
     history_text = "\n".join([f"Q: {log['question']}\nA: {log['answer']}" for log in session.qa_log[-5:]])
@@ -674,6 +708,7 @@ def generate_contextual_question(symptom: str, top_diseases: list, session: Diag
     )
     return resp.choices[0].message.content.strip().strip('"')
 
+
 def analyze_user_answer(question: str, answer: str, target_symptom: str) -> Optional[bool]:
     prompt = (
         f"Question asked to patient: '{question}'\n"
@@ -694,6 +729,7 @@ def analyze_user_answer(question: str, answer: str, target_symptom: str) -> Opti
     if "CONFIRM" in result: return True
     if "DENY" in result: return False
     return None
+
 
 async def generate_and_save_final_report(session: DiagnosticSession, diagnosis: dict):
     """Hits the LLM to generate the final detailed report and the exact 3 things to improve."""
@@ -765,7 +801,6 @@ async def get_diagnostic_history(user_id: str):
     session_data.pop("_id", None) # Clean up MongoDB _id before sending
     return session_data
 
-
 @app.post("/api/diagnose/start", tags=["Diagnostic Loop"])
 async def start_diagnosis(req: InitialDiagnosticRequest):
     print(f"Received initial diagnostic request: {req.symptom_text}")
@@ -810,6 +845,7 @@ async def start_diagnosis(req: InitialDiagnosticRequest):
         "target_symptom": symptom_to_ask, 
         "status": "ongoing"
     }
+
 
 @app.post("/api/diagnose/answer", tags=["Diagnostic Loop"])
 async def process_answer(req: AnswerRequest):
@@ -888,11 +924,18 @@ async def process_answer(req: AnswerRequest):
         "target_symptom": symptom_to_ask
     }
 
-@app.get("/health", tags=["System"])
-async def health_check():
-    """Simple health check to verify the API is running."""
-    print("Checking backend server health...")
-    return {"status": "ok", "message": "DermatCV API is alive"}
+@app.get('/health', tags=["System"])
+async def health():
+        print("Checking for health...")
+        return {"status":"ok","message":"successfully running server"}
+
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+
+
+
+
+
+
+

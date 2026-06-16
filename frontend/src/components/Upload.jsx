@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Upload.css';
 
+
 export default function Upload({ currentUserId }) {
   const [userId, setUserId] = useState(currentUserId); // Swap out with auth state later
   const [file, setFile] = useState(null);
@@ -10,7 +11,7 @@ export default function Upload({ currentUserId }) {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState('');
 
-  const BACKEND_URL = 'http://localhost:8000';
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://13.61.239.146:8000/api';
 
   useEffect(() => {
     fetchHistory();
@@ -18,7 +19,7 @@ export default function Upload({ currentUserId }) {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch(`${BACKEND_URL}/api/history/${userId}`);
+      const res = await fetch(`${BACKEND_URL}/history/${userId}`);
       if (res.ok) {
         const data = await res.json();
         setHistory(data.history || []);
@@ -51,7 +52,7 @@ export default function Upload({ currentUserId }) {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`${BACKEND_URL}/api/analyze/${userId}`, {
+      const response = await fetch(`${BACKEND_URL}/analyze/${userId}`, {
         method: 'POST',
         body: formData,
       });
