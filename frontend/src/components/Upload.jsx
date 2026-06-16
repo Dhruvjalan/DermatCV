@@ -11,7 +11,7 @@ export default function Upload({ currentUserId }) {
   const [history, setHistory] = useState([]);
   const [error, setError] = useState('');
 
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://13.61.239.146:8000/api';
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://13-61-239-146.nip.io/api';
 
   useEffect(() => {
     fetchHistory();
