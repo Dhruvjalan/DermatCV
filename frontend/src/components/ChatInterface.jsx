@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ChatInterface.css';
 import { startDiagnostic, answerDiagnosticQuestion, getDiagnosticHistory } from './api';
 
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://13.61.239.146:8000/api';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://13-61-239-146.nip.io/api';
 
 const ChatInterface = ({ userId }) => {
   const [messages, setMessages] = useState([]);
