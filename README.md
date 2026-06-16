@@ -6,7 +6,12 @@
 ![Dashboard](https://github.com/Dhruvjalan/DermatCV/blob/main/test_imgs/dashboard.png)
 
 
+
 ---
+
+[Live Link: ](https://dermat-cv.vercel.app/login)
+
+[Demo of the App Working](https://drive.google.com/file/d/1hsY7lJwtADswEaYmv9KXV5v24hfSFZyI/view?usp=sharing)
 
 ## 1. Prerequisites
 
