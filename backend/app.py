@@ -888,6 +888,11 @@ async def process_answer(req: AnswerRequest):
         "target_symptom": symptom_to_ask
     }
 
+@app.get("/health", tags=["System"])
+async def health_check():
+    """Simple health check to verify the API is running."""
+    print("Checking backend server health...")
+    return {"status": "ok", "message": "DermatCV API is alive"}
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

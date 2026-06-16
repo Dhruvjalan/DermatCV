@@ -20,3 +20,4 @@ networkx
 
 # Utilities
 python-dotenv
+torchvision
