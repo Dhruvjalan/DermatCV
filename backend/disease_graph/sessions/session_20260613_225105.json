@@ -1,0 +1,68 @@
+{
+  "session_id": "20260613_225105",
+  "started_at": "2026-06-13T22:51:05.624748Z",
+  "ml_predictions": [
+    {
+      "disease": "I have red itchy patches on my skin",
+      "confidence": 0.5
+    }
+  ],
+  "hyperparams": {
+    "max_questions": 6,
+    "confidence_threshold": 3.5,
+    "top_k_candidates": 8,
+    "min_score_to_keep": 0.01,
+    "confirmed_weight_mult": 2.0,
+    "denied_weight_mult": 0.15
+  },
+  "confirmed_symptoms": [],
+  "denied_symptoms": [],
+  "qa_log": [],
+  "score_history": [
+    [
+      {
+        "disease": "headache after lumbar puncture",
+        "score": 1.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "artificial nails: dermatologists' tips for reducing nail damage",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "acute glaucoma",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "bladder cancer",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "adenoid cystic carcinoma",
+        "score": 0.375,
+        "prior": 0.3
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.25,
+        "prior": 0.3
+      },
+      {
+        "disease": "vitiligo: signs and symptoms",
+        "score": 0.16667,
+        "prior": 0.3
+      }
+    ]
+  ],
+  "final_diagnosis": null,
+  "termination_reason": "",
+  "current_turn": 1
+}

@@ -1,186 +1,153 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getUserHistory } from './api';
 import './ChatInterface.css';
+import { startDiagnostic, answerDiagnosticQuestion, getDiagnosticHistory } from './api';
+
+const API_BASE_URL = 'http://localhost:8000/api';
 
 const ChatInterface = ({ userId }) => {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: "Hello! I'm your Wellness AI Assistant. I can help you understand your scan results, provide wellness advice, and answer questions about your health metrics. How can I help you today?",
-      sender: 'bot',
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [userContext, setUserContext] = useState(null);
+  const [sessionId, setSessionId] = useState(null);
+  const [diagnosticStatus, setDiagnosticStatus] = useState('idle'); 
+  
   const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    if (userId) {
+      loadPreviousSession();
+    }
+  }, [userId]);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  useEffect(() => {
-    if (userId) {
-      loadUserContext();
-    }
-  }, [userId]);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const loadUserContext = async () => {
+  const loadPreviousSession = async () => {
     try {
-      const history = await getUserHistory(userId);
-      if (history && history.history && history.history.length > 0) {
-        const latestScan = history.history[0];
-        setUserContext({
-          hasScans: true,
-          latestWellnessScore: latestScan.wellness_score,
-          latestBiometrics: latestScan.biometrics,
-          totalScans: history.total_scans
-        });
+      setIsTyping(true);
+      const data = await getDiagnosticHistory(userId);
+      
+      if (data && data.session_id) {
+        setSessionId(data.session_id);
         
-        addBotMessage(`I see you've had ${history.total_scans} wellness scan(s). Your latest wellness score was ${latestScan.wellness_score}. Would you like to discuss your results?`);
+        // Reconstruct the message array from the MongoDB qa_log
+        let restoredMessages = [
+          { id: 1, text: "Hello! I'm your Diagnostic AI Assistant. Let's continue your evaluation.", sender: 'bot', timestamp: new Date(data.started_at), type: 'text' },
+          { id: 2, text: data.user_query, sender: 'user', timestamp: new Date(data.started_at), type: 'text' }
+        ];
+
+        let msgId = 3;
+        data.qa_log.forEach((log) => {
+          restoredMessages.push({
+            id: msgId++, text: log.question, sender: 'bot', type: 'question', timestamp: new Date()
+          });
+          if (log.answer) {
+            restoredMessages.push({
+              id: msgId++, text: log.answer, sender: 'user', type: 'text', timestamp: new Date()
+            });
+          }
+        });
+
+        // Determine status based on termination reason
+        // Determine status based on termination reason
+        // Determine status based on termination reason
+        if (data.termination_reason || data.final_diagnosis) {
+          setDiagnosticStatus('complete');
+          restoredMessages.push({
+            id: msgId++, 
+            sender: 'bot', 
+            type: 'report',
+            diagnosis: data.final_diagnosis,
+            reportPath: `/static/report_${data.session_id}.txt`,
+            timestamp: new Date() // <-- ADD THIS LINE
+          });
+        } else {
+          setDiagnosticStatus('ongoing');
+        }
+
+        setMessages(restoredMessages);
       } else {
-        setUserContext({ hasScans: false });
-        addBotMessage("You haven't done any wellness scans yet. I recommend starting with a scan to get personalized insights!");
+        // No history found, set default greeting
+        setMessages([{
+          id: 1, text: "Hello! I'm your Diagnostic AI Assistant. Please describe your symptoms in detail to begin your evaluation.", sender: 'bot', timestamp: new Date(), type: 'text'
+        }]);
       }
     } catch (error) {
-      console.error('Error loading user context:', error);
+      console.log('No previous chat history found or new user.');
+      setMessages([{
+        id: 1, text: "Hello! I'm your Diagnostic AI Assistant. Please describe your symptoms in detail to begin your evaluation.", sender: 'bot', timestamp: new Date(), type: 'text'
+      }]);
+    } finally {
+      setIsTyping(false);
     }
   };
 
-  const addBotMessage = (text) => {
-    const botMessage = {
-      id: messages.length + 1,
-      text: text,
-      sender: 'bot',
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, botMessage]);
+  const addMessage = (text, sender, type = 'text', additionalData = null) => {
+    setMessages(prev => [...prev, {
+      id: prev.length + 1, text, sender, timestamp: new Date(), type, ...additionalData
+    }]);
   };
 
-  const getBotResponse = (userInput) => {
-    const input = userInput.toLowerCase();
-    
-    if (input.includes('wellness score') || input.includes('my score')) {
-      if (userContext?.latestWellnessScore) {
-        const score = userContext.latestWellnessScore;
-        let advice = '';
-        if (score >= 70) {
-          advice = "Great job! Your wellness score is excellent. Keep maintaining your healthy habits!";
-        } else if (score >= 50) {
-          advice = "Your wellness score is moderate. There's room for improvement. Would you like specific recommendations?";
-        } else {
-          advice = "Your wellness score indicates room for improvement. I strongly recommend reviewing your lifestyle habits and considering the actionable interventions from your scan.";
-        }
-        return `Your latest wellness score is ${score}/100. ${advice}`;
-      } else {
-        return "You don't have any scan results yet. Please complete a wellness scan first to get your score.";
+  const handleStartDiagnosis = async (symptoms) => {
+    try {
+      console.log("Starting diagnosis with symptoms:", symptoms);
+      const response = await startDiagnostic(userId, symptoms);
+      if (response.session_id) {
+        setSessionId(response.session_id);
+        setDiagnosticStatus(response.status); 
+        addMessage(response.question, 'bot', 'question', { target_symptom: response.target_symptom });
       }
+    } catch (error) {
+      addMessage("I'm having trouble connecting to the diagnostic engine. Please ensure the backend is running.", 'bot');
+    } finally {
+      setIsTyping(false);
     }
-    
-    if (input.includes('stress') || input.includes('anxiety')) {
-      if (userContext?.latestBiometrics) {
-        const stress = userContext.latestBiometrics.stress;
-        if (stress > 70) {
-          return `Your stress index is ${stress}/100, which is quite high. I recommend practicing deep breathing exercises, taking regular breaks, and considering mindfulness meditation. Would you like some guided breathing techniques?`;
-        } else if (stress > 40) {
-          return `Your stress index is ${stress}/100 - moderate. Regular exercise, adequate sleep, and work-life balance can help reduce this further.`;
-        } else {
-          return `Great news! Your stress index is ${stress}/100, indicating good stress management. Keep up your healthy routines!`;
-        }
-      }
-      return "I can help with stress management techniques. Would you like to learn some breathing exercises or meditation tips?";
-    }
-    
-    if (input.includes('fatigue') || input.includes('tired') || input.includes('energy')) {
-      if (userContext?.latestBiometrics) {
-        const fatigue = userContext.latestBiometrics.fatigue;
-        if (fatigue > 70) {
-          return `Your fatigue index is ${fatigue}/100. This suggests you might benefit from improving your sleep quality, staying hydrated, and taking regular movement breaks throughout the day.`;
-        } else if (fatigue > 40) {
-          return `Your fatigue level is ${fatigue}/100 - moderate. Ensure you're getting 7-8 hours of sleep and staying active.`;
-        } else {
-          return `Your energy levels look good with a fatigue index of ${fatigue}/100! Keep maintaining your healthy sleep and exercise routines.`;
-        }
-      }
-      return "Fatigue can be managed with proper sleep, nutrition, and stress management. Would you like specific advice?";
-    }
-    
-    if (input.includes('hydrat') || input.includes('water') || input.includes('drink')) {
-      if (userContext?.latestBiometrics) {
-        const hydration = userContext.latestBiometrics.hydration;
-        if (hydration < 40) {
-          return `Your hydration level is ${hydration}/100, which is low. I strongly recommend increasing your water intake to at least 2-3 liters per day. Set reminders to drink water regularly!`;
-        } else if (hydration < 70) {
-          return `Your hydration is at ${hydration}/100 - good but could be better. Try to drink a glass of water every hour during work hours.`;
-        } else {
-          return `Excellent! Your hydration level is ${hydration}/100. You're doing great at staying hydrated. Keep it up!`;
-        }
-      }
-      return "Staying hydrated is crucial for wellness. Aim for 2-3 liters of water daily. Would you like tips on tracking your water intake?";
-    }
-    
-    if (input.includes('recommend') || input.includes('advice') || input.includes('improve')) {
-      return "Based on wellness best practices, I recommend:\n• Stay hydrated (2-3L water daily)\n• Get 7-8 hours of quality sleep\n• Practice daily stress management (meditation, deep breathing)\n• Take regular movement breaks\n• Maintain a balanced diet rich in antioxidants\n\nWould you like detailed guidance on any of these?";
-    }
-    
-    if (input.includes('history') || input.includes('previous') || input.includes('past scan')) {
-      if (userContext?.totalScans) {
-        return `You have ${userContext.totalScans} scan(s) in your history. Your most recent wellness score was ${userContext.latestWellnessScore}. Would you like to see a detailed comparison of your progress?`;
-      }
-      return "You don't have any scan history yet. Start with a wellness scan to track your progress over time!";
-    }
-    
-    if (input.includes('health tip') || input.includes('wellness tip')) {
-      const tips = [
-        "Take a 5-minute breathing break every 2 hours to reset your nervous system.",
-        "Blue light from screens can affect sleep. Try using night mode after 7 PM.",
-        "Cold exposure (like splashing cold water on your face) can boost alertness and reduce stress.",
-        "Regular stretching improves blood flow and reduces physical fatigue.",
-        "Laughter truly is medicine - it reduces stress hormones and boosts immune function."
-      ];
-      return tips[Math.floor(Math.random() * tips.length)];
-    }
-    
-    if (input.includes('hello') || input.includes('hi') || input.includes('hey')) {
-      return "Hello! How are you feeling today? I can help analyze your wellness metrics or provide health tips.";
-    }
-    
-    if (input.includes('help') || input.includes('what can you do')) {
-      return "I can help you with:\n• Understanding your wellness scores\n• Managing stress and fatigue\n• Hydration advice\n• Wellness recommendations\n• Scan history analysis\n• Daily health tips\n\nJust ask me about any of these topics!";
-    }
-    
-    return "I'm here to support your wellness journey. You can ask me about your wellness scores, stress levels, fatigue, hydration, or general health tips. What would you like to know?";
   };
 
-  const sendMessage = async () => {
-    if (!inputMessage.trim()) return;
+  const handleAnswerQuestion = async (answer) => {
+    try {
+      const data = await answerDiagnosticQuestion(sessionId, answer);
+      setDiagnosticStatus(data.status);
 
-    const userMsg = {
-      id: messages.length + 1,
-      text: inputMessage,
-      sender: 'user',
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, userMsg]);
+      if (data.status === 'ongoing') {
+        addMessage(data.question, 'bot', 'question', { target_symptom: data.target_symptom });
+      } else if (data.status === 'complete') {
+        addMessage("Evaluation complete. Here are your results:", 'bot', 'report', {
+          diagnosis: data.diagnosis,
+          differentials: data.ranked_differentials,
+          reportPath: data.report_download_url
+        });
+      }
+    } catch (error) {
+      addMessage("There was an error processing your response.", 'bot');
+    } finally {
+      setIsTyping(false);
+    }
+  };
+
+  const sendMessage = async (overrideText = null) => {
+    const textToSend = overrideText !== null ? overrideText : inputMessage;
+    if (!textToSend.trim()) return;
+
+    addMessage(textToSend, 'user');
     setInputMessage('');
     setIsTyping(true);
 
-    setTimeout(() => {
-      const response = getBotResponse(inputMessage);
-      const botMsg = {
-        id: messages.length + 2,
-        text: response,
-        sender: 'bot',
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, botMsg]);
-      setIsTyping(false);
-    }, 800);
+    if (diagnosticStatus === 'idle' || !sessionId) {
+      await handleStartDiagnosis(textToSend);
+    } else if (diagnosticStatus === 'ongoing') {
+      await handleAnswerQuestion(textToSend);
+    } else if (diagnosticStatus === 'complete') {
+       // If complete, typing again starts a NEW session
+       setSessionId(null);
+       setDiagnosticStatus('idle');
+       await handleStartDiagnosis(textToSend);
+    }
   };
 
   const handleKeyPress = (e) => {
@@ -190,31 +157,49 @@ const ChatInterface = ({ userId }) => {
     }
   };
 
-  const quickQuestions = [
-    "What's my wellness score?",
-    "How can I reduce stress?",
-    "Give me a health tip",
-    "Help with fatigue",
-    "Hydration advice",
-    "Show my history"
-  ];
+  const downloadReport = async (filepath) => {
+    const filename = filepath.split('/').pop().split('\\').pop();
+    window.open(`${API_BASE_URL}/reports/download/${filename}`, '_blank');
+  };
+
+  const renderQuickActions = () => {
+    if (diagnosticStatus === 'ongoing') {
+      return (
+        <div className="quick-questions">
+          {['Yes', 'No', 'Not sure', 'Skip'].map((btn, idx) => (
+            <button key={idx} className="quick-question" onClick={() => sendMessage(btn)}>
+              {btn}
+            </button>
+          ))}
+        </div>
+      );
+    }
+    
+    return (
+      <div className="quick-questions">
+        {["I have red itchy patches on my skin", "I have a severe headache and nausea", "My joints are swelling"].map((btn, idx) => (
+          <button key={idx} className="quick-question" onClick={() => setInputMessage(btn)}>
+            {btn}
+          </button>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div className="chat-interface">
       <div className="chat-header">
         <div className="chat-header-info">
-          <h2>💬 Wellness AI Assistant</h2>
-          <p>Your personal health companion</p>
+          <h2>💬 AyurGenx Diagnostic Engine</h2>
+          <p>Powered by Knowledge Graph RAG</p>
         </div>
-        {userContext && (
-          <div className="context-badge">
-            {userContext.hasScans ? (
-              <span>📊 {userContext.totalScans} scans | Latest: {userContext.latestWellnessScore}/100</span>
-            ) : (
-              <span>✨ Ready for first scan</span>
-            )}
-          </div>
-        )}
+        <div className="context-badge">
+          {diagnosticStatus === 'ongoing' ? (
+            <span className="status-ongoing">🔄 Evaluating Data...</span>
+          ) : (
+            <span>✨ Ready</span>
+          )}
+        </div>
       </div>
 
       <div className="chat-messages">
@@ -224,21 +209,52 @@ const ChatInterface = ({ userId }) => {
               {message.sender === 'bot' ? '🤖' : '👤'}
             </div>
             <div className="message-content">
-              <div className="message-text">{message.text}</div>
+              
+              {(message.type === 'text' || message.type === 'question') && (
+                <div className="message-text">{message.text}</div>
+              )}
+
+              {message.type === 'report' && message.diagnosis && (
+                <div className="message-report-card">
+                  <h4>Primary Hypothesis</h4>
+                  <p className="primary-diagnosis">{message.diagnosis.disease.toUpperCase()}</p>
+                  <p className="confidence-score">Graph Match Score: {message.diagnosis.score}</p>
+                  
+                  {message.differentials && message.differentials.length > 1 && (
+                    <div className="differentials">
+                      <h5>Secondary Considerations:</h5>
+                      <ul>
+                        {message.differentials.slice(1).map((diff, i) => (
+                          <li key={i}>{diff.disease} ({diff.score})</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  {message.reportPath && (
+                    <button 
+                      className="download-btn"
+                      onClick={() => downloadReport(message.reportPath)}
+                    >
+                      📄 Download Full Clinical Report
+                    </button>
+                  )}
+                </div>
+              )}
+
               <div className="message-time">
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </div>
             </div>
           </div>
         ))}
+        
         {isTyping && (
           <div className="message bot">
             <div className="message-avatar">🤖</div>
             <div className="message-content">
               <div className="typing-indicator">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
               </div>
             </div>
           </div>
@@ -246,30 +262,17 @@ const ChatInterface = ({ userId }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="quick-questions">
-        {quickQuestions.map((question, idx) => (
-          <button
-            key={idx}
-            className="quick-question"
-            onClick={() => {
-              setInputMessage(question);
-              setTimeout(() => sendMessage(), 100);
-            }}
-          >
-            {question}
-          </button>
-        ))}
-      </div>
+      {renderQuickActions()}
 
       <div className="chat-input-container">
         <textarea
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
           onKeyPress={handleKeyPress}
-          placeholder="Type your message here... (Press Enter to send)"
+          placeholder={diagnosticStatus === 'ongoing' ? "Type your answer..." : "Describe your symptoms in detail..."}
           rows="2"
         />
-        <button onClick={sendMessage} disabled={!inputMessage.trim() || isTyping}>
+        <button onClick={() => sendMessage()} disabled={!inputMessage.trim() || isTyping}>
           Send
         </button>
       </div>

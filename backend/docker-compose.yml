@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dermatcv-backend:
+    build: .
+    container_name: dermatcv-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Maps server folders -> container folders
+      - ./storage_vault:/app/storage_vault
+      - ./disease_graph/sessions:/app/disease_graph/sessions
+      # Mount checkpoints so you don't have to rebuild the image if you update models
+      - ./checkpoints:/app/checkpoints 
+    env_file:
+      - .env
+    restart: unless-stopped

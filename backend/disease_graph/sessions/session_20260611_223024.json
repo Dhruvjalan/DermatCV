@@ -1,0 +1,674 @@
+{
+  "session_id": "20260611_223024",
+  "started_at": "2026-06-11T22:30:24.121003Z",
+  "ml_predictions": [
+    {
+      "disease": "ichthyosis vulgaris: overview",
+      "confidence": 0.2
+    },
+    {
+      "disease": "are you ready to manage your child's eczema triggers?",
+      "confidence": 0.13334
+    },
+    {
+      "disease": "how to treat eczema in babies",
+      "confidence": 0.13334
+    },
+    {
+      "disease": "are triggers causing your psoriasis flare-ups?",
+      "confidence": 0.06666
+    },
+    {
+      "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "confidence": 0.06666
+    },
+    {
+      "disease": "how to safely exfoliate at home",
+      "confidence": 0.05714
+    }
+  ],
+  "confirmed_symptoms": [
+    "cold weather",
+    "skin injuries",
+    "itching",
+    "sores"
+  ],
+  "denied_symptoms": [
+    "discoloration",
+    "thickened skin"
+  ],
+  "qa_log": [
+    {
+      "turn": 1,
+      "symptom": "cold weather",
+      "question": "Do you find that the weather affects your skin in any way?",
+      "answer": "yes. It becomes more irritating when it is humid or hot",
+      "interpreted_yes": true
+    },
+    {
+      "turn": 2,
+      "symptom": "skin injuries",
+      "question": "Have you ever experienced cuts, scrapes, or other open wounds on your skin that take a long time to heal?",
+      "answer": "yes, a few cuts on the skin",
+      "interpreted_yes": true
+    },
+    {
+      "turn": 3,
+      "symptom": "itching",
+      "question": "Do you often feel an intense urge to scratch your skin?",
+      "answer": "Sometimes",
+      "interpreted_yes": true
+    },
+    {
+      "turn": 4,
+      "symptom": "discoloration",
+      "question": "Have you ever noticed any changes in the color of your skin that don't seem normal?",
+      "answer": "No, never noticed any changes in color",
+      "interpreted_yes": false
+    },
+    {
+      "turn": 5,
+      "symptom": "sores",
+      "question": "Have you ever had any sores on your skin that didn't seem to heal on their own?",
+      "answer": "yes. a few",
+      "interpreted_yes": true
+    },
+    {
+      "turn": 6,
+      "symptom": "thickened skin",
+      "question": "Do you notice that your skin feels any harder or thicker in some areas than it normally would?",
+      "answer": "it feels harder than normal",
+      "interpreted_yes": false
+    }
+  ],
+  "score_history": [
+    [
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 0.05555,
+        "prior": 0.0667,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.05555,
+        "prior": 0.0667,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 0.72222,
+        "prior": 0.0667,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.05555,
+        "prior": 0.0667,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 1.38888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.05555,
+        "prior": 0.0667,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 1.55557,
+        "prior": 0.1333,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 1.38888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.72222,
+        "prior": 0.0667,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 1.55557,
+        "prior": 0.1333,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 1.38888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 0.67222,
+        "prior": 0.0667,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.3,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 1.55557,
+        "prior": 0.1333,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 1.38888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 1.33888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.3,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ],
+    [
+      {
+        "disease": "how to treat eczema in babies",
+        "score": 1.55557,
+        "prior": 0.1333,
+        "confirmed_hit": 4.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "inflammation",
+          "itching"
+        ]
+      },
+      {
+        "disease": "are triggers causing your psoriasis flare-ups?",
+        "score": 1.38888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "cold weather",
+          "dry skin",
+          "infections",
+          "skin injuries",
+          "stress",
+          "sunburn"
+        ]
+      },
+      {
+        "disease": "self-care: 10 ways to relieve discomfort from scleroderma",
+        "score": 1.28888,
+        "prior": 0.0667,
+        "confirmed_hit": 8.0,
+        "denied_hit": 0.6,
+        "graph_symptoms": [
+          "discoloration",
+          "dry skin",
+          "itching",
+          "poor blood flow",
+          "sores",
+          "thickened skin"
+        ]
+      },
+      {
+        "disease": "ichthyosis vulgaris: overview",
+        "score": 0.5,
+        "prior": 0.2,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "scaly skin"
+        ]
+      },
+      {
+        "disease": "are you ready to manage your child's eczema triggers?",
+        "score": 0.22223,
+        "prior": 0.1333,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "dry skin",
+          "itchy skin",
+          "red skin"
+        ]
+      },
+      {
+        "disease": "how to safely exfoliate at home",
+        "score": 0.04081,
+        "prior": 0.0571,
+        "confirmed_hit": 0.0,
+        "denied_hit": 0.0,
+        "graph_symptoms": [
+          "acne",
+          "dark spots",
+          "dry skin",
+          "oily skin",
+          "open wounds",
+          "sensitive skin",
+          "sunburned skin"
+        ]
+      }
+    ]
+  ],
+  "final_diagnosis": {
+    "disease": "how to treat eczema in babies",
+    "score": 1.55557,
+    "narrative": "The patient presents with a chief complaint of skin irritation, reporting that their skin becomes more irritating in cold weather, and experiences itching, skin injuries, and sores. Key positive findings include the patient's confirmation of cold weather exacerbating their symptoms, a history of skin injuries, occasional itching, and the presence of sores, while negative findings include the denial of skin discoloration and thickened skin. Based on these symptoms, a provisional diagnosis of eczema is considered, given the high ranking of \"How To Treat Eczema In Babies\" in the differential diagnosis, which aligns with the patient's reported symptoms. A comprehensive clinical evaluation, including a physical examination and potentially diagnostic tests such as skin scrapings or patch testing, is recommended to further confirm the diagnosis and guide treatment.",
+    "report_path": "/content/drive/MyDrive/disease_graph/sessions/report_20260611_223024.txt"
+  },
+  "termination_reason": "Max questions (6) reached."
+}

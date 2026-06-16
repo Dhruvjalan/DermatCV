@@ -19,10 +19,13 @@ const UserDashboard = ({ userId }) => {
     setLoading(true);
     setError('');
     try {
+      console.log(`Fetching data for user ID: ${userId}`);
       const [userData, historyData] = await Promise.all([
         getUserById(userId),
         getUserHistory(userId)
       ]);
+
+      console.log('User Data:', userData);
       
       setUserInfo(userData);
       setHistory(historyData.history || []);

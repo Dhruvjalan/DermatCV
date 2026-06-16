@@ -76,6 +76,7 @@ else:
 
 BODY_CLASSES = ["Face", "Skin Hand", "Eye", "Forehead", "Cheek", "Neck", "Arm", "Leg", "Chest", "Back"]
 
+# Updated to match the exactly 10 classes from your CV_Model_Training.ipynb
 DISEASE_CLASSES = [
     'Redness', 'acne', 'blackheades', 'dark spots', 'inflammatory acne', 
     'non inflammatory acne black heads', 'non inflammatory acne white heads', 
@@ -101,6 +102,7 @@ class BodyPartClassifier(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.classifier(self.features(x).view(x.size(0), -1))
 
+# Replaces the mock CNN with your EfficientNet-B3 architecture from the Notebook
 class SkinDiseaseModelWithGradCAM(nn.Module):
     def __init__(self, num_classes: int = 10):
         super().__init__()
@@ -109,6 +111,7 @@ class SkinDiseaseModelWithGradCAM(nn.Module):
         self.features = base.features
         self.avgpool = base.avgpool
         
+        # Exact classifier head from notebook
         self.classifier = nn.Sequential(
             nn.Dropout(p=0.4, inplace=True),
             nn.Linear(1536, 512), 
@@ -153,6 +156,7 @@ class NormalAutoencoder(nn.Module):
         latent = F.normalize(self.encoder(x), p=2, dim=1)
         return latent, self.decoder(latent)
 
+# Transform required by EfficientNet-B3 (Notebook pipeline)
 notebook_transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -171,6 +175,7 @@ WELLNESS_KNOWLEDGE_BASE = [
 class RagRecommendationEngine:
     @classmethod
     def retrieve_context(cls, detected_condition: str) -> str:
+        # Simplified string-matching retrieval (expand to vector-db later if desired)
         matched = [doc["text"] for doc in WELLNESS_KNOWLEDGE_BASE if doc["condition"].lower() in detected_condition.lower()]
         return matched[0] if matched else WELLNESS_KNOWLEDGE_BASE[-1]["text"]
 
@@ -198,16 +203,19 @@ class RagRecommendationEngine:
                 max_tokens=200
             )
             response_text = resp.choices[0].message.content.strip()
+            # Clean up the output into a list
             bullets = [line.strip().lstrip('-').lstrip('*').strip() for line in response_text.split('\n') if line.strip()]
             return bullets[:3] if len(bullets) >= 3 else bullets
             
         except Exception as e:
             print(f"Groq API Error in RAG: {e}")
+            # Fallback
             return [
                 f"Implement specific protocols tailored to your {condition}.",
                 f"Address your {stress}% stress baseline through down-regulation.",
                 f"Maintain deep hydration frameworks considering your {hydration}% fluid index."
             ]
+
 
 # ── LIFESPAN & FASTAPI INITIALIZATION ───────────────────────────────────
 
@@ -217,14 +225,12 @@ ae_model = None
 db = None
 users_col = None
 scans_col = None
-chats_col = None
-ai_diagnosis_col = None
 mongo_client = None
 
 @asynccontextmanager
 async def lifespan(application: "FastAPI"):
     global body_model, disease_model, ae_model
-    global db, users_col, scans_col, chats_col, ai_diagnosis_col, mongo_client
+    global db, users_col, scans_col, mongo_client
 
     if not MONGODB_URI:
         raise RuntimeError("MONGODB_URI is missing.")
@@ -236,15 +242,11 @@ async def lifespan(application: "FastAPI"):
     db = mongo_client[DATABASE_NAME]
     users_col = db["users"]
     scans_col = db["scans"]
-    chats_col = db["chats"]               # NEW: Storage for chat history
-    ai_diagnosis_col = db["ai_diagnosis"] # NEW: Storage for detailed AI reports
 
     await users_col.create_index("email", unique=True, background=True)
     await users_col.create_index("user_id", unique=True, background=True)
     await scans_col.create_index("scan_id", unique=True, background=True)
     await scans_col.create_index("user_id", background=True)
-    await chats_col.create_index("session_id", unique=True, background=True)
-    await ai_diagnosis_col.create_index("session_id", unique=True, background=True)
 
     body_model    = BodyPartClassifier(num_classes=10).to(DEVICE)
     disease_model = SkinDiseaseModelWithGradCAM(num_classes=len(DISEASE_CLASSES)).to(DEVICE)
@@ -252,7 +254,7 @@ async def lifespan(application: "FastAPI"):
 
     for fname, target_m in [
         ("body_classifier.pth", body_model),
-        ("efficientnet_best.pt", disease_model), 
+        ("efficientnet_best.pt", disease_model), # Updated to load notebook's model
         ("patch_autoencoder.pth", ae_model)
     ]:
         path = os.path.join(CHECKPOINT_DIR, fname)
@@ -271,7 +273,7 @@ async def lifespan(application: "FastAPI"):
 
 app = FastAPI(
     title="DermatCV Enterprise Wellness Analytics Core",
-    version="2.4.0",
+    version="2.3.0",
     lifespan=lifespan
 )
 
@@ -284,6 +286,7 @@ app.add_middleware(
 )
 
 app.mount("/static", StaticFiles(directory=STORAGE_DIR), name="static")
+
 
 # ── UTILS ───────────────────────────────────────────────────────────────
 
@@ -300,6 +303,7 @@ def compute_gradcam_patches(
     N: int = 4,
     P: int = 4,
 ) -> List[tuple]:
+    """Returns top-P (score, bbox) tuples from an N×N GradCAM grid."""
     H, W = image_tensor.shape[2], image_tensor.shape[3]
     patch_h, patch_w = H // N, W // N
 
@@ -344,9 +348,6 @@ class UserCreate(BaseModel):
     full_name: str
     email: str
     password: Optional[str] = None
-    age: int
-    height: int
-    gender: str
 
 class UserLogin(BaseModel):
     email   : str
@@ -361,7 +362,7 @@ class HyperParams(BaseModel):
     denied_weight_mult: float = Field(default=0.15, description="Multiplier when symptom denied")
 
 class InitialDiagnosticRequest(BaseModel):
-    user_id: Optional[str] = None  
+    user_id: Optional[str] = None  # Added to fetch ML scan history
     symptom_text: str
     hyperparams: Optional[HyperParams] = HyperParams()
 
@@ -369,22 +370,11 @@ class AnswerRequest(BaseModel):
     session_id: str
     answer: str
 
+class UpdateGraphRequest(BaseModel):
+    data: List[Dict[str, str]]
+
+
 # ── CORE ROUTES ─────────────────────────────────────────────────────────
-
-@app.get("/api/reports/download/{filename}", tags=["System"])
-async def download_report(filename: str):
-    """Serve the final generated detailed AI report from the vault."""
-    safe_filename = os.path.basename(filename) 
-    file_path = os.path.join(SESSION_DIR, safe_filename)
-    
-    if os.path.exists(file_path):
-        return FileResponse(
-            path=file_path, 
-            filename=safe_filename, 
-            media_type='text/plain' 
-        )
-    raise HTTPException(status_code=404, detail="Report file not found")
-
 @app.get("/api/history/{user_id}", tags=["Core Pipeline"])
 async def get_scan_history(user_id: str):
     cursor = scans_col.find({"user_id": user_id}).sort("timestamp", -1)
@@ -419,6 +409,10 @@ async def get_scan_history(user_id: str):
         ],
     }
 
+# Make sure this block remains at the absolute bottom of app.py
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+
 @app.post("/api/users", tags=["User Engine"])
 async def create_user(user: UserCreate):
     if await users_col.find_one({"email": user.email}):
@@ -427,7 +421,7 @@ async def create_user(user: UserCreate):
     user_id   = str(uuid.uuid4())[:8]
     now       = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    doc = {"user_id": user_id, "full_name": user.full_name, "email": user.email,"age": user.age,"height": user.height,"gender": user.gender, "password": hashed_pw, "created_at": now, "total_scans": 0, "last_scan_at": None}
+    doc = {"user_id": user_id, "full_name": user.full_name, "email": user.email, "password": hashed_pw, "created_at": now, "total_scans": 0, "last_scan_at": None}
     await users_col.insert_one(doc)
     return {"status": "success", "user_id": user_id, "full_name": user.full_name, "created_at": now}
 
@@ -470,6 +464,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     blur_score, brightness_score = run_quality_checks(native_img)
     h_nat, w_nat = native_img.shape[:2]
 
+    # Face Detection Pipeline
     rgb_img = cv2.cvtColor(native_img, cv2.COLOR_BGR2RGB)
     mp_face = mp.solutions.face_detection
     with mp_face.FaceDetection(model_selection=1, min_detection_confidence=0.4) as fd:
@@ -490,12 +485,15 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     if skin_roi.size == 0:
         skin_roi = native_img.copy()
 
+    # 1. Body Part Inference (Simple resize for mock architecture)
     full_224 = cv2.resize(native_img, (224, 224))
     body_tensor = torch.tensor(full_224, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0).to(DEVICE) / 255.0
     with torch.no_grad():
         body_logits = body_model(body_tensor)
         detected_body_part = BODY_CLASSES[torch.argmax(body_logits).item()]
 
+    # 2. Disease Classification & GradCAM (Notebook Architecture Integration)
+    # Applying the precise standardizations established in the notebook
     pil_roi = Image.fromarray(cv2.cvtColor(skin_roi, cv2.COLOR_BGR2RGB))
     input_tensor = notebook_transform(pil_roi).unsqueeze(0).to(DEVICE).requires_grad_(True)
     
@@ -503,6 +501,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     detected_class_index = torch.argmax(disease_logits, dim=1).item()
     detected_disease_condition = DISEASE_CLASSES[detected_class_index]
 
+    # GradCAM patch generation on the notebook architecture
     top_patches = compute_gradcam_patches(input_tensor, disease_model, N=4, P=4)
 
     annotated = cv2.resize(skin_roi, (224, 224)).copy()
@@ -513,6 +512,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     proc_fname = f"{scan_id}_proc.jpg"
     cv2.imwrite(os.path.join(STORAGE_DIR, proc_fname), annotated)
 
+    # 3. Patch Autoencoder extraction
     x1, y1, x2, y2 = top_patches[0][1]
     patch_region = input_tensor[:, :, max(0, y1):min(224, y2), max(0, x1):min(224, x2)]
     if patch_region.shape[2] < 2 or patch_region.shape[3] < 2:
@@ -528,6 +528,7 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
     hydration_level = int(100 - (abs(v[2]) * 100) % 100)
     overall_score   = int((hydration_level + (100 - stress_index) + (100 - fatigue_index)) // 3)
 
+    # 4. Generative RAG Inference
     recommendations = RagRecommendationEngine.generate_personalized_interventions(
         condition=detected_disease_condition,
         stress=stress_index,
@@ -562,17 +563,16 @@ async def analyze_image(user_id: str, file: UploadFile = File(...)):
 # ── DIAGNOSTIC GRAPH / RL ROUTES ────────────────────────────────────────
 
 class DiagnosticSession:
-    def __init__(self, session_id: str,user_id: str, ml_predictions: list, hyperparams: dict, user_query: str = "", scan_context: str = ""):
+    def __init__(self, session_id: str, ml_predictions: list, hyperparams: dict, user_query: str = "", scan_context: str = ""):
         self.session_id = session_id
-        self.user_id= user_id
         self.started_at = datetime.utcnow().isoformat() + "Z"
         self.ml_predictions = ml_predictions
         self.hyperparams = hyperparams
-        self.user_query = user_query          
-        self.scan_context = scan_context      
+        self.user_query = user_query          # The user's initial doubt
+        self.scan_context = scan_context      # The ML output from MongoDB
         self.confirmed_symptoms = []
         self.denied_symptoms = []
-        self.qa_log = []                      
+        self.qa_log = []                      # Now stores full descriptive Q&A history
         self.score_history = []
         self.final_diagnosis = None
         self.termination_reason = ""
@@ -585,6 +585,19 @@ class DiagnosticSession:
         obj = cls.__new__(cls)
         obj.__dict__.update(d)
         return obj
+
+    def save(self):
+        path = os.path.join(SESSION_DIR, f"session_{self.session_id}.json")
+        with open(path, "w") as f:
+            json.dump(self.to_dict(), f, indent=2, default=str)
+        return path
+
+    @staticmethod
+    def load(session_id: str):
+        path = os.path.join(SESSION_DIR, f"session_{session_id}.json")
+        if not os.path.exists(path): raise FileNotFoundError()
+        with open(path) as f: return DiagnosticSession.from_dict(json.load(f))
+
 
 def normalise_name(name: str) -> str: return re.sub(r"\s+", " ", name.strip().lower())
 
@@ -631,14 +644,25 @@ def pick_discriminating_symptom(ranked, asked_symptoms, top_n=4):
             best_ig, best_sym = ig, sym
     return best_sym
 
+# def generate_question(symptom: str, top_diseases: list) -> str:
+#     prompt = f"Current top candidate diagnoses: {', '.join(top_diseases[:4])}. Ask the patient ONE clear yes/no question to find out whether they have the symptom: '{symptom}'. Return ONLY the question text."
+#     resp = groq_client.chat.completions.create(model=SMALL_MODEL, messages=[{"role": "user", "content": prompt}], temperature=0.6, max_tokens=80)
+#     return resp.choices[0].message.content.strip().strip('"')
+
+# def parse_yes_no(answer: str):
+#     low = answer.lower().strip()
+#     if any(t in low for t in ["yes", "yeah", "yep", "true"]): return True
+#     if any(t in low for t in ["no", "nope", "not", "false"]): return False
+#     return None
+
 
 async def fetch_user_scan_context(user_id: Optional[str]) -> str:
-    print(f"Fetching scan context for user_id: {user_id}")
-    if not user_id: return "No prior computer vision scan data given."
+    """Fetches the user's latest ML CV pipeline outputs from MongoDB to ground the LLM."""
+    if not user_id: return "No prior computer vision scan data available."
+    
     cursor = scans_col.find({"user_id": user_id}).sort("timestamp", -1).limit(2)
-    user  = users_col.findOne({"user_id":user_id})
     scans = await cursor.to_list(length=None)
-    print(f"Retrieved {len(scans)} scans for user_id: {user_id}")
+    
     if not scans: return "No prior computer vision scan data available."
     
     context_parts = []
@@ -647,27 +671,27 @@ async def fetch_user_scan_context(user_id: Optional[str]) -> str:
             f"Scan {i+1} ({s['timestamp']}): ML detected '{s.get('detected_condition', 'Unknown')}' "
             f"on {s.get('detected_body_part', 'Unknown')} (Stress: {s.get('stress_index', 0)}%, "
             f"Hydration: {s.get('hydration_level', 0)}%)."
-            f"The User specified their medical gender as {user.gender}, an age of {user.age}, having height {user.height} and weight {"60kg"} "
         )
     return " | ".join(context_parts)
 
 def generate_contextual_question(symptom: str, top_diseases: list, session: DiagnosticSession) -> str:
-    history_text = "\n".join([f"Q: {log['question']}\nA: {log['answer']}" for log in session.qa_log[-5:]])
-    asked_symptoms = [log['symptom'] for log in session.qa_log]
+    """Generates a dynamic, conversational question using full conversation state and ML history."""
+    history_text = "\n".join([f"Q: {log['question']}\nA: {log['answer']}" for log in session.qa_log[-3:]])
     
     prompt = (
         f"You are an empathetic, expert AI clinical assistant. \n"
         f"User's initial doubt: '{session.user_query}'\n"
-        f"Already asked about: {', '.join(asked_symptoms)}\n"
+        f"User's recent ML Scan Data: {session.scan_context}\n"
         f"Current working hypotheses: {', '.join(top_diseases[:3])}\n"
         f"Recent conversation history:\n{history_text}\n\n"
-        f"TASK: To narrow down the diagnosis, ask about the NEW symptom: '{symptom}'. "
-        f"DO NOT repeat previous questions. Describe what the symptom might feel or look like. "
+        f"TASK: To narrow down the diagnosis, we need to know if the user is experiencing: '{symptom}'. "
+        f"Ask the user ONE highly descriptive, conversational question to figure this out. "
+        f"Do not sound robotic. Do not just ask a yes/no question; describe what the symptom might feel or look like so they can accurately answer. "
         f"Output ONLY the question text."
     )
     
     resp = groq_client.chat.completions.create(
-        model=LLM_MODEL, 
+        model=LLM_MODEL, # Upgraded to the larger model for better conversational nuance
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
         max_tokens=150
@@ -675,6 +699,7 @@ def generate_contextual_question(symptom: str, top_diseases: list, session: Diag
     return resp.choices[0].message.content.strip().strip('"')
 
 def analyze_user_answer(question: str, answer: str, target_symptom: str) -> Optional[bool]:
+    """Uses LLM to evaluate free-text user responses instead of hardcoded keyword matching."""
     prompt = (
         f"Question asked to patient: '{question}'\n"
         f"Patient's exact reply: '{answer}'\n\n"
@@ -695,75 +720,67 @@ def analyze_user_answer(question: str, answer: str, target_symptom: str) -> Opti
     if "DENY" in result: return False
     return None
 
-async def generate_and_save_final_report(session: DiagnosticSession, diagnosis: dict):
-    """Hits the LLM to generate the final detailed report and the exact 3 things to improve."""
-    history_text = "\n".join([f"Q: {log['question']}\nA: {log['answer']}" for log in session.qa_log])
-    prompt = (
-        f"You are an expert AI clinician providing a final assessment.\n"
-        f"User's initial query: {session.user_query}\n"
-        f"ML Scan Context: {session.scan_context}\n"
-        f"Symptom Q&A History:\n{history_text}\n"
-        f"Final Diagnosis: {diagnosis['disease']} (Confidence: {diagnosis['score']})\n\n"
-        f"Provide a JSON response containing exactly two keys:\n"
-        f"1. 'detailed_report': A comprehensive summary of the condition, explaining why this conclusion was reached based on the symptoms.\n"
-        f"2. 'improvement_advice': A JSON array of exactly 3 specific, actionable health tips to improve their condition."
-    )
-    
-    resp = groq_client.chat.completions.create(
-        model=LLM_MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3,
-        response_format={"type": "json_object"}
-    )
-    result = json.loads(resp.choices[0].message.content)
-    
-    report_text = result.get("detailed_report", "Evaluation successful, but detailed report generation timed out.")
-    advice_list = result.get("improvement_advice", ["Rest well.", "Stay hydrated.", "Consult a human physician."])
 
-    report_filename = f"report_{session.session_id}.txt"
-    report_path = os.path.join(SESSION_DIR, report_filename)
+# @app.post("/api/diagnose/start", tags=["Diagnostic Loop"])
+# async def start_diagnosis(req: InitialDiagnosticRequest):
+#     print("Received initial diagnostic request with symptoms:", req.symptom_text)
+#     print("Using got request:", req.dict())
+#     session_id = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+#     raw_syms = [s.strip() for s in re.split(r"[,;]+", req.symptom_text) if len(s.strip()) > 2]
+#     ml_predictions = [{"disease": d, "confidence": 0.5} for d in raw_syms] 
+#     session = DiagnosticSession(session_id, ml_predictions, req.hyperparams.model_dump())
+#     candidate_diseases = list({n for n in G.nodes if G.nodes[n].get("node_type") == "disease"})[:session.hyperparams['top_k_candidates']]
     
-    # Save text report to disk for download endpoint
-    with open(report_path, "w", encoding="utf-8") as f: 
-        f.write(f"--- AI DIAGNOSTIC WELLNESS REPORT ---\n")
-        f.write(f"FINAL DIAGNOSIS: {diagnosis['disease']}\n")
-        f.write(f"CONFIDENCE SCORE: {diagnosis['score']}\n\n")
-        f.write(f"--- DETAILED ASSESSMENT ---\n{report_text}\n\n")
-        f.write(f"--- ACTIONABLE ADVICE ---\n")
-        for idx, tip in enumerate(advice_list, 1):
-            f.write(f"{idx}. {tip}\n")
-            
-    # Persist the final structured JSON object to MongoDB
-    doc = {
-        "session_id": session.session_id,
-        "user_query": session.user_query,
-        "diagnosis": diagnosis["disease"],
-        "score": diagnosis["score"],
-        "detailed_report": report_text,
-        "improvement_advice": advice_list,
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-        "download_url": f"/api/reports/download/{report_filename}"
-    }
-    await ai_diagnosis_col.insert_one(doc)
+#     ranked = compute_scores(candidate_diseases, [], [], ml_predictions, session.hyperparams)
+#     session.score_history.append(ranked)
     
-    return report_filename
-
-@app.get("/api/diagnose/history/{user_id}", tags=["Diagnostic Loop"])
-async def get_diagnostic_history(user_id: str):
-    """Retrieves the most recent diagnostic chat session for the user."""
-    print(f"Fetching diagnostic history for user_id: {user_id}")
-    # Find the most recently created session for this user
-    session_data = await chats_col.find_one(
-        {"user_id": user_id}, 
-        sort=[("started_at", -1)]
-    )
-    print(f"Retrieved session data: {session_data}")
-    
-    if not session_data:
-        return {"user_id": user_id, "history": [], "message": "No diagnostic sessions found."}
+#     symptom_to_ask = pick_discriminating_symptom(ranked, set())
+#     if not symptom_to_ask: raise HTTPException(status_code=400, detail="Cannot generate discriminating question from input.")
         
-    session_data.pop("_id", None) # Clean up MongoDB _id before sending
-    return session_data
+#     question_text = generate_question(symptom_to_ask, [r["disease"] for r in ranked[:4]])
+#     session.current_turn = 1
+#     session.save()
+#     return {"session_id": session_id, "turn": session.current_turn, "question": question_text, "target_symptom": symptom_to_ask, "status": "ongoing"}
+
+# @app.post("/api/diagnose/answer", tags=["Diagnostic Loop"])
+# async def process_answer(req: AnswerRequest):
+#     try: session = DiagnosticSession.load(req.session_id)
+#     except FileNotFoundError: raise HTTPException(status_code=404, detail="Session not found")
+
+#     last_symptom = session.qa_log[-1]["symptom"] if session.qa_log else None
+#     if last_symptom:
+#         interpreted = parse_yes_no(req.answer)
+#         if interpreted is True: session.confirmed_symptoms.append(last_symptom)
+#         elif interpreted is False: session.denied_symptoms.append(last_symptom)
+#         session.qa_log.append({"turn": session.current_turn, "symptom": last_symptom, "answer": req.answer, "interpreted_yes": interpreted})
+
+#     candidate_diseases = list({n for n in G.nodes if G.nodes[n].get("node_type") == "disease"})
+#     ranked = compute_scores(candidate_diseases, session.confirmed_symptoms, session.denied_symptoms, session.ml_predictions, session.hyperparams)
+#     session.score_history.append(ranked)
+
+#     hp = session.hyperparams
+#     is_confident = len(ranked) >= 2 and (ranked[0]["score"] / max(ranked[1]["score"], 1e-9) >= hp['confidence_threshold'])
+    
+#     if is_confident or session.current_turn >= hp['max_questions']:
+#         session.termination_reason = "Confidence Reached" if is_confident else "Max Questions Reached"
+#         session.final_diagnosis = ranked[0]
+#         session.save()
+#         report_path = os.path.join(SESSION_DIR, f"report_{session.session_id}.txt")
+#         with open(report_path, "w") as f: f.write(f"FINAL DIAGNOSIS: {session.final_diagnosis['disease']} \nSCORE: {session.final_diagnosis['score']}")
+#         return {"status": "complete", "diagnosis": session.final_diagnosis, "ranked_differentials": ranked[:3], "report_path": report_path}
+
+#     asked_syms = {log["symptom"] for log in session.qa_log}
+#     symptom_to_ask = pick_discriminating_symptom(ranked, asked_syms, top_n=4)
+    
+#     if not symptom_to_ask:
+#         session.final_diagnosis = ranked[0]
+#         session.save()
+#         return {"status": "complete", "diagnosis": session.final_diagnosis}
+
+#     question_text = generate_question(symptom_to_ask, [r["disease"] for r in ranked[:4]])
+#     session.current_turn += 1
+#     session.save()
+#     return {"status": "ongoing", "turn": session.current_turn, "question": question_text, "target_symptom": symptom_to_ask}
 
 
 @app.post("/api/diagnose/start", tags=["Diagnostic Loop"])
@@ -771,14 +788,17 @@ async def start_diagnosis(req: InitialDiagnosticRequest):
     print(f"Received initial diagnostic request: {req.symptom_text}")
     
     session_id = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    
+    # Extract raw initial concepts to seed the graph
     raw_syms = [s.strip() for s in re.split(r"[,;]+", req.symptom_text) if len(s.strip()) > 2]
     ml_predictions = [{"disease": d, "confidence": 0.5} for d in raw_syms] 
-    print("fetching ml preds for",req.user_id)
+    
+    # 1. Fetch ML Scan Context
     scan_context = await fetch_user_scan_context(req.user_id)
     
+    # 2. Initialize Stateful Session
     session = DiagnosticSession(
         session_id=session_id, 
-        user_id = req.user_id,
         ml_predictions=ml_predictions, 
         hyperparams=req.hyperparams.model_dump(),
         user_query=req.symptom_text,
@@ -793,15 +813,12 @@ async def start_diagnosis(req: InitialDiagnosticRequest):
     if not symptom_to_ask: 
         raise HTTPException(status_code=400, detail="Cannot generate discriminating symptom from input.")
         
+    # 3. Generate AI Contextual Question
     question_text = generate_contextual_question(symptom_to_ask, [r["disease"] for r in ranked[:4]], session)
     
     session.current_turn = 1
     session.qa_log.append({"turn": 1, "symptom": symptom_to_ask, "question": question_text, "answer": None, "interpreted_yes": None})
-    
-    # NEW: Persist fresh chat to MongoDB
-    doc_to_save = session.to_dict()
-    doc_to_save["user_id"] = req.user_id
-    await chats_col.insert_one(session.to_dict())
+    session.save()
     
     return {
         "session_id": session_id, 
@@ -813,15 +830,12 @@ async def start_diagnosis(req: InitialDiagnosticRequest):
 
 @app.post("/api/diagnose/answer", tags=["Diagnostic Loop"])
 async def process_answer(req: AnswerRequest):
-    # NEW: Load session state directly from MongoDB tracking
-    session_data = await chats_col.find_one({"session_id": req.session_id})
-    if not session_data:
-        raise HTTPException(status_code=404, detail="Session not found in Database")
-        
-    # Exclude MongoDB specific _id before mapping back to object
-    session_data.pop("_id", None)
-    session = DiagnosticSession.from_dict(session_data)
+    try: 
+        session = DiagnosticSession.load(req.session_id)
+    except FileNotFoundError: 
+        raise HTTPException(status_code=404, detail="Session not found")
 
+    # 1. Analyze previous answer using LLM
     last_log = session.qa_log[-1] if session.qa_log else None
     if last_log and last_log["answer"] is None:
         interpreted = analyze_user_answer(last_log["question"], req.answer, last_log["symptom"])
@@ -829,44 +843,47 @@ async def process_answer(req: AnswerRequest):
         if interpreted is True: session.confirmed_symptoms.append(last_log["symptom"])
         elif interpreted is False: session.denied_symptoms.append(last_log["symptom"])
         
+        # Update the log with the user's actual reply and the LLM's interpretation
         last_log["answer"] = req.answer
         last_log["interpreted_yes"] = interpreted
 
+    # 2. Re-compute hypothesis tree
     candidate_diseases = list({n for n in G.nodes if G.nodes[n].get("node_type") == "disease"})
     ranked = compute_scores(candidate_diseases, session.confirmed_symptoms, session.denied_symptoms, session.ml_predictions, session.hyperparams)
     session.score_history.append(ranked)
 
+    # 3. Check early-exit (Confidence reached or Max turns hit)
     hp = session.hyperparams
     is_confident = len(ranked) >= 2 and (ranked[0]["score"] / max(ranked[1]["score"], 1e-9) >= hp['confidence_threshold'])
     
     if is_confident or session.current_turn >= hp['max_questions']:
         session.termination_reason = "Confidence Reached" if is_confident else "Max Questions Reached"
         session.final_diagnosis = ranked[0]
+        session.save()
         
-        # NEW: Trigger intelligent LLM report creation and save to AI_Diagnosis collection
-        report_filename = await generate_and_save_final_report(session, session.final_diagnosis)
-        
-        await chats_col.update_one({"session_id": session.session_id, "user_id": session.user_id}, {"$set": session.to_dict()})
+        report_path = os.path.join(SESSION_DIR, f"report_{session.session_id}.txt")
+        with open(report_path, "w") as f: 
+            f.write(f"FINAL DIAGNOSIS: {session.final_diagnosis['disease']} \nSCORE: {session.final_diagnosis['score']}\n")
+            f.write(f"INITIAL QUERY: {session.user_query}\n")
+            f.write(f"ML SCANS: {session.scan_context}\n")
+            
         return {
             "status": "complete", 
             "diagnosis": session.final_diagnosis, 
             "ranked_differentials": ranked[:3], 
-            "report_download_url": f"/api/reports/download/{report_filename}"
+            "report_path": report_path
         }
 
+    # 4. Pick next target symptom
     asked_syms = {log["symptom"] for log in session.qa_log}
     symptom_to_ask = pick_discriminating_symptom(ranked, asked_syms, top_n=4)
     
     if not symptom_to_ask:
         session.final_diagnosis = ranked[0]
-        report_filename = await generate_and_save_final_report(session, session.final_diagnosis)
-        await chats_col.update_one({"session_id": session.session_id}, {"$set": session.to_dict()})
-        return {
-            "status": "complete", 
-            "diagnosis": session.final_diagnosis,
-            "report_download_url": f"/api/reports/download/{report_filename}"
-        }
+        session.save()
+        return {"status": "complete", "diagnosis": session.final_diagnosis}
 
+    # 5. Generate descriptive next question using full state
     question_text = generate_contextual_question(symptom_to_ask, [r["disease"] for r in ranked[:4]], session)
     
     session.current_turn += 1
@@ -877,9 +894,7 @@ async def process_answer(req: AnswerRequest):
         "answer": None, 
         "interpreted_yes": None
     })
-    
-    # NEW: Save updated state array into MongoDB
-    await chats_col.update_one({"session_id": session.session_id}, {"$set": session.to_dict()})
+    session.save()
     
     return {
         "status": "ongoing", 

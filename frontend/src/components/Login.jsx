@@ -30,9 +30,9 @@ const Login = ({ onLogin }) => {
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
-          <div className="logo">🧘‍♀️</div>
-          <h1>DermatCV Wellness Analytics</h1>
-          <p>Welcome back! Please login to your account</p>
+          <div className="logo">🛡️</div>
+          <h1>AyurGenX Enterprise</h1>
+          <p>Login to access a State of the Art Wellness ConputerVision Dashboard - AyurGenX</p>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
@@ -43,7 +43,7 @@ const Login = ({ onLogin }) => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Enter your system email"
               required
               autoComplete="email"
             />
@@ -56,7 +56,7 @@ const Login = ({ onLogin }) => {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="Enter your secure password"
               required
               autoComplete="current-password"
             />
@@ -65,13 +65,13 @@ const Login = ({ onLogin }) => {
           {error && <div className="error-message">{error}</div>}
 
           <button type="submit" disabled={loading} className="login-button">
-            {loading ? 'Logging in...' : 'Login'}
+            {loading ? 'Verifying Credentials...' : 'Login'}
           </button>
         </form>
 
         <div className="login-footer">
           <p>
-            Don't have an account? <Link to="/signup">Sign up here</Link>
+            No active profile? <Link to="/signup">Create an account here</Link>
           </p>
         </div>
       </div>

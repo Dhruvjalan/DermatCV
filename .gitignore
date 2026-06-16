@@ -40,5 +40,6 @@ backend/checkpoints/body_classifier.pth
 backend/checkpoints/class_mapping.json
 backend/checkpoints/disease_classifier.pth
 backend/checkpoints/patch_autoencoder.pth
+backend/venv
 # Logs
 *.log

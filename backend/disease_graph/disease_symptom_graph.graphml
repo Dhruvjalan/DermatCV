@@ -1,0 +1,4404 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d3" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d2" for="node" attr.name="count" attr.type="long"/>
+<key id="d1" for="node" attr.name="name" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_type" attr.type="string"/>
+<graph edgedefault="directed"><node id="antihypertensives poisoning">
+  <data key="d0">disease</data>
+  <data key="d1">antihypertensives poisoning</data>
+  <data key="d2">2</data>
+</node>
+<node id="dizziness">
+  <data key="d0">symptom</data>
+  <data key="d1">dizziness</data>
+  <data key="d2">4</data>
+</node>
+<node id="low blood pressure">
+  <data key="d0">symptom</data>
+  <data key="d1">low blood pressure</data>
+  <data key="d2">6</data>
+</node>
+<node id="slow heart rate">
+  <data key="d0">symptom</data>
+  <data key="d1">slow heart rate</data>
+  <data key="d2">4</data>
+</node>
+<node id="nausea">
+  <data key="d0">symptom</data>
+  <data key="d1">nausea</data>
+  <data key="d2">8</data>
+</node>
+<node id="vomiting">
+  <data key="d0">symptom</data>
+  <data key="d1">vomiting</data>
+  <data key="d2">8</data>
+</node>
+<node id="granuloma annulare: overview">
+  <data key="d0">disease</data>
+  <data key="d1">granuloma annulare: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="rash">
+  <data key="d0">symptom</data>
+  <data key="d1">rash</data>
+  <data key="d2">16</data>
+</node>
+<node id="ring-shaped patch">
+  <data key="d0">symptom</data>
+  <data key="d1">ring-shaped patch</data>
+  <data key="d2">2</data>
+</node>
+<node id="raised skin">
+  <data key="d0">symptom</data>
+  <data key="d1">raised skin</data>
+  <data key="d2">4</data>
+</node>
+<node id="itching">
+  <data key="d0">symptom</data>
+  <data key="d1">itching</data>
+  <data key="d2">31</data>
+</node>
+<node id="pain">
+  <data key="d0">symptom</data>
+  <data key="d1">pain</data>
+  <data key="d2">20</data>
+</node>
+<node id="dry shampoo: dermatologists' tips for getting your best results">
+  <data key="d0">disease</data>
+  <data key="d1">dry shampoo: dermatologists' tips for getting your best results</data>
+  <data key="d2">2</data>
+</node>
+<node id="scalp irritation">
+  <data key="d0">symptom</data>
+  <data key="d1">scalp irritation</data>
+  <data key="d2">2</data>
+</node>
+<node id="are you ready to manage your child's eczema triggers?">
+  <data key="d0">disease</data>
+  <data key="d1">are you ready to manage your child's eczema triggers?</data>
+  <data key="d2">2</data>
+</node>
+<node id="itchy skin">
+  <data key="d0">symptom</data>
+  <data key="d1">itchy skin</data>
+  <data key="d2">10</data>
+</node>
+<node id="red skin">
+  <data key="d0">symptom</data>
+  <data key="d1">red skin</data>
+  <data key="d2">3</data>
+</node>
+<node id="dry skin">
+  <data key="d0">symptom</data>
+  <data key="d1">dry skin</data>
+  <data key="d2">12</data>
+</node>
+<node id="rosacea: insider secrets">
+  <data key="d0">disease</data>
+  <data key="d1">rosacea: insider secrets</data>
+  <data key="d2">2</data>
+</node>
+<node id="redness">
+  <data key="d0">symptom</data>
+  <data key="d1">redness</data>
+  <data key="d2">28</data>
+</node>
+<node id="bumps">
+  <data key="d0">symptom</data>
+  <data key="d1">bumps</data>
+  <data key="d2">4</data>
+</node>
+<node id="visible blood vessels">
+  <data key="d0">symptom</data>
+  <data key="d1">visible blood vessels</data>
+  <data key="d2">2</data>
+</node>
+<node id="coagulation (bleeding) disorder">
+  <data key="d0">disease</data>
+  <data key="d1">coagulation (bleeding) disorder</data>
+  <data key="d2">2</data>
+</node>
+<node id="easy bruising">
+  <data key="d0">symptom</data>
+  <data key="d1">easy bruising</data>
+  <data key="d2">2</data>
+</node>
+<node id="prolonged bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">prolonged bleeding</data>
+  <data key="d2">2</data>
+</node>
+<node id="excessive bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">excessive bleeding</data>
+  <data key="d2">2</data>
+</node>
+<node id="nosebleeds">
+  <data key="d0">symptom</data>
+  <data key="d1">nosebleeds</data>
+  <data key="d2">2</data>
+</node>
+<node id="heavy menstrual bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">heavy menstrual bleeding</data>
+  <data key="d2">2</data>
+</node>
+<node id="acinic cell carcinoma">
+  <data key="d0">disease</data>
+  <data key="d1">acinic cell carcinoma</data>
+  <data key="d2">2</data>
+</node>
+<node id="facial changes">
+  <data key="d0">symptom</data>
+  <data key="d1">facial changes</data>
+  <data key="d2">4</data>
+</node>
+<node id="lump">
+  <data key="d0">symptom</data>
+  <data key="d1">lump</data>
+  <data key="d2">4</data>
+</node>
+<node id="swelling">
+  <data key="d0">symptom</data>
+  <data key="d1">swelling</data>
+  <data key="d2">32</data>
+</node>
+<node id="skin cancer types: squamous cell carcinoma symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: squamous cell carcinoma symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="rough skin">
+  <data key="d0">symptom</data>
+  <data key="d1">rough skin</data>
+  <data key="d2">6</data>
+</node>
+<node id="reddish skin">
+  <data key="d0">symptom</data>
+  <data key="d1">reddish skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="scaly area">
+  <data key="d0">symptom</data>
+  <data key="d1">scaly area</data>
+  <data key="d2">2</data>
+</node>
+<node id="open sore">
+  <data key="d0">symptom</data>
+  <data key="d1">open sore</data>
+  <data key="d2">2</data>
+</node>
+<node id="brown spot">
+  <data key="d0">symptom</data>
+  <data key="d1">brown spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="firm growth">
+  <data key="d0">symptom</data>
+  <data key="d1">firm growth</data>
+  <data key="d2">2</data>
+</node>
+<node id="wart-like growth">
+  <data key="d0">symptom</data>
+  <data key="d1">wart-like growth</data>
+  <data key="d2">2</data>
+</node>
+<node id="horn-like growth">
+  <data key="d0">symptom</data>
+  <data key="d1">horn-like growth</data>
+  <data key="d2">2</data>
+</node>
+<node id="soreness">
+  <data key="d0">symptom</data>
+  <data key="d1">soreness</data>
+  <data key="d2">2</data>
+</node>
+<node id="tenderness">
+  <data key="d0">symptom</data>
+  <data key="d1">tenderness</data>
+  <data key="d2">8</data>
+</node>
+<node id="numbness">
+  <data key="d0">symptom</data>
+  <data key="d1">numbness</data>
+  <data key="d2">6</data>
+</node>
+<node id="pins-and-needles sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">pins-and-needles sensation</data>
+  <data key="d2">2</data>
+</node>
+<node id="bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">bleeding</data>
+  <data key="d2">12</data>
+</node>
+<node id="skin discoloration">
+  <data key="d0">symptom</data>
+  <data key="d1">skin discoloration</data>
+  <data key="d2">4</data>
+</node>
+<node id="psoriasis treatment: synthetic vitamin d">
+  <data key="d0">disease</data>
+  <data key="d1">psoriasis treatment: synthetic vitamin d</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin irritation">
+  <data key="d0">symptom</data>
+  <data key="d1">skin irritation</data>
+  <data key="d2">4</data>
+</node>
+<node id="burning">
+  <data key="d0">symptom</data>
+  <data key="d1">burning</data>
+  <data key="d2">12</data>
+</node>
+<node id="peeling">
+  <data key="d0">symptom</data>
+  <data key="d1">peeling</data>
+  <data key="d2">2</data>
+</node>
+<node id="dryness">
+  <data key="d0">symptom</data>
+  <data key="d1">dryness</data>
+  <data key="d2">6</data>
+</node>
+<node id="high calcium levels">
+  <data key="d0">symptom</data>
+  <data key="d1">high calcium levels</data>
+  <data key="d2">2</data>
+</node>
+<node id="should i treat my psoriasis?">
+  <data key="d0">disease</data>
+  <data key="d1">should i treat my psoriasis?</data>
+  <data key="d2">2</data>
+</node>
+<node id="bronchitis">
+  <data key="d0">disease</data>
+  <data key="d1">bronchitis</data>
+  <data key="d2">2</data>
+</node>
+<node id="persistent cough">
+  <data key="d0">symptom</data>
+  <data key="d1">persistent cough</data>
+  <data key="d2">2</data>
+</node>
+<node id="chest congestion">
+  <data key="d0">symptom</data>
+  <data key="d1">chest congestion</data>
+  <data key="d2">2</data>
+</node>
+<node id="fatigue">
+  <data key="d0">symptom</data>
+  <data key="d1">fatigue</data>
+  <data key="d2">12</data>
+</node>
+<node id="how to prevent and treat frostbite">
+  <data key="d0">disease</data>
+  <data key="d1">how to prevent and treat frostbite</data>
+  <data key="d2">2</data>
+</node>
+<node id="stinging">
+  <data key="d0">symptom</data>
+  <data key="d1">stinging</data>
+  <data key="d2">6</data>
+</node>
+<node id="throbbing">
+  <data key="d0">symptom</data>
+  <data key="d1">throbbing</data>
+  <data key="d2">2</data>
+</node>
+<node id="prickling sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">prickling sensation</data>
+  <data key="d2">2</data>
+</node>
+<node id="pseudohypoparathyroidism">
+  <data key="d0">disease</data>
+  <data key="d1">pseudohypoparathyroidism</data>
+  <data key="d2">2</data>
+</node>
+<node id="low calcium levels">
+  <data key="d0">symptom</data>
+  <data key="d1">low calcium levels</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle spasms">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle spasms</data>
+  <data key="d2">2</data>
+</node>
+<node id="short stature">
+  <data key="d0">symptom</data>
+  <data key="d1">short stature</data>
+  <data key="d2">2</data>
+</node>
+<node id="rounded face">
+  <data key="d0">symptom</data>
+  <data key="d1">rounded face</data>
+  <data key="d2">2</data>
+</node>
+<node id="acute otitis media">
+  <data key="d0">disease</data>
+  <data key="d1">acute otitis media</data>
+  <data key="d2">2</data>
+</node>
+<node id="ear pain">
+  <data key="d0">symptom</data>
+  <data key="d1">ear pain</data>
+  <data key="d2">4</data>
+</node>
+<node id="fever">
+  <data key="d0">symptom</data>
+  <data key="d1">fever</data>
+  <data key="d2">16</data>
+</node>
+<node id="fluid drainage">
+  <data key="d0">symptom</data>
+  <data key="d1">fluid drainage</data>
+  <data key="d2">4</data>
+</node>
+<node id="hearing loss">
+  <data key="d0">symptom</data>
+  <data key="d1">hearing loss</data>
+  <data key="d2">8</data>
+</node>
+<node id="cyst of the eyelid">
+  <data key="d0">disease</data>
+  <data key="d1">cyst of the eyelid</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful lump">
+  <data key="d0">symptom</data>
+  <data key="d1">painful lump</data>
+  <data key="d2">2</data>
+</node>
+<node id="chancroid">
+  <data key="d0">disease</data>
+  <data key="d1">chancroid</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful ulcers">
+  <data key="d0">symptom</data>
+  <data key="d1">painful ulcers</data>
+  <data key="d2">2</data>
+</node>
+<node id="swollen lymph nodes">
+  <data key="d0">symptom</data>
+  <data key="d1">swollen lymph nodes</data>
+  <data key="d2">10</data>
+</node>
+<node id="concussion">
+  <data key="d0">disease</data>
+  <data key="d1">concussion</data>
+  <data key="d2">2</data>
+</node>
+<node id="headache">
+  <data key="d0">symptom</data>
+  <data key="d1">headache</data>
+  <data key="d2">8</data>
+</node>
+<node id="confusion">
+  <data key="d0">symptom</data>
+  <data key="d1">confusion</data>
+  <data key="d2">4</data>
+</node>
+<node id="memory problems">
+  <data key="d0">symptom</data>
+  <data key="d1">memory problems</data>
+  <data key="d2">2</data>
+</node>
+<node id="sensitivity to light">
+  <data key="d0">symptom</data>
+  <data key="d1">sensitivity to light</data>
+  <data key="d2">6</data>
+</node>
+<node id="sensitivity to noise">
+  <data key="d0">symptom</data>
+  <data key="d1">sensitivity to noise</data>
+  <data key="d2">2</data>
+</node>
+<node id="mood changes">
+  <data key="d0">symptom</data>
+  <data key="d1">mood changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="prurigo nodularis: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">prurigo nodularis: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="itchy bumps">
+  <data key="d0">symptom</data>
+  <data key="d1">itchy bumps</data>
+  <data key="d2">2</data>
+</node>
+<node id="intense itching">
+  <data key="d0">symptom</data>
+  <data key="d1">intense itching</data>
+  <data key="d2">4</data>
+</node>
+<node id="burning sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">burning sensation</data>
+  <data key="d2">4</data>
+</node>
+<node id="stinging sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">stinging sensation</data>
+  <data key="d2">4</data>
+</node>
+<node id="bugs crawling sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">bugs crawling sensation</data>
+  <data key="d2">2</data>
+</node>
+<node id="raised patches">
+  <data key="d0">symptom</data>
+  <data key="d1">raised patches</data>
+  <data key="d2">4</data>
+</node>
+<node id="dark spots">
+  <data key="d0">symptom</data>
+  <data key="d1">dark spots</data>
+  <data key="d2">8</data>
+</node>
+<node id="pebbly texture">
+  <data key="d0">symptom</data>
+  <data key="d1">pebbly texture</data>
+  <data key="d2">2</data>
+</node>
+<node id="thickening skin">
+  <data key="d0">symptom</data>
+  <data key="d1">thickening skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer types: basal cell carcinoma overview">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: basal cell carcinoma overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="slowly growing spot">
+  <data key="d0">symptom</data>
+  <data key="d1">slowly growing spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="non-healing spot">
+  <data key="d0">symptom</data>
+  <data key="d1">non-healing spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="epidermolysis bullosa: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">epidermolysis bullosa: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="blistering">
+  <data key="d0">symptom</data>
+  <data key="d1">blistering</data>
+  <data key="d2">2</data>
+</node>
+<node id="open wounds">
+  <data key="d0">symptom</data>
+  <data key="d1">open wounds</data>
+  <data key="d2">4</data>
+</node>
+<node id="anemia">
+  <data key="d0">symptom</data>
+  <data key="d1">anemia</data>
+  <data key="d2">2</data>
+</node>
+<node id="constipation">
+  <data key="d0">symptom</data>
+  <data key="d1">constipation</data>
+  <data key="d2">2</data>
+</node>
+<node id="dehydration">
+  <data key="d0">symptom</data>
+  <data key="d1">dehydration</data>
+  <data key="d2">4</data>
+</node>
+<node id="eye problems">
+  <data key="d0">symptom</data>
+  <data key="d1">eye problems</data>
+  <data key="d2">2</data>
+</node>
+<node id="hair loss">
+  <data key="d0">symptom</data>
+  <data key="d1">hair loss</data>
+  <data key="d2">18</data>
+</node>
+<node id="itchiness">
+  <data key="d0">symptom</data>
+  <data key="d1">itchiness</data>
+  <data key="d2">6</data>
+</node>
+<node id="malnutrition">
+  <data key="d0">symptom</data>
+  <data key="d1">malnutrition</data>
+  <data key="d2">2</data>
+</node>
+<node id="mouth sores">
+  <data key="d0">symptom</data>
+  <data key="d1">mouth sores</data>
+  <data key="d2">4</data>
+</node>
+<node id="nail loss">
+  <data key="d0">symptom</data>
+  <data key="d1">nail loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin infections">
+  <data key="d0">symptom</data>
+  <data key="d1">skin infections</data>
+  <data key="d2">2</data>
+</node>
+<node id="melanoma survivor? you really need to check your skin!">
+  <data key="d0">disease</data>
+  <data key="d1">melanoma survivor? you really need to check your skin!</data>
+  <data key="d2">2</data>
+</node>
+<node id="asymmetry">
+  <data key="d0">symptom</data>
+  <data key="d1">asymmetry</data>
+  <data key="d2">2</data>
+</node>
+<node id="border change">
+  <data key="d0">symptom</data>
+  <data key="d1">border change</data>
+  <data key="d2">2</data>
+</node>
+<node id="color change">
+  <data key="d0">symptom</data>
+  <data key="d1">color change</data>
+  <data key="d2">2</data>
+</node>
+<node id="diameter change">
+  <data key="d0">symptom</data>
+  <data key="d1">diameter change</data>
+  <data key="d2">2</data>
+</node>
+<node id="evolving spot">
+  <data key="d0">symptom</data>
+  <data key="d1">evolving spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="osteoarthritis">
+  <data key="d0">disease</data>
+  <data key="d1">osteoarthritis</data>
+  <data key="d2">2</data>
+</node>
+<node id="joint pain">
+  <data key="d0">symptom</data>
+  <data key="d1">joint pain</data>
+  <data key="d2">8</data>
+</node>
+<node id="stiffness">
+  <data key="d0">symptom</data>
+  <data key="d1">stiffness</data>
+  <data key="d2">4</data>
+</node>
+<node id="gastroenteritis (stomach flu)">
+  <data key="d0">disease</data>
+  <data key="d1">gastroenteritis (stomach flu)</data>
+  <data key="d2">2</data>
+</node>
+<node id="diarrhea">
+  <data key="d0">symptom</data>
+  <data key="d1">diarrhea</data>
+  <data key="d2">4</data>
+</node>
+<node id="abdominal pain">
+  <data key="d0">symptom</data>
+  <data key="d1">abdominal pain</data>
+  <data key="d2">10</data>
+</node>
+<node id="how to treat psoriasis at age 65 and beyond">
+  <data key="d0">disease</data>
+  <data key="d1">how to treat psoriasis at age 65 and beyond</data>
+  <data key="d2">2</data>
+</node>
+<node id="thinning skin">
+  <data key="d0">symptom</data>
+  <data key="d1">thinning skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="bruising">
+  <data key="d0">symptom</data>
+  <data key="d1">bruising</data>
+  <data key="d2">2</data>
+</node>
+<node id="infections">
+  <data key="d0">symptom</data>
+  <data key="d1">infections</data>
+  <data key="d2">4</data>
+</node>
+<node id="how to get rid of head lice when treatment fails">
+  <data key="d0">disease</data>
+  <data key="d1">how to get rid of head lice when treatment fails</data>
+  <data key="d2">2</data>
+</node>
+<node id="irritated skin">
+  <data key="d0">symptom</data>
+  <data key="d1">irritated skin</data>
+  <data key="d2">4</data>
+</node>
+<node id="marijuana abuse">
+  <data key="d0">disease</data>
+  <data key="d1">marijuana abuse</data>
+  <data key="d2">2</data>
+</node>
+<node id="impaired memory">
+  <data key="d0">symptom</data>
+  <data key="d1">impaired memory</data>
+  <data key="d2">2</data>
+</node>
+<node id="altered judgment">
+  <data key="d0">symptom</data>
+  <data key="d1">altered judgment</data>
+  <data key="d2">2</data>
+</node>
+<node id="anxiety">
+  <data key="d0">symptom</data>
+  <data key="d1">anxiety</data>
+  <data key="d2">8</data>
+</node>
+<node id="extrapyramidal effect of drugs">
+  <data key="d0">disease</data>
+  <data key="d1">extrapyramidal effect of drugs</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle stiffness">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle stiffness</data>
+  <data key="d2">2</data>
+</node>
+<node id="tremors">
+  <data key="d0">symptom</data>
+  <data key="d1">tremors</data>
+  <data key="d2">2</data>
+</node>
+<node id="involuntary movements">
+  <data key="d0">symptom</data>
+  <data key="d1">involuntary movements</data>
+  <data key="d2">2</data>
+</node>
+<node id="myasthenia gravis">
+  <data key="d0">disease</data>
+  <data key="d1">myasthenia gravis</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle weakness">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle weakness</data>
+  <data key="d2">4</data>
+</node>
+<node id="difficulty speaking">
+  <data key="d0">symptom</data>
+  <data key="d1">difficulty speaking</data>
+  <data key="d2">2</data>
+</node>
+<node id="eczema types: contact dermatitis diagnosis and treatment">
+  <data key="d0">disease</data>
+  <data key="d1">eczema types: contact dermatitis diagnosis and treatment</data>
+  <data key="d2">2</data>
+</node>
+<node id="gastrointestinal hemorrhage">
+  <data key="d0">disease</data>
+  <data key="d1">gastrointestinal hemorrhage</data>
+  <data key="d2">2</data>
+</node>
+<node id="vomiting blood">
+  <data key="d0">symptom</data>
+  <data key="d1">vomiting blood</data>
+  <data key="d2">2</data>
+</node>
+<node id="bloody stools">
+  <data key="d0">symptom</data>
+  <data key="d1">bloody stools</data>
+  <data key="d2">2</data>
+</node>
+<node id="black stools">
+  <data key="d0">symptom</data>
+  <data key="d1">black stools</data>
+  <data key="d2">2</data>
+</node>
+<node id="wrinkles">
+  <data key="d0">disease</data>
+  <data key="d1">wrinkles</data>
+  <data key="d2">8</data>
+</node>
+<node id="lines">
+  <data key="d0">symptom</data>
+  <data key="d1">lines</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin damage">
+  <data key="d0">symptom</data>
+  <data key="d1">skin damage</data>
+  <data key="d2">2</data>
+</node>
+<node id="types of hair loss">
+  <data key="d0">disease</data>
+  <data key="d1">types of hair loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="patchy hair loss">
+  <data key="d0">symptom</data>
+  <data key="d1">patchy hair loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="thinning hair">
+  <data key="d0">symptom</data>
+  <data key="d1">thinning hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="receding hairline">
+  <data key="d0">symptom</data>
+  <data key="d1">receding hairline</data>
+  <data key="d2">4</data>
+</node>
+<node id="eyebrow loss">
+  <data key="d0">symptom</data>
+  <data key="d1">eyebrow loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="hair loss on scalp">
+  <data key="d0">symptom</data>
+  <data key="d1">hair loss on scalp</data>
+  <data key="d2">2</data>
+</node>
+<node id="acanthosis nigricans: overview">
+  <data key="d0">disease</data>
+  <data key="d1">acanthosis nigricans: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="darkened skin">
+  <data key="d0">symptom</data>
+  <data key="d1">darkened skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="thickened skin">
+  <data key="d0">symptom</data>
+  <data key="d1">thickened skin</data>
+  <data key="d2">6</data>
+</node>
+<node id="velvety skin">
+  <data key="d0">symptom</data>
+  <data key="d1">velvety skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="how to treat different types of acne">
+  <data key="d0">disease</data>
+  <data key="d1">how to treat different types of acne</data>
+  <data key="d2">2</data>
+</node>
+<node id="clogged pores">
+  <data key="d0">symptom</data>
+  <data key="d1">clogged pores</data>
+  <data key="d2">2</data>
+</node>
+<node id="red bumps">
+  <data key="d0">symptom</data>
+  <data key="d1">red bumps</data>
+  <data key="d2">2</data>
+</node>
+<node id="blackheads">
+  <data key="d0">symptom</data>
+  <data key="d1">blackheads</data>
+  <data key="d2">3</data>
+</node>
+<node id="whiteheads">
+  <data key="d0">symptom</data>
+  <data key="d1">whiteheads</data>
+  <data key="d2">3</data>
+</node>
+<node id="papules">
+  <data key="d0">symptom</data>
+  <data key="d1">papules</data>
+  <data key="d2">2</data>
+</node>
+<node id="pustules">
+  <data key="d0">symptom</data>
+  <data key="d1">pustules</data>
+  <data key="d2">2</data>
+</node>
+<node id="inflamed blemishes">
+  <data key="d0">symptom</data>
+  <data key="d1">inflamed blemishes</data>
+  <data key="d2">2</data>
+</node>
+<node id="permanent scarring">
+  <data key="d0">symptom</data>
+  <data key="d1">permanent scarring</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer types: melanoma overview">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: melanoma overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="new mole">
+  <data key="d0">symptom</data>
+  <data key="d1">new mole</data>
+  <data key="d2">2</data>
+</node>
+<node id="changing mole">
+  <data key="d0">symptom</data>
+  <data key="d1">changing mole</data>
+  <data key="d2">2</data>
+</node>
+<node id="different mole">
+  <data key="d0">symptom</data>
+  <data key="d1">different mole</data>
+  <data key="d2">2</data>
+</node>
+<node id="idiopathic absence of menstruation">
+  <data key="d0">disease</data>
+  <data key="d1">idiopathic absence of menstruation</data>
+  <data key="d2">2</data>
+</node>
+<node id="absent periods">
+  <data key="d0">symptom</data>
+  <data key="d1">absent periods</data>
+  <data key="d2">2</data>
+</node>
+<node id="how natalie finally got rid of her adult acne">
+  <data key="d0">disease</data>
+  <data key="d1">how natalie finally got rid of her adult acne</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful cysts">
+  <data key="d0">symptom</data>
+  <data key="d1">painful cysts</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne scars">
+  <data key="d0">symptom</data>
+  <data key="d1">acne scars</data>
+  <data key="d2">4</data>
+</node>
+<node id="cystic acne">
+  <data key="d0">symptom</data>
+  <data key="d1">cystic acne</data>
+  <data key="d2">2</data>
+</node>
+<node id="bulimia nervosa">
+  <data key="d0">disease</data>
+  <data key="d1">bulimia nervosa</data>
+  <data key="d2">2</data>
+</node>
+<node id="binge eating">
+  <data key="d0">symptom</data>
+  <data key="d1">binge eating</data>
+  <data key="d2">2</data>
+</node>
+<node id="purging behaviors">
+  <data key="d0">symptom</data>
+  <data key="d1">purging behaviors</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin biopsy: dermatologist-recommended wound care">
+  <data key="d0">disease</data>
+  <data key="d1">skin biopsy: dermatologist-recommended wound care</data>
+  <data key="d2">2</data>
+</node>
+<node id="allergic reaction">
+  <data key="d0">symptom</data>
+  <data key="d1">allergic reaction</data>
+  <data key="d2">4</data>
+</node>
+<node id="acute glaucoma">
+  <data key="d0">disease</data>
+  <data key="d1">acute glaucoma</data>
+  <data key="d2">2</data>
+</node>
+<node id="severe eye pain">
+  <data key="d0">symptom</data>
+  <data key="d1">severe eye pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="blurred vision">
+  <data key="d0">symptom</data>
+  <data key="d1">blurred vision</data>
+  <data key="d2">6</data>
+</node>
+<node id="halos around lights">
+  <data key="d0">symptom</data>
+  <data key="d1">halos around lights</data>
+  <data key="d2">2</data>
+</node>
+<node id="younger-looking skin">
+  <data key="d0">disease</data>
+  <data key="d1">younger-looking skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="age spots">
+  <data key="d0">symptom</data>
+  <data key="d1">age spots</data>
+  <data key="d2">6</data>
+</node>
+<node id="sagging skin">
+  <data key="d0">symptom</data>
+  <data key="d1">sagging skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="spider veins">
+  <data key="d0">symptom</data>
+  <data key="d1">spider veins</data>
+  <data key="d2">4</data>
+</node>
+<node id="varicose veins">
+  <data key="d0">symptom</data>
+  <data key="d1">varicose veins</data>
+  <data key="d2">2</data>
+</node>
+<node id="fine lines">
+  <data key="d0">symptom</data>
+  <data key="d1">fine lines</data>
+  <data key="d2">4</data>
+</node>
+<node id="pilonidal cyst">
+  <data key="d0">disease</data>
+  <data key="d1">pilonidal cyst</data>
+  <data key="d2">2</data>
+</node>
+<node id="pain in tailbone">
+  <data key="d0">symptom</data>
+  <data key="d1">pain in tailbone</data>
+  <data key="d2">2</data>
+</node>
+<node id="pus drainage">
+  <data key="d0">symptom</data>
+  <data key="d1">pus drainage</data>
+  <data key="d2">2</data>
+</node>
+<node id="blood drainage">
+  <data key="d0">symptom</data>
+  <data key="d1">blood drainage</data>
+  <data key="d2">2</data>
+</node>
+<node id="abscess formation">
+  <data key="d0">symptom</data>
+  <data key="d1">abscess formation</data>
+  <data key="d2">2</data>
+</node>
+<node id="can covid-19 cause hair loss?">
+  <data key="d0">disease</data>
+  <data key="d1">can covid-19 cause hair loss?</data>
+  <data key="d2">2</data>
+</node>
+<node id="itchy scalp">
+  <data key="d0">symptom</data>
+  <data key="d1">itchy scalp</data>
+  <data key="d2">2</data>
+</node>
+<node id="detectar cã¡ncer de piel: cã³mo realizar un autoexamen de piel">
+  <data key="d0">disease</data>
+  <data key="d1">detectar cã¡ncer de piel: cã³mo realizar un autoexamen de piel</data>
+  <data key="d2">2</data>
+</node>
+<node id="new spots">
+  <data key="d0">symptom</data>
+  <data key="d1">new spots</data>
+  <data key="d2">4</data>
+</node>
+<node id="bleeding spots">
+  <data key="d0">symptom</data>
+  <data key="d1">bleeding spots</data>
+  <data key="d2">2</data>
+</node>
+<node id="lymphoma">
+  <data key="d0">disease</data>
+  <data key="d1">lymphoma</data>
+  <data key="d2">2</data>
+</node>
+<node id="unexplained weight loss">
+  <data key="d0">symptom</data>
+  <data key="d1">unexplained weight loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="ludwig's angina">
+  <data key="d0">disease</data>
+  <data key="d1">ludwig's angina</data>
+  <data key="d2">2</data>
+</node>
+<node id="severe swelling">
+  <data key="d0">symptom</data>
+  <data key="d1">severe swelling</data>
+  <data key="d2">2</data>
+</node>
+<node id="difficulty swallowing">
+  <data key="d0">symptom</data>
+  <data key="d1">difficulty swallowing</data>
+  <data key="d2">6</data>
+</node>
+<node id="drooling">
+  <data key="d0">symptom</data>
+  <data key="d1">drooling</data>
+  <data key="d2">2</data>
+</node>
+<node id="6 ways to remove unwanted hair">
+  <data key="d0">disease</data>
+  <data key="d1">6 ways to remove unwanted hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="ingrown hairs">
+  <data key="d0">symptom</data>
+  <data key="d1">ingrown hairs</data>
+  <data key="d2">2</data>
+</node>
+<node id="how to safely exfoliate at home">
+  <data key="d0">disease</data>
+  <data key="d1">how to safely exfoliate at home</data>
+  <data key="d2">2</data>
+</node>
+<node id="sensitive skin">
+  <data key="d0">symptom</data>
+  <data key="d1">sensitive skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="oily skin">
+  <data key="d0">symptom</data>
+  <data key="d1">oily skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne">
+  <data key="d0">symptom</data>
+  <data key="d1">acne</data>
+  <data key="d2">11</data>
+</node>
+<node id="sunburned skin">
+  <data key="d0">symptom</data>
+  <data key="d1">sunburned skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="autism">
+  <data key="d0">disease</data>
+  <data key="d1">autism</data>
+  <data key="d2">2</data>
+</node>
+<node id="social interaction issues">
+  <data key="d0">symptom</data>
+  <data key="d1">social interaction issues</data>
+  <data key="d2">2</data>
+</node>
+<node id="communication difficulties">
+  <data key="d0">symptom</data>
+  <data key="d1">communication difficulties</data>
+  <data key="d2">2</data>
+</node>
+<node id="restricted interests">
+  <data key="d0">symptom</data>
+  <data key="d1">restricted interests</data>
+  <data key="d2">2</data>
+</node>
+<node id="repetitive behaviors">
+  <data key="d0">symptom</data>
+  <data key="d1">repetitive behaviors</data>
+  <data key="d2">2</data>
+</node>
+<node id="acanthosis nigricans: diagnosis and treatment">
+  <data key="d0">disease</data>
+  <data key="d1">acanthosis nigricans: diagnosis and treatment</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin thickening">
+  <data key="d0">symptom</data>
+  <data key="d1">skin thickening</data>
+  <data key="d2">2</data>
+</node>
+<node id="dark skin">
+  <data key="d0">symptom</data>
+  <data key="d1">dark skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="discomfort">
+  <data key="d0">symptom</data>
+  <data key="d1">discomfort</data>
+  <data key="d2">10</data>
+</node>
+<node id="odor">
+  <data key="d0">symptom</data>
+  <data key="d1">odor</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne scars: causes">
+  <data key="d0">disease</data>
+  <data key="d1">acne scars: causes</data>
+  <data key="d2">2</data>
+</node>
+<node id="depressed scars">
+  <data key="d0">symptom</data>
+  <data key="d1">depressed scars</data>
+  <data key="d2">2</data>
+</node>
+<node id="raised scars">
+  <data key="d0">symptom</data>
+  <data key="d1">raised scars</data>
+  <data key="d2">4</data>
+</node>
+<node id="inflammation">
+  <data key="d0">symptom</data>
+  <data key="d1">inflammation</data>
+  <data key="d2">10</data>
+</node>
+<node id="eczema treatment: corticosteroids applied to the skin">
+  <data key="d0">disease</data>
+  <data key="d1">eczema treatment: corticosteroids applied to the skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="heat">
+  <data key="d0">symptom</data>
+  <data key="d1">heat</data>
+  <data key="d2">2</data>
+</node>
+<node id="how to control oily skin">
+  <data key="d0">disease</data>
+  <data key="d1">how to control oily skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="excess oil">
+  <data key="d0">symptom</data>
+  <data key="d1">excess oil</data>
+  <data key="d2">2</data>
+</node>
+<node id="face mask skin care made simple: infographic">
+  <data key="d0">disease</data>
+  <data key="d1">face mask skin care made simple: infographic</data>
+  <data key="d2">2</data>
+</node>
+<node id="stress incontinence">
+  <data key="d0">disease</data>
+  <data key="d1">stress incontinence</data>
+  <data key="d2">2</data>
+</node>
+<node id="unintentional urine leakage">
+  <data key="d0">symptom</data>
+  <data key="d1">unintentional urine leakage</data>
+  <data key="d2">2</data>
+</node>
+<node id="signs of lyme disease that appear on your skin">
+  <data key="d0">disease</data>
+  <data key="d1">signs of lyme disease that appear on your skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="bullseye rash">
+  <data key="d0">symptom</data>
+  <data key="d1">bullseye rash</data>
+  <data key="d2">2</data>
+</node>
+<node id="red spot">
+  <data key="d0">symptom</data>
+  <data key="d1">red spot</data>
+  <data key="d2">4</data>
+</node>
+<node id="warm skin">
+  <data key="d0">symptom</data>
+  <data key="d1">warm skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful skin">
+  <data key="d0">symptom</data>
+  <data key="d1">painful skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="chills">
+  <data key="d0">symptom</data>
+  <data key="d1">chills</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle aches">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle aches</data>
+  <data key="d2">2</data>
+</node>
+<node id="bluish-red lump">
+  <data key="d0">symptom</data>
+  <data key="d1">bluish-red lump</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin swelling">
+  <data key="d0">symptom</data>
+  <data key="d1">skin swelling</data>
+  <data key="d2">2</data>
+</node>
+<node id="hardening">
+  <data key="d0">symptom</data>
+  <data key="d1">hardening</data>
+  <data key="d2">2</data>
+</node>
+<node id="goiter">
+  <data key="d0">disease</data>
+  <data key="d1">goiter</data>
+  <data key="d2">2</data>
+</node>
+<node id="enlarged thyroid">
+  <data key="d0">symptom</data>
+  <data key="d1">enlarged thyroid</data>
+  <data key="d2">2</data>
+</node>
+<node id="neck swelling">
+  <data key="d0">symptom</data>
+  <data key="d1">neck swelling</data>
+  <data key="d2">2</data>
+</node>
+<node id="breathing difficulty">
+  <data key="d0">symptom</data>
+  <data key="d1">breathing difficulty</data>
+  <data key="d2">2</data>
+</node>
+<node id="ichthyosis vulgaris: overview">
+  <data key="d0">disease</data>
+  <data key="d1">ichthyosis vulgaris: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="scaly skin">
+  <data key="d0">symptom</data>
+  <data key="d1">scaly skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="chorioretinitis">
+  <data key="d0">disease</data>
+  <data key="d1">chorioretinitis</data>
+  <data key="d2">2</data>
+</node>
+<node id="eye pain">
+  <data key="d0">symptom</data>
+  <data key="d1">eye pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="eczema types: neurodermatitis signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">eczema types: neurodermatitis signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="discolored skin">
+  <data key="d0">symptom</data>
+  <data key="d1">discolored skin</data>
+  <data key="d2">4</data>
+</node>
+<node id="open sores">
+  <data key="d0">symptom</data>
+  <data key="d1">open sores</data>
+  <data key="d2">4</data>
+</node>
+<node id="scarring">
+  <data key="d0">symptom</data>
+  <data key="d1">scarring</data>
+  <data key="d2">6</data>
+</node>
+<node id="artificial nails: dermatologists' tips for reducing nail damage">
+  <data key="d0">disease</data>
+  <data key="d1">artificial nails: dermatologists' tips for reducing nail damage</data>
+  <data key="d2">2</data>
+</node>
+<node id="thin nails">
+  <data key="d0">symptom</data>
+  <data key="d1">thin nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="brittle nails">
+  <data key="d0">symptom</data>
+  <data key="d1">brittle nails</data>
+  <data key="d2">3</data>
+</node>
+<node id="weak nails">
+  <data key="d0">symptom</data>
+  <data key="d1">weak nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="warts: who gets and causes">
+  <data key="d0">disease</data>
+  <data key="d1">warts: who gets and causes</data>
+  <data key="d2">2</data>
+</node>
+<node id="see how the sun damages your skin">
+  <data key="d0">disease</data>
+  <data key="d1">see how the sun damages your skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer">
+  <data key="d0">symptom</data>
+  <data key="d1">skin cancer</data>
+  <data key="d2">2</data>
+</node>
+<node id="premature aging">
+  <data key="d0">symptom</data>
+  <data key="d1">premature aging</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne can affect more than your skin">
+  <data key="d0">disease</data>
+  <data key="d1">acne can affect more than your skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="depression">
+  <data key="d0">symptom</data>
+  <data key="d1">depression</data>
+  <data key="d2">4</data>
+</node>
+<node id="low self-esteem">
+  <data key="d0">symptom</data>
+  <data key="d1">low self-esteem</data>
+  <data key="d2">2</data>
+</node>
+<node id="isolation">
+  <data key="d0">symptom</data>
+  <data key="d1">isolation</data>
+  <data key="d2">2</data>
+</node>
+<node id="emotional distress">
+  <data key="d0">symptom</data>
+  <data key="d1">emotional distress</data>
+  <data key="d2">2</data>
+</node>
+<node id="headache after lumbar puncture">
+  <data key="d0">disease</data>
+  <data key="d1">headache after lumbar puncture</data>
+  <data key="d2">2</data>
+</node>
+<node id="throbbing headache">
+  <data key="d0">symptom</data>
+  <data key="d1">throbbing headache</data>
+  <data key="d2">2</data>
+</node>
+<node id="pityriasis rosea: tips for managing">
+  <data key="d0">disease</data>
+  <data key="d1">pityriasis rosea: tips for managing</data>
+  <data key="d2">2</data>
+</node>
+<node id="psoriasis treatment: coal tar">
+  <data key="d0">disease</data>
+  <data key="d1">psoriasis treatment: coal tar</data>
+  <data key="d2">2</data>
+</node>
+<node id="itch">
+  <data key="d0">symptom</data>
+  <data key="d1">itch</data>
+  <data key="d2">2</data>
+</node>
+<node id="herpes simplex: overview">
+  <data key="d0">disease</data>
+  <data key="d1">herpes simplex: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="cold sores">
+  <data key="d0">symptom</data>
+  <data key="d1">cold sores</data>
+  <data key="d2">2</data>
+</node>
+<node id="fever blisters">
+  <data key="d0">symptom</data>
+  <data key="d1">fever blisters</data>
+  <data key="d2">2</data>
+</node>
+<node id="moles: tips for managing">
+  <data key="d0">disease</data>
+  <data key="d1">moles: tips for managing</data>
+  <data key="d2">2</data>
+</node>
+<node id="size change">
+  <data key="d0">symptom</data>
+  <data key="d1">size change</data>
+  <data key="d2">2</data>
+</node>
+<node id="shape change">
+  <data key="d0">symptom</data>
+  <data key="d1">shape change</data>
+  <data key="d2">2</data>
+</node>
+<node id="syringomyelia">
+  <data key="d0">disease</data>
+  <data key="d1">syringomyelia</data>
+  <data key="d2">2</data>
+</node>
+<node id="loss of sensation">
+  <data key="d0">symptom</data>
+  <data key="d1">loss of sensation</data>
+  <data key="d2">2</data>
+</node>
+<node id="chronic pain">
+  <data key="d0">symptom</data>
+  <data key="d1">chronic pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="rabies">
+  <data key="d0">disease</data>
+  <data key="d1">rabies</data>
+  <data key="d2">2</data>
+</node>
+<node id="hallucinations">
+  <data key="d0">symptom</data>
+  <data key="d1">hallucinations</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne keloidalis nuchae: overview">
+  <data key="d0">disease</data>
+  <data key="d1">acne keloidalis nuchae: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne like breakouts">
+  <data key="d0">symptom</data>
+  <data key="d1">acne like breakouts</data>
+  <data key="d2">2</data>
+</node>
+<node id="bumps on neck">
+  <data key="d0">symptom</data>
+  <data key="d1">bumps on neck</data>
+  <data key="d2">2</data>
+</node>
+<node id="bumps on scalp">
+  <data key="d0">symptom</data>
+  <data key="d1">bumps on scalp</data>
+  <data key="d2">2</data>
+</node>
+<node id="treating acne? is it time to see a dermatologist?">
+  <data key="d0">disease</data>
+  <data key="d1">treating acne? is it time to see a dermatologist?</data>
+  <data key="d2">2</data>
+</node>
+<node id="persistent breakouts">
+  <data key="d0">symptom</data>
+  <data key="d1">persistent breakouts</data>
+  <data key="d2">2</data>
+</node>
+<node id="deep acne">
+  <data key="d0">symptom</data>
+  <data key="d1">deep acne</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful acne">
+  <data key="d0">symptom</data>
+  <data key="d1">painful acne</data>
+  <data key="d2">2</data>
+</node>
+<node id="pemphigus">
+  <data key="d0">disease</data>
+  <data key="d1">pemphigus</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful blisters">
+  <data key="d0">symptom</data>
+  <data key="d1">painful blisters</data>
+  <data key="d2">4</data>
+</node>
+<node id="skin blisters">
+  <data key="d0">symptom</data>
+  <data key="d1">skin blisters</data>
+  <data key="d2">2</data>
+</node>
+<node id="mucous membrane blisters">
+  <data key="d0">symptom</data>
+  <data key="d1">mucous membrane blisters</data>
+  <data key="d2">2</data>
+</node>
+<node id="acne keloidalis nuchae: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">acne keloidalis nuchae: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="firm bumps">
+  <data key="d0">symptom</data>
+  <data key="d1">firm bumps</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful bumps">
+  <data key="d0">symptom</data>
+  <data key="d1">painful bumps</data>
+  <data key="d2">2</data>
+</node>
+<node id="abscesses">
+  <data key="d0">symptom</data>
+  <data key="d1">abscesses</data>
+  <data key="d2">2</data>
+</node>
+<node id="sinus tracts">
+  <data key="d0">symptom</data>
+  <data key="d1">sinus tracts</data>
+  <data key="d2">2</data>
+</node>
+<node id="adults with eczema should watch for eye problems">
+  <data key="d0">disease</data>
+  <data key="d1">adults with eczema should watch for eye problems</data>
+  <data key="d2">2</data>
+</node>
+<node id="itchy eyes">
+  <data key="d0">symptom</data>
+  <data key="d1">itchy eyes</data>
+  <data key="d2">2</data>
+</node>
+<node id="red eyes">
+  <data key="d0">symptom</data>
+  <data key="d1">red eyes</data>
+  <data key="d2">2</data>
+</node>
+<node id="swollen eyes">
+  <data key="d0">symptom</data>
+  <data key="d1">swollen eyes</data>
+  <data key="d2">2</data>
+</node>
+<node id="eye discomfort">
+  <data key="d0">symptom</data>
+  <data key="d1">eye discomfort</data>
+  <data key="d2">2</data>
+</node>
+<node id="watery discharge">
+  <data key="d0">symptom</data>
+  <data key="d1">watery discharge</data>
+  <data key="d2">2</data>
+</node>
+<node id="sticky discharge">
+  <data key="d0">symptom</data>
+  <data key="d1">sticky discharge</data>
+  <data key="d2">2</data>
+</node>
+<node id="nearsightedness">
+  <data key="d0">symptom</data>
+  <data key="d1">nearsightedness</data>
+  <data key="d2">2</data>
+</node>
+<node id="heart medicine can clear strawberry birthmarks">
+  <data key="d0">disease</data>
+  <data key="d1">heart medicine can clear strawberry birthmarks</data>
+  <data key="d2">2</data>
+</node>
+<node id="sleep problems">
+  <data key="d0">symptom</data>
+  <data key="d1">sleep problems</data>
+  <data key="d2">2</data>
+</node>
+<node id="cold hands">
+  <data key="d0">symptom</data>
+  <data key="d1">cold hands</data>
+  <data key="d2">2</data>
+</node>
+<node id="low blood sugar">
+  <data key="d0">symptom</data>
+  <data key="d1">low blood sugar</data>
+  <data key="d2">2</data>
+</node>
+<node id="what does psoriasis look like?">
+  <data key="d0">disease</data>
+  <data key="d1">what does psoriasis look like?</data>
+  <data key="d2">2</data>
+</node>
+<node id="thick skin">
+  <data key="d0">symptom</data>
+  <data key="d1">thick skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="silvery scales">
+  <data key="d0">symptom</data>
+  <data key="d1">silvery scales</data>
+  <data key="d2">2</data>
+</node>
+<node id="yellow spots">
+  <data key="d0">symptom</data>
+  <data key="d1">yellow spots</data>
+  <data key="d2">2</data>
+</node>
+<node id="pitting">
+  <data key="d0">symptom</data>
+  <data key="d1">pitting</data>
+  <data key="d2">2</data>
+</node>
+<node id="crumbling nails">
+  <data key="d0">symptom</data>
+  <data key="d1">crumbling nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="scaly spots">
+  <data key="d0">symptom</data>
+  <data key="d1">scaly spots</data>
+  <data key="d2">2</data>
+</node>
+<node id="red patches">
+  <data key="d0">symptom</data>
+  <data key="d1">red patches</data>
+  <data key="d2">4</data>
+</node>
+<node id="cracking skin">
+  <data key="d0">symptom</data>
+  <data key="d1">cracking skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="burnt skin">
+  <data key="d0">symptom</data>
+  <data key="d1">burnt skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="can the right diet get rid of acne?">
+  <data key="d0">disease</data>
+  <data key="d1">can the right diet get rid of acne?</data>
+  <data key="d2">2</data>
+</node>
+<node id="breakouts">
+  <data key="d0">symptom</data>
+  <data key="d1">breakouts</data>
+  <data key="d2">2</data>
+</node>
+<node id="excess sebum">
+  <data key="d0">symptom</data>
+  <data key="d1">excess sebum</data>
+  <data key="d2">2</data>
+</node>
+<node id="genital warts: overview">
+  <data key="d0">disease</data>
+  <data key="d1">genital warts: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="infection of open wound">
+  <data key="d0">disease</data>
+  <data key="d1">infection of open wound</data>
+  <data key="d2">2</data>
+</node>
+<node id="warmth">
+  <data key="d0">symptom</data>
+  <data key="d1">warmth</data>
+  <data key="d2">2</data>
+</node>
+<node id="pus">
+  <data key="d0">symptom</data>
+  <data key="d1">pus</data>
+  <data key="d2">2</data>
+</node>
+<node id="malaise">
+  <data key="d0">symptom</data>
+  <data key="d1">malaise</data>
+  <data key="d2">2</data>
+</node>
+<node id="diverticulosis">
+  <data key="d0">disease</data>
+  <data key="d1">diverticulosis</data>
+  <data key="d2">2</data>
+</node>
+<node id="bloating">
+  <data key="d0">symptom</data>
+  <data key="d1">bloating</data>
+  <data key="d2">2</data>
+</node>
+<node id="bowel changes">
+  <data key="d0">symptom</data>
+  <data key="d1">bowel changes</data>
+  <data key="d2">4</data>
+</node>
+<node id="mittelschmerz">
+  <data key="d0">disease</data>
+  <data key="d1">mittelschmerz</data>
+  <data key="d2">2</data>
+</node>
+<node id="lower abdominal pain">
+  <data key="d0">symptom</data>
+  <data key="d1">lower abdominal pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="causes of hair loss">
+  <data key="d0">disease</data>
+  <data key="d1">causes of hair loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="telogen effluvium">
+  <data key="d0">symptom</data>
+  <data key="d1">telogen effluvium</data>
+  <data key="d2">2</data>
+</node>
+<node id="endometriosis">
+  <data key="d0">disease</data>
+  <data key="d1">endometriosis</data>
+  <data key="d2">2</data>
+</node>
+<node id="pelvic pain">
+  <data key="d0">symptom</data>
+  <data key="d1">pelvic pain</data>
+  <data key="d2">6</data>
+</node>
+<node id="heavy bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">heavy bleeding</data>
+  <data key="d2">2</data>
+</node>
+<node id="infertility">
+  <data key="d0">symptom</data>
+  <data key="d1">infertility</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful periods">
+  <data key="d0">symptom</data>
+  <data key="d1">painful periods</data>
+  <data key="d2">2</data>
+</node>
+<node id="impetigo: overview">
+  <data key="d0">disease</data>
+  <data key="d1">impetigo: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="blisters">
+  <data key="d0">symptom</data>
+  <data key="d1">blisters</data>
+  <data key="d2">4</data>
+</node>
+<node id="crusts">
+  <data key="d0">symptom</data>
+  <data key="d1">crusts</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin infection">
+  <data key="d0">symptom</data>
+  <data key="d1">skin infection</data>
+  <data key="d2">2</data>
+</node>
+<node id="cuts">
+  <data key="d0">symptom</data>
+  <data key="d1">cuts</data>
+  <data key="d2">2</data>
+</node>
+<node id="scratches">
+  <data key="d0">symptom</data>
+  <data key="d1">scratches</data>
+  <data key="d2">2</data>
+</node>
+<node id="insect bites">
+  <data key="d0">symptom</data>
+  <data key="d1">insect bites</data>
+  <data key="d2">2</data>
+</node>
+<node id="eczema">
+  <data key="d0">symptom</data>
+  <data key="d1">eczema</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer types: sebaceous carcinoma causes">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: sebaceous carcinoma causes</data>
+  <data key="d2">2</data>
+</node>
+<node id="growth on eyelid">
+  <data key="d0">symptom</data>
+  <data key="d1">growth on eyelid</data>
+  <data key="d2">2</data>
+</node>
+<node id="congenital rubella">
+  <data key="d0">disease</data>
+  <data key="d1">congenital rubella</data>
+  <data key="d2">2</data>
+</node>
+<node id="developmental delays">
+  <data key="d0">symptom</data>
+  <data key="d1">developmental delays</data>
+  <data key="d2">2</data>
+</node>
+<node id="intellectual disability">
+  <data key="d0">symptom</data>
+  <data key="d1">intellectual disability</data>
+  <data key="d2">2</data>
+</node>
+<node id="vision problems">
+  <data key="d0">symptom</data>
+  <data key="d1">vision problems</data>
+  <data key="d2">2</data>
+</node>
+<node id="heart defects">
+  <data key="d0">symptom</data>
+  <data key="d1">heart defects</data>
+  <data key="d2">2</data>
+</node>
+<node id="liver enlargement">
+  <data key="d0">symptom</data>
+  <data key="d1">liver enlargement</data>
+  <data key="d2">2</data>
+</node>
+<node id="spleen enlargement">
+  <data key="d0">symptom</data>
+  <data key="d1">spleen enlargement</data>
+  <data key="d2">2</data>
+</node>
+<node id="why you need sun protection in the winter">
+  <data key="d0">disease</data>
+  <data key="d1">why you need sun protection in the winter</data>
+  <data key="d2">2</data>
+</node>
+<node id="sunburn">
+  <data key="d0">symptom</data>
+  <data key="d1">sunburn</data>
+  <data key="d2">6</data>
+</node>
+<node id="lichen planus: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">lichen planus: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="white dots">
+  <data key="d0">symptom</data>
+  <data key="d1">white dots</data>
+  <data key="d2">2</data>
+</node>
+<node id="scaly patches">
+  <data key="d0">symptom</data>
+  <data key="d1">scaly patches</data>
+  <data key="d2">2</data>
+</node>
+<node id="hair thinning">
+  <data key="d0">symptom</data>
+  <data key="d1">hair thinning</data>
+  <data key="d2">2</data>
+</node>
+<node id="irritation">
+  <data key="d0">symptom</data>
+  <data key="d1">irritation</data>
+  <data key="d2">2</data>
+</node>
+<node id="hair loss types: frontal fibrosing alopecia overview">
+  <data key="d0">disease</data>
+  <data key="d1">hair loss types: frontal fibrosing alopecia overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="bald skin">
+  <data key="d0">symptom</data>
+  <data key="d1">bald skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="patches of hair loss">
+  <data key="d0">symptom</data>
+  <data key="d1">patches of hair loss</data>
+  <data key="d2">2</data>
+</node>
+<node id="endometrial cancer">
+  <data key="d0">disease</data>
+  <data key="d1">endometrial cancer</data>
+  <data key="d2">2</data>
+</node>
+<node id="abnormal vaginal bleeding">
+  <data key="d0">symptom</data>
+  <data key="d1">abnormal vaginal bleeding</data>
+  <data key="d2">2</data>
+</node>
+<node id="bladder changes">
+  <data key="d0">symptom</data>
+  <data key="d1">bladder changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="pleomorphic adenoma">
+  <data key="d0">disease</data>
+  <data key="d1">pleomorphic adenoma</data>
+  <data key="d2">2</data>
+</node>
+<node id="painless lump">
+  <data key="d0">symptom</data>
+  <data key="d1">painless lump</data>
+  <data key="d2">2</data>
+</node>
+<node id="how to treat eczema in babies">
+  <data key="d0">disease</data>
+  <data key="d1">how to treat eczema in babies</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer types: merkel cell carcinoma signs &amp; symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: merkel cell carcinoma signs &amp; symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="painless spot">
+  <data key="d0">symptom</data>
+  <data key="d1">painless spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="sore">
+  <data key="d0">symptom</data>
+  <data key="d1">sore</data>
+  <data key="d2">2</data>
+</node>
+<node id="tender skin">
+  <data key="d0">symptom</data>
+  <data key="d1">tender skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="purple spot">
+  <data key="d0">symptom</data>
+  <data key="d1">purple spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="pink spot">
+  <data key="d0">symptom</data>
+  <data key="d1">pink spot</data>
+  <data key="d2">2</data>
+</node>
+<node id="pregnancy-related back pain">
+  <data key="d0">disease</data>
+  <data key="d1">pregnancy-related back pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="lower back pain">
+  <data key="d0">symptom</data>
+  <data key="d1">lower back pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="pelvic discomfort">
+  <data key="d0">symptom</data>
+  <data key="d1">pelvic discomfort</data>
+  <data key="d2">2</data>
+</node>
+<node id="melasma: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">melasma: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="dark patches">
+  <data key="d0">symptom</data>
+  <data key="d1">dark patches</data>
+  <data key="d2">4</data>
+</node>
+<node id="blotchy skin">
+  <data key="d0">symptom</data>
+  <data key="d1">blotchy skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="are triggers causing your psoriasis flare-ups?">
+  <data key="d0">disease</data>
+  <data key="d1">are triggers causing your psoriasis flare-ups?</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin injuries">
+  <data key="d0">symptom</data>
+  <data key="d1">skin injuries</data>
+  <data key="d2">2</data>
+</node>
+<node id="cold weather">
+  <data key="d0">symptom</data>
+  <data key="d1">cold weather</data>
+  <data key="d2">2</data>
+</node>
+<node id="stress">
+  <data key="d0">symptom</data>
+  <data key="d1">stress</data>
+  <data key="d2">2</data>
+</node>
+<node id="cellulite treatments: what really works?">
+  <data key="d0">disease</data>
+  <data key="d1">cellulite treatments: what really works?</data>
+  <data key="d2">2</data>
+</node>
+<node id="dimples">
+  <data key="d0">symptom</data>
+  <data key="d1">dimples</data>
+  <data key="d2">2</data>
+</node>
+<node id="fat deposits">
+  <data key="d0">symptom</data>
+  <data key="d1">fat deposits</data>
+  <data key="d2">2</data>
+</node>
+<node id="vitiligo: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">vitiligo: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="loss of skin color">
+  <data key="d0">symptom</data>
+  <data key="d1">loss of skin color</data>
+  <data key="d2">3</data>
+</node>
+<node id="lighter skin patches">
+  <data key="d0">symptom</data>
+  <data key="d1">lighter skin patches</data>
+  <data key="d2">2</data>
+</node>
+<node id="premature hair graying">
+  <data key="d0">symptom</data>
+  <data key="d1">premature hair graying</data>
+  <data key="d2">2</data>
+</node>
+<node id="eye color change">
+  <data key="d0">symptom</data>
+  <data key="d1">eye color change</data>
+  <data key="d2">2</data>
+</node>
+<node id="emphysema">
+  <data key="d0">disease</data>
+  <data key="d1">emphysema</data>
+  <data key="d2">2</data>
+</node>
+<node id="shortness of breath">
+  <data key="d0">symptom</data>
+  <data key="d1">shortness of breath</data>
+  <data key="d2">2</data>
+</node>
+<node id="wheezing">
+  <data key="d0">symptom</data>
+  <data key="d1">wheezing</data>
+  <data key="d2">2</data>
+</node>
+<node id="chronic cough">
+  <data key="d0">symptom</data>
+  <data key="d1">chronic cough</data>
+  <data key="d2">2</data>
+</node>
+<node id="chest tightness">
+  <data key="d0">symptom</data>
+  <data key="d1">chest tightness</data>
+  <data key="d2">2</data>
+</node>
+<node id="weight loss">
+  <data key="d0">symptom</data>
+  <data key="d1">weight loss</data>
+  <data key="d2">4</data>
+</node>
+<node id="hand-foot-and-mouth disease: signs and symptoms">
+  <data key="d0">disease</data>
+  <data key="d1">hand-foot-and-mouth disease: signs and symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="mild fever">
+  <data key="d0">symptom</data>
+  <data key="d1">mild fever</data>
+  <data key="d2">2</data>
+</node>
+<node id="sore throat">
+  <data key="d0">symptom</data>
+  <data key="d1">sore throat</data>
+  <data key="d2">2</data>
+</node>
+<node id="stomach pain">
+  <data key="d0">symptom</data>
+  <data key="d1">stomach pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="decreased appetite">
+  <data key="d0">symptom</data>
+  <data key="d1">decreased appetite</data>
+  <data key="d2">2</data>
+</node>
+<node id="painful mouth sores">
+  <data key="d0">symptom</data>
+  <data key="d1">painful mouth sores</data>
+  <data key="d2">2</data>
+</node>
+<node id="itchy rash">
+  <data key="d0">symptom</data>
+  <data key="d1">itchy rash</data>
+  <data key="d2">2</data>
+</node>
+<node id="dengue fever">
+  <data key="d0">disease</data>
+  <data key="d1">dengue fever</data>
+  <data key="d2">2</data>
+</node>
+<node id="high fever">
+  <data key="d0">symptom</data>
+  <data key="d1">high fever</data>
+  <data key="d2">2</data>
+</node>
+<node id="severe headache">
+  <data key="d0">symptom</data>
+  <data key="d1">severe headache</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle pain">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle pain</data>
+  <data key="d2">4</data>
+</node>
+<node id="how to care for your baby's skin, hair, and nails">
+  <data key="d0">disease</data>
+  <data key="d1">how to care for your baby's skin, hair, and nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="diaper rash">
+  <data key="d0">symptom</data>
+  <data key="d1">diaper rash</data>
+  <data key="d2">2</data>
+</node>
+<node id="sharp nails">
+  <data key="d0">symptom</data>
+  <data key="d1">sharp nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin scratches">
+  <data key="d0">symptom</data>
+  <data key="d1">skin scratches</data>
+  <data key="d2">2</data>
+</node>
+<node id="mastoiditis">
+  <data key="d0">disease</data>
+  <data key="d1">mastoiditis</data>
+  <data key="d2">2</data>
+</node>
+<node id="earache">
+  <data key="d0">symptom</data>
+  <data key="d1">earache</data>
+  <data key="d2">2</data>
+</node>
+<node id="irritability">
+  <data key="d0">symptom</data>
+  <data key="d1">irritability</data>
+  <data key="d2">2</data>
+</node>
+<node id="adenoid cystic carcinoma">
+  <data key="d0">disease</data>
+  <data key="d1">adenoid cystic carcinoma</data>
+  <data key="d2">2</data>
+</node>
+<node id="facial numbness">
+  <data key="d0">symptom</data>
+  <data key="d1">facial numbness</data>
+  <data key="d2">2</data>
+</node>
+<node id="tingling">
+  <data key="d0">symptom</data>
+  <data key="d1">tingling</data>
+  <data key="d2">4</data>
+</node>
+<node id="gout">
+  <data key="d0">disease</data>
+  <data key="d1">gout</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin cancer types: merkel cell carcinoma self-care">
+  <data key="d0">disease</data>
+  <data key="d1">skin cancer types: merkel cell carcinoma self-care</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin growths">
+  <data key="d0">symptom</data>
+  <data key="d1">skin growths</data>
+  <data key="d2">4</data>
+</node>
+<node id="warts: overview">
+  <data key="d0">disease</data>
+  <data key="d1">warts: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="self-care: 10 ways to relieve discomfort from scleroderma">
+  <data key="d0">disease</data>
+  <data key="d1">self-care: 10 ways to relieve discomfort from scleroderma</data>
+  <data key="d2">2</data>
+</node>
+<node id="discoloration">
+  <data key="d0">symptom</data>
+  <data key="d1">discoloration</data>
+  <data key="d2">4</data>
+</node>
+<node id="sores">
+  <data key="d0">symptom</data>
+  <data key="d1">sores</data>
+  <data key="d2">2</data>
+</node>
+<node id="poor blood flow">
+  <data key="d0">symptom</data>
+  <data key="d1">poor blood flow</data>
+  <data key="d2">2</data>
+</node>
+<node id="sarcoidosis and your skin: diagnosis and treatment">
+  <data key="d0">disease</data>
+  <data key="d1">sarcoidosis and your skin: diagnosis and treatment</data>
+  <data key="d2">2</data>
+</node>
+<node id="lumps">
+  <data key="d0">symptom</data>
+  <data key="d1">lumps</data>
+  <data key="d2">2</data>
+</node>
+<node id="rashes">
+  <data key="d0">symptom</data>
+  <data key="d1">rashes</data>
+  <data key="d2">3</data>
+</node>
+<node id="vision changes">
+  <data key="d0">symptom</data>
+  <data key="d1">vision changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="cough">
+  <data key="d0">symptom</data>
+  <data key="d1">cough</data>
+  <data key="d2">2</data>
+</node>
+<node id="difficulty breathing">
+  <data key="d0">symptom</data>
+  <data key="d1">difficulty breathing</data>
+  <data key="d2">4</data>
+</node>
+<node id="abnormal heart rhythms">
+  <data key="d0">symptom</data>
+  <data key="d1">abnormal heart rhythms</data>
+  <data key="d2">2</data>
+</node>
+<node id="manicures and pedicures">
+  <data key="d0">disease</data>
+  <data key="d1">manicures and pedicures</data>
+  <data key="d2">2</data>
+</node>
+<node id="nail damage">
+  <data key="d0">symptom</data>
+  <data key="d1">nail damage</data>
+  <data key="d2">2</data>
+</node>
+<node id="cutaneous t-cell lymphoma: overview">
+  <data key="d0">disease</data>
+  <data key="d1">cutaneous t-cell lymphoma: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="pink patches">
+  <data key="d0">symptom</data>
+  <data key="d1">pink patches</data>
+  <data key="d2">2</data>
+</node>
+<node id="raised plaques">
+  <data key="d0">symptom</data>
+  <data key="d1">raised plaques</data>
+  <data key="d2">2</data>
+</node>
+<node id="light spots">
+  <data key="d0">symptom</data>
+  <data key="d1">light spots</data>
+  <data key="d2">2</data>
+</node>
+<node id="bladder cancer">
+  <data key="d0">disease</data>
+  <data key="d1">bladder cancer</data>
+  <data key="d2">2</data>
+</node>
+<node id="blood in urine">
+  <data key="d0">symptom</data>
+  <data key="d1">blood in urine</data>
+  <data key="d2">2</data>
+</node>
+<node id="frequent urination">
+  <data key="d0">symptom</data>
+  <data key="d1">frequent urination</data>
+  <data key="d2">2</data>
+</node>
+<node id="myofascial pain syndrome">
+  <data key="d0">disease</data>
+  <data key="d1">myofascial pain syndrome</data>
+  <data key="d2">2</data>
+</node>
+<node id="trigger points">
+  <data key="d0">symptom</data>
+  <data key="d1">trigger points</data>
+  <data key="d2">2</data>
+</node>
+<node id="chemical peels: overview">
+  <data key="d0">disease</data>
+  <data key="d1">chemical peels: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="hypocalcemia">
+  <data key="d0">disease</data>
+  <data key="d1">hypocalcemia</data>
+  <data key="d2">2</data>
+</node>
+<node id="muscle cramps">
+  <data key="d0">symptom</data>
+  <data key="d1">muscle cramps</data>
+  <data key="d2">2</data>
+</node>
+<node id="psoriatic arthritis: causes">
+  <data key="d0">disease</data>
+  <data key="d1">psoriatic arthritis: causes</data>
+  <data key="d2">2</data>
+</node>
+<node id="swollen joints">
+  <data key="d0">symptom</data>
+  <data key="d1">swollen joints</data>
+  <data key="d2">2</data>
+</node>
+<node id="how dermatologists treat sun-damaged skin">
+  <data key="d0">disease</data>
+  <data key="d1">how dermatologists treat sun-damaged skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="loose skin">
+  <data key="d0">symptom</data>
+  <data key="d1">loose skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="blotchy complexion">
+  <data key="d0">symptom</data>
+  <data key="d1">blotchy complexion</data>
+  <data key="d2">2</data>
+</node>
+<node id="fillers: faqs">
+  <data key="d0">disease</data>
+  <data key="d1">fillers: faqs</data>
+  <data key="d2">2</data>
+</node>
+<node id="transient ischemic attack">
+  <data key="d0">disease</data>
+  <data key="d1">transient ischemic attack</data>
+  <data key="d2">2</data>
+</node>
+<node id="sudden onset">
+  <data key="d0">symptom</data>
+  <data key="d1">sudden onset</data>
+  <data key="d2">2</data>
+</node>
+<node id="neurological symptoms">
+  <data key="d0">symptom</data>
+  <data key="d1">neurological symptoms</data>
+  <data key="d2">2</data>
+</node>
+<node id="glucocorticoid deficiency">
+  <data key="d0">disease</data>
+  <data key="d1">glucocorticoid deficiency</data>
+  <data key="d2">2</data>
+</node>
+<node id="weakness">
+  <data key="d0">symptom</data>
+  <data key="d1">weakness</data>
+  <data key="d2">2</data>
+</node>
+<node id="poison ivy, oak, and sumac">
+  <data key="d0">disease</data>
+  <data key="d1">poison ivy, oak, and sumac</data>
+  <data key="d2">2</data>
+</node>
+<node id="red rash">
+  <data key="d0">symptom</data>
+  <data key="d1">red rash</data>
+  <data key="d2">2</data>
+</node>
+<node id="blistered skin">
+  <data key="d0">symptom</data>
+  <data key="d1">blistered skin</data>
+  <data key="d2">2</data>
+</node>
+<node id="dip powder manicure: 5 tips to keep your nails healthy">
+  <data key="d0">disease</data>
+  <data key="d1">dip powder manicure: 5 tips to keep your nails healthy</data>
+  <data key="d2">2</data>
+</node>
+<node id="infection">
+  <data key="d0">symptom</data>
+  <data key="d1">infection</data>
+  <data key="d2">2</data>
+</node>
+<node id="thinning nails">
+  <data key="d0">symptom</data>
+  <data key="d1">thinning nails</data>
+  <data key="d2">2</data>
+</node>
+<node id="damage">
+  <data key="d0">symptom</data>
+  <data key="d1">damage</data>
+  <data key="d2">2</data>
+</node>
+<node id="lichen planus: overview">
+  <data key="d0">disease</data>
+  <data key="d1">lichen planus: overview</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin changes">
+  <data key="d0">symptom</data>
+  <data key="d1">skin changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="nail changes">
+  <data key="d0">symptom</data>
+  <data key="d1">nail changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin lesions">
+  <data key="d0">symptom</data>
+  <data key="d1">skin lesions</data>
+  <data key="d2">2</data>
+</node>
+<node id="coloring and perming tips for healthier-looking hair">
+  <data key="d0">disease</data>
+  <data key="d1">coloring and perming tips for healthier-looking hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="weak hair">
+  <data key="d0">symptom</data>
+  <data key="d1">weak hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="dry hair">
+  <data key="d0">symptom</data>
+  <data key="d1">dry hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="rough hair">
+  <data key="d0">symptom</data>
+  <data key="d1">rough hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="faded hair">
+  <data key="d0">symptom</data>
+  <data key="d1">faded hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="brittle hair">
+  <data key="d0">symptom</data>
+  <data key="d1">brittle hair</data>
+  <data key="d2">2</data>
+</node>
+<node id="polycystic kidney disease">
+  <data key="d0">disease</data>
+  <data key="d1">polycystic kidney disease</data>
+  <data key="d2">2</data>
+</node>
+<node id="high blood pressure">
+  <data key="d0">symptom</data>
+  <data key="d1">high blood pressure</data>
+  <data key="d2">2</data>
+</node>
+<node id="kidney cysts">
+  <data key="d0">symptom</data>
+  <data key="d1">kidney cysts</data>
+  <data key="d2">2</data>
+</node>
+<node id="dysthymic disorder">
+  <data key="d0">disease</data>
+  <data key="d1">dysthymic disorder</data>
+  <data key="d2">2</data>
+</node>
+<node id="low mood">
+  <data key="d0">symptom</data>
+  <data key="d1">low mood</data>
+  <data key="d2">2</data>
+</node>
+<node id="lack of interest">
+  <data key="d0">symptom</data>
+  <data key="d1">lack of interest</data>
+  <data key="d2">2</data>
+</node>
+<node id="sleep changes">
+  <data key="d0">symptom</data>
+  <data key="d1">sleep changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="appetite changes">
+  <data key="d0">symptom</data>
+  <data key="d1">appetite changes</data>
+  <data key="d2">2</data>
+</node>
+<node id="melasma: diagnosis and treatment">
+  <data key="d0">disease</data>
+  <data key="d1">melasma: diagnosis and treatment</data>
+  <data key="d2">2</data>
+</node>
+<node id="brown patches">
+  <data key="d0">symptom</data>
+  <data key="d1">brown patches</data>
+  <data key="d2">2</data>
+</node>
+<node id="skin darkening">
+  <data key="d0">symptom</data>
+  <data key="d1">skin darkening</data>
+  <data key="d2">2</data>
+</node>
+<node id="urge incontinence">
+  <data key="d0">disease</data>
+  <data key="d1">urge incontinence</data>
+  <data key="d2">2</data>
+</node>
+<node id="sudden urination urge">
+  <data key="d0">symptom</data>
+  <data key="d1">sudden urination urge</data>
+  <data key="d2">2</data>
+</node>
+<node id="involuntary urine leakage">
+  <data key="d0">symptom</data>
+  <data key="d1">involuntary urine leakage</data>
+  <data key="d2">2</data>
+</node>
+<node id="fracture of the rib">
+  <data key="d0">disease</data>
+  <data key="d1">fracture of the rib</data>
+  <data key="d2">2</data>
+</node>
+<node id="chest pain">
+  <data key="d0">symptom</data>
+  <data key="d1">chest pain</data>
+  <data key="d2">2</data>
+</node>
+<node id="bell palsy">
+  <data key="d0">disease</data>
+  <data key="d1">bell palsy</data>
+  <data key="d2">2</data>
+</node>
+<node id="facial weakness">
+  <data key="d0">symptom</data>
+  <data key="d1">facial weakness</data>
+  <data key="d2">2</data>
+</node>
+<node id="paralysis">
+  <data key="d0">symptom</data>
+  <data key="d1">paralysis</data>
+  <data key="d2">2</data>
+</node>
+<node id="drooping eyelid">
+  <data key="d0">symptom</data>
+  <data key="d1">drooping eyelid</data>
+  <data key="d2">2</data>
+</node>
+<node id="drooping mouth">
+  <data key="d0">symptom</data>
+  <data key="d1">drooping mouth</data>
+  <data key="d2">2</data>
+</node>
+<node id="pimples">
+  <data key="d0">symptom</data>
+  <data key="d1">pimples</data>
+  <data key="d2">1</data>
+</node>
+<node id="skin inflammation">
+  <data key="d0">symptom</data>
+  <data key="d1">skin inflammation</data>
+  <data key="d2">1</data>
+</node>
+<node id="fungal nail infection">
+  <data key="d0">disease</data>
+  <data key="d1">fungal nail infection</data>
+  <data key="d2">1</data>
+</node>
+<node id="thickened nails">
+  <data key="d0">symptom</data>
+  <data key="d1">thickened nails</data>
+  <data key="d2">1</data>
+</node>
+<node id="discolored nails">
+  <data key="d0">symptom</data>
+  <data key="d1">discolored nails</data>
+  <data key="d2">1</data>
+</node>
+<node id="nail odor">
+  <data key="d0">symptom</data>
+  <data key="d1">nail odor</data>
+  <data key="d2">1</data>
+</node>
+<node id="vitiligo">
+  <data key="d0">disease</data>
+  <data key="d1">vitiligo</data>
+  <data key="d2">1</data>
+</node>
+<node id="white patches">
+  <data key="d0">symptom</data>
+  <data key="d1">white patches</data>
+  <data key="d2">1</data>
+</node>
+<node id="premature hair whitening">
+  <data key="d0">symptom</data>
+  <data key="d1">premature hair whitening</data>
+  <data key="d2">1</data>
+</node>
+<edge source="antihypertensives poisoning" target="dizziness">
+  <data key="d3">2</data>
+</edge>
+<edge source="antihypertensives poisoning" target="low blood pressure">
+  <data key="d3">2</data>
+</edge>
+<edge source="antihypertensives poisoning" target="slow heart rate">
+  <data key="d3">2</data>
+</edge>
+<edge source="antihypertensives poisoning" target="nausea">
+  <data key="d3">2</data>
+</edge>
+<edge source="antihypertensives poisoning" target="vomiting">
+  <data key="d3">2</data>
+</edge>
+<edge source="granuloma annulare: overview" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="granuloma annulare: overview" target="ring-shaped patch">
+  <data key="d3">2</data>
+</edge>
+<edge source="granuloma annulare: overview" target="raised skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="granuloma annulare: overview" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="granuloma annulare: overview" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="dry shampoo: dermatologists' tips for getting your best results" target="scalp irritation">
+  <data key="d3">2</data>
+</edge>
+<edge source="are you ready to manage your child's eczema triggers?" target="itchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="are you ready to manage your child's eczema triggers?" target="red skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="are you ready to manage your child's eczema triggers?" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="rosacea: insider secrets" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="rosacea: insider secrets" target="bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="rosacea: insider secrets" target="visible blood vessels">
+  <data key="d3">2</data>
+</edge>
+<edge source="coagulation (bleeding) disorder" target="easy bruising">
+  <data key="d3">2</data>
+</edge>
+<edge source="coagulation (bleeding) disorder" target="prolonged bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="coagulation (bleeding) disorder" target="excessive bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="coagulation (bleeding) disorder" target="nosebleeds">
+  <data key="d3">2</data>
+</edge>
+<edge source="coagulation (bleeding) disorder" target="heavy menstrual bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="acinic cell carcinoma" target="facial changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="acinic cell carcinoma" target="lump">
+  <data key="d3">2</data>
+</edge>
+<edge source="acinic cell carcinoma" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="rough skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="reddish skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="scaly area">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="open sore">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="brown spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="firm growth">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="wart-like growth">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="horn-like growth">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="soreness">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="tenderness">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="numbness">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="pins-and-needles sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: squamous cell carcinoma symptoms" target="skin discoloration">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="skin irritation">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="peeling">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="dryness">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: synthetic vitamin d" target="high calcium levels">
+  <data key="d3">2</data>
+</edge>
+<edge source="should i treat my psoriasis?" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="should i treat my psoriasis?" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="bronchitis" target="persistent cough">
+  <data key="d3">2</data>
+</edge>
+<edge source="bronchitis" target="chest congestion">
+  <data key="d3">2</data>
+</edge>
+<edge source="bronchitis" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="stinging">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="throbbing">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="prickling sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to prevent and treat frostbite" target="numbness">
+  <data key="d3">2</data>
+</edge>
+<edge source="pseudohypoparathyroidism" target="low calcium levels">
+  <data key="d3">2</data>
+</edge>
+<edge source="pseudohypoparathyroidism" target="muscle spasms">
+  <data key="d3">2</data>
+</edge>
+<edge source="pseudohypoparathyroidism" target="short stature">
+  <data key="d3">2</data>
+</edge>
+<edge source="pseudohypoparathyroidism" target="rounded face">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute otitis media" target="ear pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute otitis media" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute otitis media" target="fluid drainage">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute otitis media" target="hearing loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="cyst of the eyelid" target="painful lump">
+  <data key="d3">2</data>
+</edge>
+<edge source="cyst of the eyelid" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="cyst of the eyelid" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="cyst of the eyelid" target="tenderness">
+  <data key="d3">2</data>
+</edge>
+<edge source="chancroid" target="painful ulcers">
+  <data key="d3">2</data>
+</edge>
+<edge source="chancroid" target="swollen lymph nodes">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="dizziness">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="nausea">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="vomiting">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="confusion">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="memory problems">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="sensitivity to light">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="sensitivity to noise">
+  <data key="d3">2</data>
+</edge>
+<edge source="concussion" target="mood changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="itchy bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="intense itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="burning sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="stinging sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="bugs crawling sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="raised patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="itchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="dark spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="pebbly texture">
+  <data key="d3">2</data>
+</edge>
+<edge source="prurigo nodularis: signs and symptoms" target="thickening skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: basal cell carcinoma overview" target="slowly growing spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: basal cell carcinoma overview" target="non-healing spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: basal cell carcinoma overview" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="blistering">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="open wounds">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="anemia">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="constipation">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="dehydration">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="eye problems">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="itchiness">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="malnutrition">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="mouth sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="nail loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="epidermolysis bullosa: signs and symptoms" target="skin infections">
+  <data key="d3">2</data>
+</edge>
+<edge source="melanoma survivor? you really need to check your skin!" target="asymmetry">
+  <data key="d3">2</data>
+</edge>
+<edge source="melanoma survivor? you really need to check your skin!" target="border change">
+  <data key="d3">2</data>
+</edge>
+<edge source="melanoma survivor? you really need to check your skin!" target="color change">
+  <data key="d3">2</data>
+</edge>
+<edge source="melanoma survivor? you really need to check your skin!" target="diameter change">
+  <data key="d3">2</data>
+</edge>
+<edge source="melanoma survivor? you really need to check your skin!" target="evolving spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="osteoarthritis" target="joint pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="osteoarthritis" target="stiffness">
+  <data key="d3">2</data>
+</edge>
+<edge source="osteoarthritis" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastroenteritis (stomach flu)" target="nausea">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastroenteritis (stomach flu)" target="vomiting">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastroenteritis (stomach flu)" target="diarrhea">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastroenteritis (stomach flu)" target="abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastroenteritis (stomach flu)" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat psoriasis at age 65 and beyond" target="thinning skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat psoriasis at age 65 and beyond" target="bruising">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat psoriasis at age 65 and beyond" target="infections">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to get rid of head lice when treatment fails" target="irritated skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="marijuana abuse" target="impaired memory">
+  <data key="d3">2</data>
+</edge>
+<edge source="marijuana abuse" target="altered judgment">
+  <data key="d3">2</data>
+</edge>
+<edge source="marijuana abuse" target="anxiety">
+  <data key="d3">2</data>
+</edge>
+<edge source="extrapyramidal effect of drugs" target="muscle stiffness">
+  <data key="d3">2</data>
+</edge>
+<edge source="extrapyramidal effect of drugs" target="tremors">
+  <data key="d3">2</data>
+</edge>
+<edge source="extrapyramidal effect of drugs" target="involuntary movements">
+  <data key="d3">2</data>
+</edge>
+<edge source="myasthenia gravis" target="muscle weakness">
+  <data key="d3">2</data>
+</edge>
+<edge source="myasthenia gravis" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="myasthenia gravis" target="difficulty speaking">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: contact dermatitis diagnosis and treatment" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: contact dermatitis diagnosis and treatment" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastrointestinal hemorrhage" target="abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastrointestinal hemorrhage" target="vomiting blood">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastrointestinal hemorrhage" target="bloody stools">
+  <data key="d3">2</data>
+</edge>
+<edge source="gastrointestinal hemorrhage" target="black stools">
+  <data key="d3">2</data>
+</edge>
+<edge source="wrinkles" target="lines">
+  <data key="d3">2</data>
+</edge>
+<edge source="wrinkles" target="skin damage">
+  <data key="d3">2</data>
+</edge>
+<edge source="types of hair loss" target="patchy hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="types of hair loss" target="thinning hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="types of hair loss" target="receding hairline">
+  <data key="d3">2</data>
+</edge>
+<edge source="types of hair loss" target="eyebrow loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="types of hair loss" target="hair loss on scalp">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: overview" target="darkened skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: overview" target="thickened skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: overview" target="velvety skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="clogged pores">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="red bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="blackheads">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="whiteheads">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="papules">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="pustules">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="inflamed blemishes">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat different types of acne" target="permanent scarring">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: melanoma overview" target="new mole">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: melanoma overview" target="changing mole">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: melanoma overview" target="different mole">
+  <data key="d3">2</data>
+</edge>
+<edge source="idiopathic absence of menstruation" target="absent periods">
+  <data key="d3">2</data>
+</edge>
+<edge source="how natalie finally got rid of her adult acne" target="painful cysts">
+  <data key="d3">2</data>
+</edge>
+<edge source="how natalie finally got rid of her adult acne" target="acne scars">
+  <data key="d3">2</data>
+</edge>
+<edge source="how natalie finally got rid of her adult acne" target="cystic acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="bulimia nervosa" target="binge eating">
+  <data key="d3">2</data>
+</edge>
+<edge source="bulimia nervosa" target="purging behaviors">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin biopsy: dermatologist-recommended wound care" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin biopsy: dermatologist-recommended wound care" target="dryness">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin biopsy: dermatologist-recommended wound care" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin biopsy: dermatologist-recommended wound care" target="allergic reaction">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute glaucoma" target="severe eye pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute glaucoma" target="blurred vision">
+  <data key="d3">2</data>
+</edge>
+<edge source="acute glaucoma" target="halos around lights">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="age spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="wrinkles">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="sagging skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="spider veins">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="varicose veins">
+  <data key="d3">2</data>
+</edge>
+<edge source="younger-looking skin" target="fine lines">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="pain in tailbone">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="pus drainage">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="blood drainage">
+  <data key="d3">2</data>
+</edge>
+<edge source="pilonidal cyst" target="abscess formation">
+  <data key="d3">2</data>
+</edge>
+<edge source="can covid-19 cause hair loss?" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="can covid-19 cause hair loss?" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="can covid-19 cause hair loss?" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="can covid-19 cause hair loss?" target="itchy scalp">
+  <data key="d3">2</data>
+</edge>
+<edge source="can covid-19 cause hair loss?" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="detectar cã¡ncer de piel: cã³mo realizar un autoexamen de piel" target="new spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="detectar cã¡ncer de piel: cã³mo realizar un autoexamen de piel" target="itchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="detectar cã¡ncer de piel: cã³mo realizar un autoexamen de piel" target="bleeding spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="lymphoma" target="swollen lymph nodes">
+  <data key="d3">2</data>
+</edge>
+<edge source="lymphoma" target="unexplained weight loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="lymphoma" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="ludwig's angina" target="severe swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="ludwig's angina" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="ludwig's angina" target="difficulty swallowing">
+  <data key="d3">2</data>
+</edge>
+<edge source="ludwig's angina" target="drooling">
+  <data key="d3">2</data>
+</edge>
+<edge source="6 ways to remove unwanted hair" target="ingrown hairs">
+  <data key="d3">2</data>
+</edge>
+<edge source="6 ways to remove unwanted hair" target="irritated skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="6 ways to remove unwanted hair" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="sensitive skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="oily skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="dark spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="open wounds">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to safely exfoliate at home" target="sunburned skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne" target="itching">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="rashes">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="red skin">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="pimples">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="blackheads">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="whiteheads">
+  <data key="d3">1</data>
+</edge>
+<edge source="acne" target="skin inflammation">
+  <data key="d3">1</data>
+</edge>
+<edge source="autism" target="social interaction issues">
+  <data key="d3">2</data>
+</edge>
+<edge source="autism" target="communication difficulties">
+  <data key="d3">2</data>
+</edge>
+<edge source="autism" target="restricted interests">
+  <data key="d3">2</data>
+</edge>
+<edge source="autism" target="repetitive behaviors">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: diagnosis and treatment" target="skin thickening">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: diagnosis and treatment" target="dark skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: diagnosis and treatment" target="discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="acanthosis nigricans: diagnosis and treatment" target="odor">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne scars: causes" target="depressed scars">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne scars: causes" target="raised scars">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne scars: causes" target="inflammation">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema treatment: corticosteroids applied to the skin" target="inflammation">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema treatment: corticosteroids applied to the skin" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema treatment: corticosteroids applied to the skin" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema treatment: corticosteroids applied to the skin" target="heat">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema treatment: corticosteroids applied to the skin" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to control oily skin" target="acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to control oily skin" target="excess oil">
+  <data key="d3">2</data>
+</edge>
+<edge source="face mask skin care made simple: infographic" target="acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="face mask skin care made simple: infographic" target="dryness">
+  <data key="d3">2</data>
+</edge>
+<edge source="stress incontinence" target="unintentional urine leakage">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="bullseye rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="red spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="itchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="warm skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="painful skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="chills">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="muscle aches">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="bluish-red lump">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="skin swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="hardening">
+  <data key="d3">2</data>
+</edge>
+<edge source="signs of lyme disease that appear on your skin" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="goiter" target="enlarged thyroid">
+  <data key="d3">2</data>
+</edge>
+<edge source="goiter" target="neck swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="goiter" target="difficulty swallowing">
+  <data key="d3">2</data>
+</edge>
+<edge source="goiter" target="breathing difficulty">
+  <data key="d3">2</data>
+</edge>
+<edge source="ichthyosis vulgaris: overview" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="ichthyosis vulgaris: overview" target="scaly skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="chorioretinitis" target="eye pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="chorioretinitis" target="blurred vision">
+  <data key="d3">2</data>
+</edge>
+<edge source="chorioretinitis" target="sensitivity to light">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="intense itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="raised skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="rough skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="discolored skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="thickened skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="open sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="eczema types: neurodermatitis signs and symptoms" target="scarring">
+  <data key="d3">2</data>
+</edge>
+<edge source="artificial nails: dermatologists' tips for reducing nail damage" target="thin nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="artificial nails: dermatologists' tips for reducing nail damage" target="brittle nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="artificial nails: dermatologists' tips for reducing nail damage" target="weak nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="warts: who gets and causes" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="warts: who gets and causes" target="discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="see how the sun damages your skin" target="skin cancer">
+  <data key="d3">2</data>
+</edge>
+<edge source="see how the sun damages your skin" target="premature aging">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="depression">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="anxiety">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="low self-esteem">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="isolation">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="emotional distress">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="scarring">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne can affect more than your skin" target="discolored skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="headache after lumbar puncture" target="throbbing headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="pityriasis rosea: tips for managing" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="pityriasis rosea: tips for managing" target="itchiness">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="itch">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="skin irritation">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="stinging">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriasis treatment: coal tar" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="herpes simplex: overview" target="cold sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="herpes simplex: overview" target="fever blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="herpes simplex: overview" target="mouth sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="moles: tips for managing" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="moles: tips for managing" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="moles: tips for managing" target="size change">
+  <data key="d3">2</data>
+</edge>
+<edge source="moles: tips for managing" target="shape change">
+  <data key="d3">2</data>
+</edge>
+<edge source="syringomyelia" target="muscle weakness">
+  <data key="d3">2</data>
+</edge>
+<edge source="syringomyelia" target="loss of sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="syringomyelia" target="chronic pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="anxiety">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="confusion">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="hallucinations">
+  <data key="d3">2</data>
+</edge>
+<edge source="rabies" target="difficulty swallowing">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="acne like breakouts">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="bumps on neck">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="bumps on scalp">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="inflammation">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="scarring">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: overview" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="treating acne? is it time to see a dermatologist?" target="persistent breakouts">
+  <data key="d3">2</data>
+</edge>
+<edge source="treating acne? is it time to see a dermatologist?" target="deep acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="treating acne? is it time to see a dermatologist?" target="painful acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="treating acne? is it time to see a dermatologist?" target="acne scars">
+  <data key="d3">2</data>
+</edge>
+<edge source="treating acne? is it time to see a dermatologist?" target="dark spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="pemphigus" target="painful blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="pemphigus" target="skin blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="pemphigus" target="mucous membrane blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="firm bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="painful bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="raised scars">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="abscesses">
+  <data key="d3">2</data>
+</edge>
+<edge source="acne keloidalis nuchae: signs and symptoms" target="sinus tracts">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="itchy eyes">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="red eyes">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="swollen eyes">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="eye discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="itchiness">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="sensitivity to light">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="watery discharge">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="sticky discharge">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="blurred vision">
+  <data key="d3">2</data>
+</edge>
+<edge source="adults with eczema should watch for eye problems" target="nearsightedness">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="diarrhea">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="sleep problems">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="cold hands">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="low blood pressure">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="slow heart rate">
+  <data key="d3">2</data>
+</edge>
+<edge source="heart medicine can clear strawberry birthmarks" target="low blood sugar">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="thick skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="raised patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="silvery scales">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="yellow spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="pitting">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="crumbling nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="scaly spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="red patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="painful blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="cracking skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="what does psoriasis look like?" target="burnt skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="can the right diet get rid of acne?" target="breakouts">
+  <data key="d3">2</data>
+</edge>
+<edge source="can the right diet get rid of acne?" target="inflammation">
+  <data key="d3">2</data>
+</edge>
+<edge source="can the right diet get rid of acne?" target="excess sebum">
+  <data key="d3">2</data>
+</edge>
+<edge source="genital warts: overview" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="genital warts: overview" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="genital warts: overview" target="discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="warmth">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="pus">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="infection of open wound" target="malaise">
+  <data key="d3">2</data>
+</edge>
+<edge source="diverticulosis" target="abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="diverticulosis" target="bloating">
+  <data key="d3">2</data>
+</edge>
+<edge source="diverticulosis" target="bowel changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="mittelschmerz" target="lower abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="mittelschmerz" target="discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="causes of hair loss" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="causes of hair loss" target="telogen effluvium">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometriosis" target="pelvic pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometriosis" target="heavy bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometriosis" target="infertility">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometriosis" target="painful periods">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="crusts">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="skin infection">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="cuts">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="scratches">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="insect bites">
+  <data key="d3">2</data>
+</edge>
+<edge source="impetigo: overview" target="eczema">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: sebaceous carcinoma causes" target="growth on eyelid">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="developmental delays">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="intellectual disability">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="hearing loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="vision problems">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="heart defects">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="liver enlargement">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="spleen enlargement">
+  <data key="d3">2</data>
+</edge>
+<edge source="congenital rubella" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="why you need sun protection in the winter" target="sunburn">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="blisters">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="open sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="white dots">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="scaly patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="hair thinning">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: signs and symptoms" target="irritation">
+  <data key="d3">2</data>
+</edge>
+<edge source="hair loss types: frontal fibrosing alopecia overview" target="receding hairline">
+  <data key="d3">2</data>
+</edge>
+<edge source="hair loss types: frontal fibrosing alopecia overview" target="bald skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="hair loss types: frontal fibrosing alopecia overview" target="hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="hair loss types: frontal fibrosing alopecia overview" target="patches of hair loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometrial cancer" target="abnormal vaginal bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometrial cancer" target="pelvic pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometrial cancer" target="discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometrial cancer" target="bowel changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="endometrial cancer" target="bladder changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="pleomorphic adenoma" target="painless lump">
+  <data key="d3">2</data>
+</edge>
+<edge source="pleomorphic adenoma" target="facial changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="pleomorphic adenoma" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat eczema in babies" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat eczema in babies" target="inflammation">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to treat eczema in babies" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="painless spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="sore">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="tender skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="red spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="purple spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma signs &amp; symptoms" target="pink spot">
+  <data key="d3">2</data>
+</edge>
+<edge source="pregnancy-related back pain" target="lower back pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="pregnancy-related back pain" target="pelvic discomfort">
+  <data key="d3">2</data>
+</edge>
+<edge source="melasma: signs and symptoms" target="dark patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="melasma: signs and symptoms" target="blotchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="melasma: signs and symptoms" target="skin discoloration">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="skin injuries">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="sunburn">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="infections">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="cold weather">
+  <data key="d3">2</data>
+</edge>
+<edge source="are triggers causing your psoriasis flare-ups?" target="stress">
+  <data key="d3">2</data>
+</edge>
+<edge source="cellulite treatments: what really works?" target="dimples">
+  <data key="d3">2</data>
+</edge>
+<edge source="cellulite treatments: what really works?" target="fat deposits">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="loss of skin color">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="lighter skin patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="premature hair graying">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="eye color change">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="hearing loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="sunburn">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="anxiety">
+  <data key="d3">2</data>
+</edge>
+<edge source="vitiligo: signs and symptoms" target="depression">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="shortness of breath">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="wheezing">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="chronic cough">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="chest tightness">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="emphysema" target="weight loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="mild fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="sore throat">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="stomach pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="decreased appetite">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="painful mouth sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="itchy rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="swollen lymph nodes">
+  <data key="d3">2</data>
+</edge>
+<edge source="hand-foot-and-mouth disease: signs and symptoms" target="dehydration">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="high fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="severe headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="joint pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="muscle pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="nausea">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="vomiting">
+  <data key="d3">2</data>
+</edge>
+<edge source="dengue fever" target="bleeding">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to care for your baby's skin, hair, and nails" target="diaper rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to care for your baby's skin, hair, and nails" target="sharp nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="how to care for your baby's skin, hair, and nails" target="skin scratches">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="ear pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="fever">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="headache">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="hearing loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="fluid drainage">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="earache">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="irritability">
+  <data key="d3">2</data>
+</edge>
+<edge source="mastoiditis" target="tenderness">
+  <data key="d3">2</data>
+</edge>
+<edge source="adenoid cystic carcinoma" target="facial numbness">
+  <data key="d3">2</data>
+</edge>
+<edge source="adenoid cystic carcinoma" target="lump">
+  <data key="d3">2</data>
+</edge>
+<edge source="adenoid cystic carcinoma" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="adenoid cystic carcinoma" target="tingling">
+  <data key="d3">2</data>
+</edge>
+<edge source="gout" target="joint pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="gout" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="gout" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma self-care" target="new spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma self-care" target="swollen lymph nodes">
+  <data key="d3">2</data>
+</edge>
+<edge source="skin cancer types: merkel cell carcinoma self-care" target="skin growths">
+  <data key="d3">2</data>
+</edge>
+<edge source="warts: overview" target="rough skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="warts: overview" target="skin growths">
+  <data key="d3">2</data>
+</edge>
+<edge source="warts: overview" target="dark spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="dry skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="discoloration">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="thickened skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="sores">
+  <data key="d3">2</data>
+</edge>
+<edge source="self-care: 10 ways to relieve discomfort from scleroderma" target="poor blood flow">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="lumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="bumps">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="rashes">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="swollen lymph nodes">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="vision changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="cough">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="difficulty breathing">
+  <data key="d3">2</data>
+</edge>
+<edge source="sarcoidosis and your skin: diagnosis and treatment" target="abnormal heart rhythms">
+  <data key="d3">2</data>
+</edge>
+<edge source="manicures and pedicures" target="nail damage">
+  <data key="d3">2</data>
+</edge>
+<edge source="cutaneous t-cell lymphoma: overview" target="pink patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="cutaneous t-cell lymphoma: overview" target="red patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="cutaneous t-cell lymphoma: overview" target="dark patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="cutaneous t-cell lymphoma: overview" target="raised plaques">
+  <data key="d3">2</data>
+</edge>
+<edge source="cutaneous t-cell lymphoma: overview" target="light spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="bladder cancer" target="blood in urine">
+  <data key="d3">2</data>
+</edge>
+<edge source="bladder cancer" target="frequent urination">
+  <data key="d3">2</data>
+</edge>
+<edge source="bladder cancer" target="pelvic pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="myofascial pain syndrome" target="muscle pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="myofascial pain syndrome" target="trigger points">
+  <data key="d3">2</data>
+</edge>
+<edge source="chemical peels: overview" target="wrinkles">
+  <data key="d3">2</data>
+</edge>
+<edge source="chemical peels: overview" target="fine lines">
+  <data key="d3">2</data>
+</edge>
+<edge source="chemical peels: overview" target="acne">
+  <data key="d3">2</data>
+</edge>
+<edge source="chemical peels: overview" target="age spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="chemical peels: overview" target="discoloration">
+  <data key="d3">2</data>
+</edge>
+<edge source="hypocalcemia" target="numbness">
+  <data key="d3">2</data>
+</edge>
+<edge source="hypocalcemia" target="tingling">
+  <data key="d3">2</data>
+</edge>
+<edge source="hypocalcemia" target="muscle cramps">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriatic arthritis: causes" target="joint pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriatic arthritis: causes" target="stiffness">
+  <data key="d3">2</data>
+</edge>
+<edge source="psoriatic arthritis: causes" target="swollen joints">
+  <data key="d3">2</data>
+</edge>
+<edge source="how dermatologists treat sun-damaged skin" target="wrinkles">
+  <data key="d3">2</data>
+</edge>
+<edge source="how dermatologists treat sun-damaged skin" target="age spots">
+  <data key="d3">2</data>
+</edge>
+<edge source="how dermatologists treat sun-damaged skin" target="loose skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="how dermatologists treat sun-damaged skin" target="spider veins">
+  <data key="d3">2</data>
+</edge>
+<edge source="how dermatologists treat sun-damaged skin" target="blotchy complexion">
+  <data key="d3">2</data>
+</edge>
+<edge source="fillers: faqs" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="fillers: faqs" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="fillers: faqs" target="stinging sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="fillers: faqs" target="burning sensation">
+  <data key="d3">2</data>
+</edge>
+<edge source="transient ischemic attack" target="sudden onset">
+  <data key="d3">2</data>
+</edge>
+<edge source="transient ischemic attack" target="neurological symptoms">
+  <data key="d3">2</data>
+</edge>
+<edge source="glucocorticoid deficiency" target="fatigue">
+  <data key="d3">2</data>
+</edge>
+<edge source="glucocorticoid deficiency" target="weakness">
+  <data key="d3">2</data>
+</edge>
+<edge source="glucocorticoid deficiency" target="weight loss">
+  <data key="d3">2</data>
+</edge>
+<edge source="glucocorticoid deficiency" target="low blood pressure">
+  <data key="d3">2</data>
+</edge>
+<edge source="glucocorticoid deficiency" target="abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="poison ivy, oak, and sumac" target="itchy skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="poison ivy, oak, and sumac" target="red rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="poison ivy, oak, and sumac" target="blistered skin">
+  <data key="d3">2</data>
+</edge>
+<edge source="dip powder manicure: 5 tips to keep your nails healthy" target="infection">
+  <data key="d3">2</data>
+</edge>
+<edge source="dip powder manicure: 5 tips to keep your nails healthy" target="allergic reaction">
+  <data key="d3">2</data>
+</edge>
+<edge source="dip powder manicure: 5 tips to keep your nails healthy" target="thinning nails">
+  <data key="d3">2</data>
+</edge>
+<edge source="dip powder manicure: 5 tips to keep your nails healthy" target="damage">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: overview" target="skin changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: overview" target="nail changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="lichen planus: overview" target="skin lesions">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="rash">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="redness">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="burning">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="itching">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="weak hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="dry hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="rough hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="faded hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="brittle hair">
+  <data key="d3">2</data>
+</edge>
+<edge source="coloring and perming tips for healthier-looking hair" target="stinging">
+  <data key="d3">2</data>
+</edge>
+<edge source="polycystic kidney disease" target="abdominal pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="polycystic kidney disease" target="high blood pressure">
+  <data key="d3">2</data>
+</edge>
+<edge source="polycystic kidney disease" target="kidney cysts">
+  <data key="d3">2</data>
+</edge>
+<edge source="dysthymic disorder" target="low mood">
+  <data key="d3">2</data>
+</edge>
+<edge source="dysthymic disorder" target="lack of interest">
+  <data key="d3">2</data>
+</edge>
+<edge source="dysthymic disorder" target="sleep changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="dysthymic disorder" target="appetite changes">
+  <data key="d3">2</data>
+</edge>
+<edge source="melasma: diagnosis and treatment" target="brown patches">
+  <data key="d3">2</data>
+</edge>
+<edge source="melasma: diagnosis and treatment" target="skin darkening">
+  <data key="d3">2</data>
+</edge>
+<edge source="urge incontinence" target="sudden urination urge">
+  <data key="d3">2</data>
+</edge>
+<edge source="urge incontinence" target="involuntary urine leakage">
+  <data key="d3">2</data>
+</edge>
+<edge source="fracture of the rib" target="chest pain">
+  <data key="d3">2</data>
+</edge>
+<edge source="fracture of the rib" target="difficulty breathing">
+  <data key="d3">2</data>
+</edge>
+<edge source="fracture of the rib" target="tenderness">
+  <data key="d3">2</data>
+</edge>
+<edge source="fracture of the rib" target="swelling">
+  <data key="d3">2</data>
+</edge>
+<edge source="bell palsy" target="facial weakness">
+  <data key="d3">2</data>
+</edge>
+<edge source="bell palsy" target="paralysis">
+  <data key="d3">2</data>
+</edge>
+<edge source="bell palsy" target="drooping eyelid">
+  <data key="d3">2</data>
+</edge>
+<edge source="bell palsy" target="drooping mouth">
+  <data key="d3">2</data>
+</edge>
+<edge source="fungal nail infection" target="thickened nails">
+  <data key="d3">1</data>
+</edge>
+<edge source="fungal nail infection" target="brittle nails">
+  <data key="d3">1</data>
+</edge>
+<edge source="fungal nail infection" target="discolored nails">
+  <data key="d3">1</data>
+</edge>
+<edge source="fungal nail infection" target="nail odor">
+  <data key="d3">1</data>
+</edge>
+<edge source="vitiligo" target="loss of skin color">
+  <data key="d3">1</data>
+</edge>
+<edge source="vitiligo" target="white patches">
+  <data key="d3">1</data>
+</edge>
+<edge source="vitiligo" target="premature hair whitening">
+  <data key="d3">1</data>
+</edge>
+</graph></graphml>

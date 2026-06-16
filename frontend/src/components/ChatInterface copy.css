@@ -197,60 +197,6 @@
   resize: none;
   transition: border-color 0.3s;
 }
-.message-report-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 8px;
-  color: #0f172a;
-}
-
-.primary-diagnosis {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2563eb;
-  margin: 4px 0;
-}
-
-.confidence-score {
-  font-size: 0.85rem;
-  color: #64748b;
-  margin-bottom: 12px;
-}
-
-.differentials h5 {
-  margin: 0 0 4px 0;
-  color: #475569;
-}
-
-.differentials ul {
-  margin: 0;
-  padding-left: 16px;
-  font-size: 0.9rem;
-}
-
-.download-btn {
-  width: 100%;
-  margin-top: 16px;
-  background: #10b981;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-.download-btn:hover {
-  background: #059669;
-}
-
-.status-ongoing {
-  color: #eab308;
-  font-weight: 600;
-}
 
 .chat-input-container textarea:focus {
   outline: none;
@@ -293,4 +239,3 @@
     text-align: center;
   }
 }
-

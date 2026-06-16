@@ -347,7 +347,7 @@ body {
 
 .metadata-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin: 24px 0;
 }
@@ -357,11 +357,6 @@ body {
   border: 1px solid var(--border-color);
   padding: 12px;
   border-radius: 6px;
-}
-
-.highlight-card {
-  background-color: #1e1b4b;
-  border-color: #4338ca;
 }
 
 .meta-lbl {
@@ -374,12 +369,6 @@ body {
 .meta-val {
   font-size: 14px;
   font-weight: 600;
-}
-
-.condition-text {
-  color: #818cf8;
-  text-transform: capitalize;
-  font-weight: 700;
 }
 
 .highlight-green {
@@ -436,13 +425,11 @@ body {
   font-weight: 600;
   padding: 12px 16px;
   border-bottom: 1px solid var(--border-color);
-  white-space: nowrap;
 }
 
 .history-table td {
   padding: 14px 16px;
   border-bottom: 1px solid var(--border-color);
-  white-space: nowrap;
 }
 
 .history-table tbody tr:hover {
@@ -463,16 +450,6 @@ body {
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 12px;
-}
-
-.condition-tag {
-  background-color: #4c1d95;
-  color: #ddd6fe;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  text-transform: capitalize;
-  font-weight: 600;
 }
 
 /* Keyframe Animations */

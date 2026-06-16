@@ -1,0 +1,11 @@
+--- AI DIAGNOSTIC WELLNESS REPORT ---
+FINAL DIAGNOSIS: dry shampoo: dermatologists' tips for getting your best results
+CONFIDENCE SCORE: 5.5
+
+--- DETAILED ASSESSMENT ---
+Based on the symptoms described, the initial conclusion of acne is supported by the presence of painful, pus-filled, and inflamed bumps on the face. The absence of itchiness and the specific locations of the bumps (forehead, cheek, and chin) are consistent with acne. The presence of dandruff and occasional scalp itchiness may indicate a related skin condition, but it does not seem to be directly contributing to the facial symptoms. The visible blood vessels on the face could be related to the inflammation caused by acne. Given the patient's gender and lack of menstrual irregularities, hormonal imbalances are less likely to be a contributing factor. The absence of unusual growths or lesions on the eyelids and no vision problems suggests that the condition is localized to the face and scalp. However, the confidence level of 5.5 in the diagnosis of using dry shampoo is low, and it may not be directly related to the symptoms described. A more comprehensive diagnosis would be acne vulgaris, a common skin condition characterized by the occurrence of comedones (blackheads and whiteheads), pimples, and sometimes cysts or nodules.
+
+--- ACTIONABLE ADVICE ---
+1. Maintain good hygiene by washing your face twice a day with a gentle cleanser to reduce oil and bacteria buildup
+2. Apply topical treatments such as benzoyl peroxide or salicylic acid to help reduce inflammation and prevent future breakouts
+3. Consider consulting a dermatologist for further evaluation and guidance on prescription medications or other treatments that may be necessary to manage your acne effectively

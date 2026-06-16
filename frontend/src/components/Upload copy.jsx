@@ -92,7 +92,6 @@ export default function Upload({ currentUserId }) {
             .recommendations { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; border-radius: 4px; }
             .recommendations li { margin-bottom: 8px; }
             .disclaimer { font-size: 11px; color: #94a3b8; margin-top: 5px; text-align: center; }
-            .condition-alert { color: #b91c1c; font-weight: bold; text-transform: capitalize; }
             @media print { .no-print { display: none; } }
           </style>
         </head>
@@ -107,7 +106,6 @@ export default function Upload({ currentUserId }) {
               <h3>Composite Performance</h3>
               <div class="metric">${wellness_biometrics.composite_wellness_score} / 100</div>
               <p>Target Structural Region: <strong>${segmentation.detected_body_region}</strong></p>
-              <p>Clinical Inference: <span class="condition-alert">${segmentation.detected_condition_inference}</span></p>
             </div>
             <div class="card">
               <h3>Biometric Breakdown</h3>
@@ -147,7 +145,7 @@ export default function Upload({ currentUserId }) {
           <span className="pulse-indicator"></span>
           <h1>DermatCV Enterprise</h1>
         </div>
-        <div className="badge">Wellness Analytics Pipeline v2.3.0</div>
+        <div className="badge">Wellness Analytics Pipeline v2.1.0</div>
       </header>
 
       <div className="DermatCV-grid">
@@ -228,7 +226,7 @@ export default function Upload({ currentUserId }) {
               </div>
 
               <div className="metrics-group">
-                <h3>Latent Space Metrics</h3>
+                <h3>Latent Space Space Metrics</h3>
                 <div className="bar-stat">
                   <div className="stat-info"><span>Stress Index</span><strong>{scanResult.wellness_biometrics.stress_index}%</strong></div>
                   <div className="bar-container"><div className="bar color-stress" style={{width: `${scanResult.wellness_biometrics.stress_index}%`}}></div></div>
@@ -248,9 +246,9 @@ export default function Upload({ currentUserId }) {
                   <span className="meta-lbl">Detected Array</span>
                   <span className="meta-val">{scanResult.segmentation.detected_body_region}</span>
                 </div>
-                <div className="meta-card highlight-card">
-                  <span className="meta-lbl">Clinical Inference</span>
-                  <span className="meta-val condition-text">{scanResult.segmentation.detected_condition_inference}</span>
+                <div className="meta-card">
+                  <span className="meta-lbl">Classification State</span>
+                  <span className="meta-val style-condition-text">{scanResult.segmentation.detected_condition_inference}</span>
                 </div>
                 <div className="meta-card">
                   <span className="meta-lbl">Image Integrity</span>
@@ -281,7 +279,6 @@ export default function Upload({ currentUserId }) {
                 <th>Scan Code Token</th>
                 <th>Execution Timestamp</th>
                 <th>Target Region</th>
-                <th>Condition</th>
                 <th>Wellness Metric</th>
                 <th>Stress</th>
                 <th>Fatigue</th>
@@ -291,7 +288,7 @@ export default function Upload({ currentUserId }) {
             <tbody>
               {history.length === 0 ? (
                 <tr>
-                  <td colSpan="8" style={{ textAlign: 'center', color: '#94a3b8' }}>No historical document records verified inside cluster dataset.</td>
+                  <td colSpan="7" style={{ textAlign: 'center', color: '#94a3b8' }}>No historical document records verified inside cluster dataset.</td>
                 </tr>
               ) : (
                 history.map((item) => (
@@ -299,7 +296,6 @@ export default function Upload({ currentUserId }) {
                     <td className="mono">{item.scan_id}</td>
                     <td>{item.timestamp}</td>
                     <td><span className="region-tag">{item.body_part}</span></td>
-                    <td><span className="condition-tag">{item.condition}</span></td>
                     <td className="weight-bold">{item.wellness_score}/100</td>
                     <td>{item.biometrics.stress}%</td>
                     <td>{item.biometrics.fatigue}%</td>

@@ -1,0 +1,6138 @@
+{
+  "nodes": [
+    {
+      "id": "antihypertensives poisoning",
+      "node_type": "disease",
+      "name": "antihypertensives poisoning",
+      "count": 2
+    },
+    {
+      "id": "dizziness",
+      "node_type": "symptom",
+      "name": "dizziness",
+      "count": 4
+    },
+    {
+      "id": "low blood pressure",
+      "node_type": "symptom",
+      "name": "low blood pressure",
+      "count": 6
+    },
+    {
+      "id": "slow heart rate",
+      "node_type": "symptom",
+      "name": "slow heart rate",
+      "count": 4
+    },
+    {
+      "id": "nausea",
+      "node_type": "symptom",
+      "name": "nausea",
+      "count": 8
+    },
+    {
+      "id": "vomiting",
+      "node_type": "symptom",
+      "name": "vomiting",
+      "count": 8
+    },
+    {
+      "id": "granuloma annulare: overview",
+      "node_type": "disease",
+      "name": "granuloma annulare: overview",
+      "count": 2
+    },
+    {
+      "id": "rash",
+      "node_type": "symptom",
+      "name": "rash",
+      "count": 16
+    },
+    {
+      "id": "ring-shaped patch",
+      "node_type": "symptom",
+      "name": "ring-shaped patch",
+      "count": 2
+    },
+    {
+      "id": "raised skin",
+      "node_type": "symptom",
+      "name": "raised skin",
+      "count": 4
+    },
+    {
+      "id": "itching",
+      "node_type": "symptom",
+      "name": "itching",
+      "count": 31
+    },
+    {
+      "id": "pain",
+      "node_type": "symptom",
+      "name": "pain",
+      "count": 20
+    },
+    {
+      "id": "dry shampoo: dermatologists' tips for getting your best results",
+      "node_type": "disease",
+      "name": "dry shampoo: dermatologists' tips for getting your best results",
+      "count": 2
+    },
+    {
+      "id": "scalp irritation",
+      "node_type": "symptom",
+      "name": "scalp irritation",
+      "count": 2
+    },
+    {
+      "id": "are you ready to manage your child's eczema triggers?",
+      "node_type": "disease",
+      "name": "are you ready to manage your child's eczema triggers?",
+      "count": 2
+    },
+    {
+      "id": "itchy skin",
+      "node_type": "symptom",
+      "name": "itchy skin",
+      "count": 10
+    },
+    {
+      "id": "red skin",
+      "node_type": "symptom",
+      "name": "red skin",
+      "count": 3
+    },
+    {
+      "id": "dry skin",
+      "node_type": "symptom",
+      "name": "dry skin",
+      "count": 12
+    },
+    {
+      "id": "rosacea: insider secrets",
+      "node_type": "disease",
+      "name": "rosacea: insider secrets",
+      "count": 2
+    },
+    {
+      "id": "redness",
+      "node_type": "symptom",
+      "name": "redness",
+      "count": 28
+    },
+    {
+      "id": "bumps",
+      "node_type": "symptom",
+      "name": "bumps",
+      "count": 4
+    },
+    {
+      "id": "visible blood vessels",
+      "node_type": "symptom",
+      "name": "visible blood vessels",
+      "count": 2
+    },
+    {
+      "id": "coagulation (bleeding) disorder",
+      "node_type": "disease",
+      "name": "coagulation (bleeding) disorder",
+      "count": 2
+    },
+    {
+      "id": "easy bruising",
+      "node_type": "symptom",
+      "name": "easy bruising",
+      "count": 2
+    },
+    {
+      "id": "prolonged bleeding",
+      "node_type": "symptom",
+      "name": "prolonged bleeding",
+      "count": 2
+    },
+    {
+      "id": "excessive bleeding",
+      "node_type": "symptom",
+      "name": "excessive bleeding",
+      "count": 2
+    },
+    {
+      "id": "nosebleeds",
+      "node_type": "symptom",
+      "name": "nosebleeds",
+      "count": 2
+    },
+    {
+      "id": "heavy menstrual bleeding",
+      "node_type": "symptom",
+      "name": "heavy menstrual bleeding",
+      "count": 2
+    },
+    {
+      "id": "acinic cell carcinoma",
+      "node_type": "disease",
+      "name": "acinic cell carcinoma",
+      "count": 2
+    },
+    {
+      "id": "facial changes",
+      "node_type": "symptom",
+      "name": "facial changes",
+      "count": 4
+    },
+    {
+      "id": "lump",
+      "node_type": "symptom",
+      "name": "lump",
+      "count": 4
+    },
+    {
+      "id": "swelling",
+      "node_type": "symptom",
+      "name": "swelling",
+      "count": 32
+    },
+    {
+      "id": "skin cancer types: squamous cell carcinoma symptoms",
+      "node_type": "disease",
+      "name": "skin cancer types: squamous cell carcinoma symptoms",
+      "count": 2
+    },
+    {
+      "id": "rough skin",
+      "node_type": "symptom",
+      "name": "rough skin",
+      "count": 6
+    },
+    {
+      "id": "reddish skin",
+      "node_type": "symptom",
+      "name": "reddish skin",
+      "count": 2
+    },
+    {
+      "id": "scaly area",
+      "node_type": "symptom",
+      "name": "scaly area",
+      "count": 2
+    },
+    {
+      "id": "open sore",
+      "node_type": "symptom",
+      "name": "open sore",
+      "count": 2
+    },
+    {
+      "id": "brown spot",
+      "node_type": "symptom",
+      "name": "brown spot",
+      "count": 2
+    },
+    {
+      "id": "firm growth",
+      "node_type": "symptom",
+      "name": "firm growth",
+      "count": 2
+    },
+    {
+      "id": "wart-like growth",
+      "node_type": "symptom",
+      "name": "wart-like growth",
+      "count": 2
+    },
+    {
+      "id": "horn-like growth",
+      "node_type": "symptom",
+      "name": "horn-like growth",
+      "count": 2
+    },
+    {
+      "id": "soreness",
+      "node_type": "symptom",
+      "name": "soreness",
+      "count": 2
+    },
+    {
+      "id": "tenderness",
+      "node_type": "symptom",
+      "name": "tenderness",
+      "count": 8
+    },
+    {
+      "id": "numbness",
+      "node_type": "symptom",
+      "name": "numbness",
+      "count": 6
+    },
+    {
+      "id": "pins-and-needles sensation",
+      "node_type": "symptom",
+      "name": "pins-and-needles sensation",
+      "count": 2
+    },
+    {
+      "id": "bleeding",
+      "node_type": "symptom",
+      "name": "bleeding",
+      "count": 12
+    },
+    {
+      "id": "skin discoloration",
+      "node_type": "symptom",
+      "name": "skin discoloration",
+      "count": 4
+    },
+    {
+      "id": "psoriasis treatment: synthetic vitamin d",
+      "node_type": "disease",
+      "name": "psoriasis treatment: synthetic vitamin d",
+      "count": 2
+    },
+    {
+      "id": "skin irritation",
+      "node_type": "symptom",
+      "name": "skin irritation",
+      "count": 4
+    },
+    {
+      "id": "burning",
+      "node_type": "symptom",
+      "name": "burning",
+      "count": 12
+    },
+    {
+      "id": "peeling",
+      "node_type": "symptom",
+      "name": "peeling",
+      "count": 2
+    },
+    {
+      "id": "dryness",
+      "node_type": "symptom",
+      "name": "dryness",
+      "count": 6
+    },
+    {
+      "id": "high calcium levels",
+      "node_type": "symptom",
+      "name": "high calcium levels",
+      "count": 2
+    },
+    {
+      "id": "should i treat my psoriasis?",
+      "node_type": "disease",
+      "name": "should i treat my psoriasis?",
+      "count": 2
+    },
+    {
+      "id": "bronchitis",
+      "node_type": "disease",
+      "name": "bronchitis",
+      "count": 2
+    },
+    {
+      "id": "persistent cough",
+      "node_type": "symptom",
+      "name": "persistent cough",
+      "count": 2
+    },
+    {
+      "id": "chest congestion",
+      "node_type": "symptom",
+      "name": "chest congestion",
+      "count": 2
+    },
+    {
+      "id": "fatigue",
+      "node_type": "symptom",
+      "name": "fatigue",
+      "count": 12
+    },
+    {
+      "id": "how to prevent and treat frostbite",
+      "node_type": "disease",
+      "name": "how to prevent and treat frostbite",
+      "count": 2
+    },
+    {
+      "id": "stinging",
+      "node_type": "symptom",
+      "name": "stinging",
+      "count": 6
+    },
+    {
+      "id": "throbbing",
+      "node_type": "symptom",
+      "name": "throbbing",
+      "count": 2
+    },
+    {
+      "id": "prickling sensation",
+      "node_type": "symptom",
+      "name": "prickling sensation",
+      "count": 2
+    },
+    {
+      "id": "pseudohypoparathyroidism",
+      "node_type": "disease",
+      "name": "pseudohypoparathyroidism",
+      "count": 2
+    },
+    {
+      "id": "low calcium levels",
+      "node_type": "symptom",
+      "name": "low calcium levels",
+      "count": 2
+    },
+    {
+      "id": "muscle spasms",
+      "node_type": "symptom",
+      "name": "muscle spasms",
+      "count": 2
+    },
+    {
+      "id": "short stature",
+      "node_type": "symptom",
+      "name": "short stature",
+      "count": 2
+    },
+    {
+      "id": "rounded face",
+      "node_type": "symptom",
+      "name": "rounded face",
+      "count": 2
+    },
+    {
+      "id": "acute otitis media",
+      "node_type": "disease",
+      "name": "acute otitis media",
+      "count": 2
+    },
+    {
+      "id": "ear pain",
+      "node_type": "symptom",
+      "name": "ear pain",
+      "count": 4
+    },
+    {
+      "id": "fever",
+      "node_type": "symptom",
+      "name": "fever",
+      "count": 16
+    },
+    {
+      "id": "fluid drainage",
+      "node_type": "symptom",
+      "name": "fluid drainage",
+      "count": 4
+    },
+    {
+      "id": "hearing loss",
+      "node_type": "symptom",
+      "name": "hearing loss",
+      "count": 8
+    },
+    {
+      "id": "cyst of the eyelid",
+      "node_type": "disease",
+      "name": "cyst of the eyelid",
+      "count": 2
+    },
+    {
+      "id": "painful lump",
+      "node_type": "symptom",
+      "name": "painful lump",
+      "count": 2
+    },
+    {
+      "id": "chancroid",
+      "node_type": "disease",
+      "name": "chancroid",
+      "count": 2
+    },
+    {
+      "id": "painful ulcers",
+      "node_type": "symptom",
+      "name": "painful ulcers",
+      "count": 2
+    },
+    {
+      "id": "swollen lymph nodes",
+      "node_type": "symptom",
+      "name": "swollen lymph nodes",
+      "count": 10
+    },
+    {
+      "id": "concussion",
+      "node_type": "disease",
+      "name": "concussion",
+      "count": 2
+    },
+    {
+      "id": "headache",
+      "node_type": "symptom",
+      "name": "headache",
+      "count": 8
+    },
+    {
+      "id": "confusion",
+      "node_type": "symptom",
+      "name": "confusion",
+      "count": 4
+    },
+    {
+      "id": "memory problems",
+      "node_type": "symptom",
+      "name": "memory problems",
+      "count": 2
+    },
+    {
+      "id": "sensitivity to light",
+      "node_type": "symptom",
+      "name": "sensitivity to light",
+      "count": 6
+    },
+    {
+      "id": "sensitivity to noise",
+      "node_type": "symptom",
+      "name": "sensitivity to noise",
+      "count": 2
+    },
+    {
+      "id": "mood changes",
+      "node_type": "symptom",
+      "name": "mood changes",
+      "count": 2
+    },
+    {
+      "id": "prurigo nodularis: signs and symptoms",
+      "node_type": "disease",
+      "name": "prurigo nodularis: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "itchy bumps",
+      "node_type": "symptom",
+      "name": "itchy bumps",
+      "count": 2
+    },
+    {
+      "id": "intense itching",
+      "node_type": "symptom",
+      "name": "intense itching",
+      "count": 4
+    },
+    {
+      "id": "burning sensation",
+      "node_type": "symptom",
+      "name": "burning sensation",
+      "count": 4
+    },
+    {
+      "id": "stinging sensation",
+      "node_type": "symptom",
+      "name": "stinging sensation",
+      "count": 4
+    },
+    {
+      "id": "bugs crawling sensation",
+      "node_type": "symptom",
+      "name": "bugs crawling sensation",
+      "count": 2
+    },
+    {
+      "id": "raised patches",
+      "node_type": "symptom",
+      "name": "raised patches",
+      "count": 4
+    },
+    {
+      "id": "dark spots",
+      "node_type": "symptom",
+      "name": "dark spots",
+      "count": 8
+    },
+    {
+      "id": "pebbly texture",
+      "node_type": "symptom",
+      "name": "pebbly texture",
+      "count": 2
+    },
+    {
+      "id": "thickening skin",
+      "node_type": "symptom",
+      "name": "thickening skin",
+      "count": 2
+    },
+    {
+      "id": "skin cancer types: basal cell carcinoma overview",
+      "node_type": "disease",
+      "name": "skin cancer types: basal cell carcinoma overview",
+      "count": 2
+    },
+    {
+      "id": "slowly growing spot",
+      "node_type": "symptom",
+      "name": "slowly growing spot",
+      "count": 2
+    },
+    {
+      "id": "non-healing spot",
+      "node_type": "symptom",
+      "name": "non-healing spot",
+      "count": 2
+    },
+    {
+      "id": "epidermolysis bullosa: signs and symptoms",
+      "node_type": "disease",
+      "name": "epidermolysis bullosa: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "blistering",
+      "node_type": "symptom",
+      "name": "blistering",
+      "count": 2
+    },
+    {
+      "id": "open wounds",
+      "node_type": "symptom",
+      "name": "open wounds",
+      "count": 4
+    },
+    {
+      "id": "anemia",
+      "node_type": "symptom",
+      "name": "anemia",
+      "count": 2
+    },
+    {
+      "id": "constipation",
+      "node_type": "symptom",
+      "name": "constipation",
+      "count": 2
+    },
+    {
+      "id": "dehydration",
+      "node_type": "symptom",
+      "name": "dehydration",
+      "count": 4
+    },
+    {
+      "id": "eye problems",
+      "node_type": "symptom",
+      "name": "eye problems",
+      "count": 2
+    },
+    {
+      "id": "hair loss",
+      "node_type": "symptom",
+      "name": "hair loss",
+      "count": 18
+    },
+    {
+      "id": "itchiness",
+      "node_type": "symptom",
+      "name": "itchiness",
+      "count": 6
+    },
+    {
+      "id": "malnutrition",
+      "node_type": "symptom",
+      "name": "malnutrition",
+      "count": 2
+    },
+    {
+      "id": "mouth sores",
+      "node_type": "symptom",
+      "name": "mouth sores",
+      "count": 4
+    },
+    {
+      "id": "nail loss",
+      "node_type": "symptom",
+      "name": "nail loss",
+      "count": 2
+    },
+    {
+      "id": "skin infections",
+      "node_type": "symptom",
+      "name": "skin infections",
+      "count": 2
+    },
+    {
+      "id": "melanoma survivor? you really need to check your skin!",
+      "node_type": "disease",
+      "name": "melanoma survivor? you really need to check your skin!",
+      "count": 2
+    },
+    {
+      "id": "asymmetry",
+      "node_type": "symptom",
+      "name": "asymmetry",
+      "count": 2
+    },
+    {
+      "id": "border change",
+      "node_type": "symptom",
+      "name": "border change",
+      "count": 2
+    },
+    {
+      "id": "color change",
+      "node_type": "symptom",
+      "name": "color change",
+      "count": 2
+    },
+    {
+      "id": "diameter change",
+      "node_type": "symptom",
+      "name": "diameter change",
+      "count": 2
+    },
+    {
+      "id": "evolving spot",
+      "node_type": "symptom",
+      "name": "evolving spot",
+      "count": 2
+    },
+    {
+      "id": "osteoarthritis",
+      "node_type": "disease",
+      "name": "osteoarthritis",
+      "count": 2
+    },
+    {
+      "id": "joint pain",
+      "node_type": "symptom",
+      "name": "joint pain",
+      "count": 8
+    },
+    {
+      "id": "stiffness",
+      "node_type": "symptom",
+      "name": "stiffness",
+      "count": 4
+    },
+    {
+      "id": "gastroenteritis (stomach flu)",
+      "node_type": "disease",
+      "name": "gastroenteritis (stomach flu)",
+      "count": 2
+    },
+    {
+      "id": "diarrhea",
+      "node_type": "symptom",
+      "name": "diarrhea",
+      "count": 4
+    },
+    {
+      "id": "abdominal pain",
+      "node_type": "symptom",
+      "name": "abdominal pain",
+      "count": 10
+    },
+    {
+      "id": "how to treat psoriasis at age 65 and beyond",
+      "node_type": "disease",
+      "name": "how to treat psoriasis at age 65 and beyond",
+      "count": 2
+    },
+    {
+      "id": "thinning skin",
+      "node_type": "symptom",
+      "name": "thinning skin",
+      "count": 2
+    },
+    {
+      "id": "bruising",
+      "node_type": "symptom",
+      "name": "bruising",
+      "count": 2
+    },
+    {
+      "id": "infections",
+      "node_type": "symptom",
+      "name": "infections",
+      "count": 4
+    },
+    {
+      "id": "how to get rid of head lice when treatment fails",
+      "node_type": "disease",
+      "name": "how to get rid of head lice when treatment fails",
+      "count": 2
+    },
+    {
+      "id": "irritated skin",
+      "node_type": "symptom",
+      "name": "irritated skin",
+      "count": 4
+    },
+    {
+      "id": "marijuana abuse",
+      "node_type": "disease",
+      "name": "marijuana abuse",
+      "count": 2
+    },
+    {
+      "id": "impaired memory",
+      "node_type": "symptom",
+      "name": "impaired memory",
+      "count": 2
+    },
+    {
+      "id": "altered judgment",
+      "node_type": "symptom",
+      "name": "altered judgment",
+      "count": 2
+    },
+    {
+      "id": "anxiety",
+      "node_type": "symptom",
+      "name": "anxiety",
+      "count": 8
+    },
+    {
+      "id": "extrapyramidal effect of drugs",
+      "node_type": "disease",
+      "name": "extrapyramidal effect of drugs",
+      "count": 2
+    },
+    {
+      "id": "muscle stiffness",
+      "node_type": "symptom",
+      "name": "muscle stiffness",
+      "count": 2
+    },
+    {
+      "id": "tremors",
+      "node_type": "symptom",
+      "name": "tremors",
+      "count": 2
+    },
+    {
+      "id": "involuntary movements",
+      "node_type": "symptom",
+      "name": "involuntary movements",
+      "count": 2
+    },
+    {
+      "id": "myasthenia gravis",
+      "node_type": "disease",
+      "name": "myasthenia gravis",
+      "count": 2
+    },
+    {
+      "id": "muscle weakness",
+      "node_type": "symptom",
+      "name": "muscle weakness",
+      "count": 4
+    },
+    {
+      "id": "difficulty speaking",
+      "node_type": "symptom",
+      "name": "difficulty speaking",
+      "count": 2
+    },
+    {
+      "id": "eczema types: contact dermatitis diagnosis and treatment",
+      "node_type": "disease",
+      "name": "eczema types: contact dermatitis diagnosis and treatment",
+      "count": 2
+    },
+    {
+      "id": "gastrointestinal hemorrhage",
+      "node_type": "disease",
+      "name": "gastrointestinal hemorrhage",
+      "count": 2
+    },
+    {
+      "id": "vomiting blood",
+      "node_type": "symptom",
+      "name": "vomiting blood",
+      "count": 2
+    },
+    {
+      "id": "bloody stools",
+      "node_type": "symptom",
+      "name": "bloody stools",
+      "count": 2
+    },
+    {
+      "id": "black stools",
+      "node_type": "symptom",
+      "name": "black stools",
+      "count": 2
+    },
+    {
+      "id": "wrinkles",
+      "node_type": "disease",
+      "name": "wrinkles",
+      "count": 8
+    },
+    {
+      "id": "lines",
+      "node_type": "symptom",
+      "name": "lines",
+      "count": 2
+    },
+    {
+      "id": "skin damage",
+      "node_type": "symptom",
+      "name": "skin damage",
+      "count": 2
+    },
+    {
+      "id": "types of hair loss",
+      "node_type": "disease",
+      "name": "types of hair loss",
+      "count": 2
+    },
+    {
+      "id": "patchy hair loss",
+      "node_type": "symptom",
+      "name": "patchy hair loss",
+      "count": 2
+    },
+    {
+      "id": "thinning hair",
+      "node_type": "symptom",
+      "name": "thinning hair",
+      "count": 2
+    },
+    {
+      "id": "receding hairline",
+      "node_type": "symptom",
+      "name": "receding hairline",
+      "count": 4
+    },
+    {
+      "id": "eyebrow loss",
+      "node_type": "symptom",
+      "name": "eyebrow loss",
+      "count": 2
+    },
+    {
+      "id": "hair loss on scalp",
+      "node_type": "symptom",
+      "name": "hair loss on scalp",
+      "count": 2
+    },
+    {
+      "id": "acanthosis nigricans: overview",
+      "node_type": "disease",
+      "name": "acanthosis nigricans: overview",
+      "count": 2
+    },
+    {
+      "id": "darkened skin",
+      "node_type": "symptom",
+      "name": "darkened skin",
+      "count": 2
+    },
+    {
+      "id": "thickened skin",
+      "node_type": "symptom",
+      "name": "thickened skin",
+      "count": 6
+    },
+    {
+      "id": "velvety skin",
+      "node_type": "symptom",
+      "name": "velvety skin",
+      "count": 2
+    },
+    {
+      "id": "how to treat different types of acne",
+      "node_type": "disease",
+      "name": "how to treat different types of acne",
+      "count": 2
+    },
+    {
+      "id": "clogged pores",
+      "node_type": "symptom",
+      "name": "clogged pores",
+      "count": 2
+    },
+    {
+      "id": "red bumps",
+      "node_type": "symptom",
+      "name": "red bumps",
+      "count": 2
+    },
+    {
+      "id": "blackheads",
+      "node_type": "symptom",
+      "name": "blackheads",
+      "count": 3
+    },
+    {
+      "id": "whiteheads",
+      "node_type": "symptom",
+      "name": "whiteheads",
+      "count": 3
+    },
+    {
+      "id": "papules",
+      "node_type": "symptom",
+      "name": "papules",
+      "count": 2
+    },
+    {
+      "id": "pustules",
+      "node_type": "symptom",
+      "name": "pustules",
+      "count": 2
+    },
+    {
+      "id": "inflamed blemishes",
+      "node_type": "symptom",
+      "name": "inflamed blemishes",
+      "count": 2
+    },
+    {
+      "id": "permanent scarring",
+      "node_type": "symptom",
+      "name": "permanent scarring",
+      "count": 2
+    },
+    {
+      "id": "skin cancer types: melanoma overview",
+      "node_type": "disease",
+      "name": "skin cancer types: melanoma overview",
+      "count": 2
+    },
+    {
+      "id": "new mole",
+      "node_type": "symptom",
+      "name": "new mole",
+      "count": 2
+    },
+    {
+      "id": "changing mole",
+      "node_type": "symptom",
+      "name": "changing mole",
+      "count": 2
+    },
+    {
+      "id": "different mole",
+      "node_type": "symptom",
+      "name": "different mole",
+      "count": 2
+    },
+    {
+      "id": "idiopathic absence of menstruation",
+      "node_type": "disease",
+      "name": "idiopathic absence of menstruation",
+      "count": 2
+    },
+    {
+      "id": "absent periods",
+      "node_type": "symptom",
+      "name": "absent periods",
+      "count": 2
+    },
+    {
+      "id": "how natalie finally got rid of her adult acne",
+      "node_type": "disease",
+      "name": "how natalie finally got rid of her adult acne",
+      "count": 2
+    },
+    {
+      "id": "painful cysts",
+      "node_type": "symptom",
+      "name": "painful cysts",
+      "count": 2
+    },
+    {
+      "id": "acne scars",
+      "node_type": "symptom",
+      "name": "acne scars",
+      "count": 4
+    },
+    {
+      "id": "cystic acne",
+      "node_type": "symptom",
+      "name": "cystic acne",
+      "count": 2
+    },
+    {
+      "id": "bulimia nervosa",
+      "node_type": "disease",
+      "name": "bulimia nervosa",
+      "count": 2
+    },
+    {
+      "id": "binge eating",
+      "node_type": "symptom",
+      "name": "binge eating",
+      "count": 2
+    },
+    {
+      "id": "purging behaviors",
+      "node_type": "symptom",
+      "name": "purging behaviors",
+      "count": 2
+    },
+    {
+      "id": "skin biopsy: dermatologist-recommended wound care",
+      "node_type": "disease",
+      "name": "skin biopsy: dermatologist-recommended wound care",
+      "count": 2
+    },
+    {
+      "id": "allergic reaction",
+      "node_type": "symptom",
+      "name": "allergic reaction",
+      "count": 4
+    },
+    {
+      "id": "acute glaucoma",
+      "node_type": "disease",
+      "name": "acute glaucoma",
+      "count": 2
+    },
+    {
+      "id": "severe eye pain",
+      "node_type": "symptom",
+      "name": "severe eye pain",
+      "count": 2
+    },
+    {
+      "id": "blurred vision",
+      "node_type": "symptom",
+      "name": "blurred vision",
+      "count": 6
+    },
+    {
+      "id": "halos around lights",
+      "node_type": "symptom",
+      "name": "halos around lights",
+      "count": 2
+    },
+    {
+      "id": "younger-looking skin",
+      "node_type": "disease",
+      "name": "younger-looking skin",
+      "count": 2
+    },
+    {
+      "id": "age spots",
+      "node_type": "symptom",
+      "name": "age spots",
+      "count": 6
+    },
+    {
+      "id": "sagging skin",
+      "node_type": "symptom",
+      "name": "sagging skin",
+      "count": 2
+    },
+    {
+      "id": "spider veins",
+      "node_type": "symptom",
+      "name": "spider veins",
+      "count": 4
+    },
+    {
+      "id": "varicose veins",
+      "node_type": "symptom",
+      "name": "varicose veins",
+      "count": 2
+    },
+    {
+      "id": "fine lines",
+      "node_type": "symptom",
+      "name": "fine lines",
+      "count": 4
+    },
+    {
+      "id": "pilonidal cyst",
+      "node_type": "disease",
+      "name": "pilonidal cyst",
+      "count": 2
+    },
+    {
+      "id": "pain in tailbone",
+      "node_type": "symptom",
+      "name": "pain in tailbone",
+      "count": 2
+    },
+    {
+      "id": "pus drainage",
+      "node_type": "symptom",
+      "name": "pus drainage",
+      "count": 2
+    },
+    {
+      "id": "blood drainage",
+      "node_type": "symptom",
+      "name": "blood drainage",
+      "count": 2
+    },
+    {
+      "id": "abscess formation",
+      "node_type": "symptom",
+      "name": "abscess formation",
+      "count": 2
+    },
+    {
+      "id": "can covid-19 cause hair loss?",
+      "node_type": "disease",
+      "name": "can covid-19 cause hair loss?",
+      "count": 2
+    },
+    {
+      "id": "itchy scalp",
+      "node_type": "symptom",
+      "name": "itchy scalp",
+      "count": 2
+    },
+    {
+      "id": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+      "node_type": "disease",
+      "name": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+      "count": 2
+    },
+    {
+      "id": "new spots",
+      "node_type": "symptom",
+      "name": "new spots",
+      "count": 4
+    },
+    {
+      "id": "bleeding spots",
+      "node_type": "symptom",
+      "name": "bleeding spots",
+      "count": 2
+    },
+    {
+      "id": "lymphoma",
+      "node_type": "disease",
+      "name": "lymphoma",
+      "count": 2
+    },
+    {
+      "id": "unexplained weight loss",
+      "node_type": "symptom",
+      "name": "unexplained weight loss",
+      "count": 2
+    },
+    {
+      "id": "ludwig's angina",
+      "node_type": "disease",
+      "name": "ludwig's angina",
+      "count": 2
+    },
+    {
+      "id": "severe swelling",
+      "node_type": "symptom",
+      "name": "severe swelling",
+      "count": 2
+    },
+    {
+      "id": "difficulty swallowing",
+      "node_type": "symptom",
+      "name": "difficulty swallowing",
+      "count": 6
+    },
+    {
+      "id": "drooling",
+      "node_type": "symptom",
+      "name": "drooling",
+      "count": 2
+    },
+    {
+      "id": "6 ways to remove unwanted hair",
+      "node_type": "disease",
+      "name": "6 ways to remove unwanted hair",
+      "count": 2
+    },
+    {
+      "id": "ingrown hairs",
+      "node_type": "symptom",
+      "name": "ingrown hairs",
+      "count": 2
+    },
+    {
+      "id": "how to safely exfoliate at home",
+      "node_type": "disease",
+      "name": "how to safely exfoliate at home",
+      "count": 2
+    },
+    {
+      "id": "sensitive skin",
+      "node_type": "symptom",
+      "name": "sensitive skin",
+      "count": 2
+    },
+    {
+      "id": "oily skin",
+      "node_type": "symptom",
+      "name": "oily skin",
+      "count": 2
+    },
+    {
+      "id": "acne",
+      "node_type": "symptom",
+      "name": "acne",
+      "count": 11
+    },
+    {
+      "id": "sunburned skin",
+      "node_type": "symptom",
+      "name": "sunburned skin",
+      "count": 2
+    },
+    {
+      "id": "autism",
+      "node_type": "disease",
+      "name": "autism",
+      "count": 2
+    },
+    {
+      "id": "social interaction issues",
+      "node_type": "symptom",
+      "name": "social interaction issues",
+      "count": 2
+    },
+    {
+      "id": "communication difficulties",
+      "node_type": "symptom",
+      "name": "communication difficulties",
+      "count": 2
+    },
+    {
+      "id": "restricted interests",
+      "node_type": "symptom",
+      "name": "restricted interests",
+      "count": 2
+    },
+    {
+      "id": "repetitive behaviors",
+      "node_type": "symptom",
+      "name": "repetitive behaviors",
+      "count": 2
+    },
+    {
+      "id": "acanthosis nigricans: diagnosis and treatment",
+      "node_type": "disease",
+      "name": "acanthosis nigricans: diagnosis and treatment",
+      "count": 2
+    },
+    {
+      "id": "skin thickening",
+      "node_type": "symptom",
+      "name": "skin thickening",
+      "count": 2
+    },
+    {
+      "id": "dark skin",
+      "node_type": "symptom",
+      "name": "dark skin",
+      "count": 2
+    },
+    {
+      "id": "discomfort",
+      "node_type": "symptom",
+      "name": "discomfort",
+      "count": 10
+    },
+    {
+      "id": "odor",
+      "node_type": "symptom",
+      "name": "odor",
+      "count": 2
+    },
+    {
+      "id": "acne scars: causes",
+      "node_type": "disease",
+      "name": "acne scars: causes",
+      "count": 2
+    },
+    {
+      "id": "depressed scars",
+      "node_type": "symptom",
+      "name": "depressed scars",
+      "count": 2
+    },
+    {
+      "id": "raised scars",
+      "node_type": "symptom",
+      "name": "raised scars",
+      "count": 4
+    },
+    {
+      "id": "inflammation",
+      "node_type": "symptom",
+      "name": "inflammation",
+      "count": 10
+    },
+    {
+      "id": "eczema treatment: corticosteroids applied to the skin",
+      "node_type": "disease",
+      "name": "eczema treatment: corticosteroids applied to the skin",
+      "count": 2
+    },
+    {
+      "id": "heat",
+      "node_type": "symptom",
+      "name": "heat",
+      "count": 2
+    },
+    {
+      "id": "how to control oily skin",
+      "node_type": "disease",
+      "name": "how to control oily skin",
+      "count": 2
+    },
+    {
+      "id": "excess oil",
+      "node_type": "symptom",
+      "name": "excess oil",
+      "count": 2
+    },
+    {
+      "id": "face mask skin care made simple: infographic",
+      "node_type": "disease",
+      "name": "face mask skin care made simple: infographic",
+      "count": 2
+    },
+    {
+      "id": "stress incontinence",
+      "node_type": "disease",
+      "name": "stress incontinence",
+      "count": 2
+    },
+    {
+      "id": "unintentional urine leakage",
+      "node_type": "symptom",
+      "name": "unintentional urine leakage",
+      "count": 2
+    },
+    {
+      "id": "signs of lyme disease that appear on your skin",
+      "node_type": "disease",
+      "name": "signs of lyme disease that appear on your skin",
+      "count": 2
+    },
+    {
+      "id": "bullseye rash",
+      "node_type": "symptom",
+      "name": "bullseye rash",
+      "count": 2
+    },
+    {
+      "id": "red spot",
+      "node_type": "symptom",
+      "name": "red spot",
+      "count": 4
+    },
+    {
+      "id": "warm skin",
+      "node_type": "symptom",
+      "name": "warm skin",
+      "count": 2
+    },
+    {
+      "id": "painful skin",
+      "node_type": "symptom",
+      "name": "painful skin",
+      "count": 2
+    },
+    {
+      "id": "chills",
+      "node_type": "symptom",
+      "name": "chills",
+      "count": 2
+    },
+    {
+      "id": "muscle aches",
+      "node_type": "symptom",
+      "name": "muscle aches",
+      "count": 2
+    },
+    {
+      "id": "bluish-red lump",
+      "node_type": "symptom",
+      "name": "bluish-red lump",
+      "count": 2
+    },
+    {
+      "id": "skin swelling",
+      "node_type": "symptom",
+      "name": "skin swelling",
+      "count": 2
+    },
+    {
+      "id": "hardening",
+      "node_type": "symptom",
+      "name": "hardening",
+      "count": 2
+    },
+    {
+      "id": "goiter",
+      "node_type": "disease",
+      "name": "goiter",
+      "count": 2
+    },
+    {
+      "id": "enlarged thyroid",
+      "node_type": "symptom",
+      "name": "enlarged thyroid",
+      "count": 2
+    },
+    {
+      "id": "neck swelling",
+      "node_type": "symptom",
+      "name": "neck swelling",
+      "count": 2
+    },
+    {
+      "id": "breathing difficulty",
+      "node_type": "symptom",
+      "name": "breathing difficulty",
+      "count": 2
+    },
+    {
+      "id": "ichthyosis vulgaris: overview",
+      "node_type": "disease",
+      "name": "ichthyosis vulgaris: overview",
+      "count": 2
+    },
+    {
+      "id": "scaly skin",
+      "node_type": "symptom",
+      "name": "scaly skin",
+      "count": 2
+    },
+    {
+      "id": "chorioretinitis",
+      "node_type": "disease",
+      "name": "chorioretinitis",
+      "count": 2
+    },
+    {
+      "id": "eye pain",
+      "node_type": "symptom",
+      "name": "eye pain",
+      "count": 2
+    },
+    {
+      "id": "eczema types: neurodermatitis signs and symptoms",
+      "node_type": "disease",
+      "name": "eczema types: neurodermatitis signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "discolored skin",
+      "node_type": "symptom",
+      "name": "discolored skin",
+      "count": 4
+    },
+    {
+      "id": "open sores",
+      "node_type": "symptom",
+      "name": "open sores",
+      "count": 4
+    },
+    {
+      "id": "scarring",
+      "node_type": "symptom",
+      "name": "scarring",
+      "count": 6
+    },
+    {
+      "id": "artificial nails: dermatologists' tips for reducing nail damage",
+      "node_type": "disease",
+      "name": "artificial nails: dermatologists' tips for reducing nail damage",
+      "count": 2
+    },
+    {
+      "id": "thin nails",
+      "node_type": "symptom",
+      "name": "thin nails",
+      "count": 2
+    },
+    {
+      "id": "brittle nails",
+      "node_type": "symptom",
+      "name": "brittle nails",
+      "count": 3
+    },
+    {
+      "id": "weak nails",
+      "node_type": "symptom",
+      "name": "weak nails",
+      "count": 2
+    },
+    {
+      "id": "warts: who gets and causes",
+      "node_type": "disease",
+      "name": "warts: who gets and causes",
+      "count": 2
+    },
+    {
+      "id": "see how the sun damages your skin",
+      "node_type": "disease",
+      "name": "see how the sun damages your skin",
+      "count": 2
+    },
+    {
+      "id": "skin cancer",
+      "node_type": "symptom",
+      "name": "skin cancer",
+      "count": 2
+    },
+    {
+      "id": "premature aging",
+      "node_type": "symptom",
+      "name": "premature aging",
+      "count": 2
+    },
+    {
+      "id": "acne can affect more than your skin",
+      "node_type": "disease",
+      "name": "acne can affect more than your skin",
+      "count": 2
+    },
+    {
+      "id": "depression",
+      "node_type": "symptom",
+      "name": "depression",
+      "count": 4
+    },
+    {
+      "id": "low self-esteem",
+      "node_type": "symptom",
+      "name": "low self-esteem",
+      "count": 2
+    },
+    {
+      "id": "isolation",
+      "node_type": "symptom",
+      "name": "isolation",
+      "count": 2
+    },
+    {
+      "id": "emotional distress",
+      "node_type": "symptom",
+      "name": "emotional distress",
+      "count": 2
+    },
+    {
+      "id": "headache after lumbar puncture",
+      "node_type": "disease",
+      "name": "headache after lumbar puncture",
+      "count": 2
+    },
+    {
+      "id": "throbbing headache",
+      "node_type": "symptom",
+      "name": "throbbing headache",
+      "count": 2
+    },
+    {
+      "id": "pityriasis rosea: tips for managing",
+      "node_type": "disease",
+      "name": "pityriasis rosea: tips for managing",
+      "count": 2
+    },
+    {
+      "id": "psoriasis treatment: coal tar",
+      "node_type": "disease",
+      "name": "psoriasis treatment: coal tar",
+      "count": 2
+    },
+    {
+      "id": "itch",
+      "node_type": "symptom",
+      "name": "itch",
+      "count": 2
+    },
+    {
+      "id": "herpes simplex: overview",
+      "node_type": "disease",
+      "name": "herpes simplex: overview",
+      "count": 2
+    },
+    {
+      "id": "cold sores",
+      "node_type": "symptom",
+      "name": "cold sores",
+      "count": 2
+    },
+    {
+      "id": "fever blisters",
+      "node_type": "symptom",
+      "name": "fever blisters",
+      "count": 2
+    },
+    {
+      "id": "moles: tips for managing",
+      "node_type": "disease",
+      "name": "moles: tips for managing",
+      "count": 2
+    },
+    {
+      "id": "size change",
+      "node_type": "symptom",
+      "name": "size change",
+      "count": 2
+    },
+    {
+      "id": "shape change",
+      "node_type": "symptom",
+      "name": "shape change",
+      "count": 2
+    },
+    {
+      "id": "syringomyelia",
+      "node_type": "disease",
+      "name": "syringomyelia",
+      "count": 2
+    },
+    {
+      "id": "loss of sensation",
+      "node_type": "symptom",
+      "name": "loss of sensation",
+      "count": 2
+    },
+    {
+      "id": "chronic pain",
+      "node_type": "symptom",
+      "name": "chronic pain",
+      "count": 2
+    },
+    {
+      "id": "rabies",
+      "node_type": "disease",
+      "name": "rabies",
+      "count": 2
+    },
+    {
+      "id": "hallucinations",
+      "node_type": "symptom",
+      "name": "hallucinations",
+      "count": 2
+    },
+    {
+      "id": "acne keloidalis nuchae: overview",
+      "node_type": "disease",
+      "name": "acne keloidalis nuchae: overview",
+      "count": 2
+    },
+    {
+      "id": "acne like breakouts",
+      "node_type": "symptom",
+      "name": "acne like breakouts",
+      "count": 2
+    },
+    {
+      "id": "bumps on neck",
+      "node_type": "symptom",
+      "name": "bumps on neck",
+      "count": 2
+    },
+    {
+      "id": "bumps on scalp",
+      "node_type": "symptom",
+      "name": "bumps on scalp",
+      "count": 2
+    },
+    {
+      "id": "treating acne? is it time to see a dermatologist?",
+      "node_type": "disease",
+      "name": "treating acne? is it time to see a dermatologist?",
+      "count": 2
+    },
+    {
+      "id": "persistent breakouts",
+      "node_type": "symptom",
+      "name": "persistent breakouts",
+      "count": 2
+    },
+    {
+      "id": "deep acne",
+      "node_type": "symptom",
+      "name": "deep acne",
+      "count": 2
+    },
+    {
+      "id": "painful acne",
+      "node_type": "symptom",
+      "name": "painful acne",
+      "count": 2
+    },
+    {
+      "id": "pemphigus",
+      "node_type": "disease",
+      "name": "pemphigus",
+      "count": 2
+    },
+    {
+      "id": "painful blisters",
+      "node_type": "symptom",
+      "name": "painful blisters",
+      "count": 4
+    },
+    {
+      "id": "skin blisters",
+      "node_type": "symptom",
+      "name": "skin blisters",
+      "count": 2
+    },
+    {
+      "id": "mucous membrane blisters",
+      "node_type": "symptom",
+      "name": "mucous membrane blisters",
+      "count": 2
+    },
+    {
+      "id": "acne keloidalis nuchae: signs and symptoms",
+      "node_type": "disease",
+      "name": "acne keloidalis nuchae: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "firm bumps",
+      "node_type": "symptom",
+      "name": "firm bumps",
+      "count": 2
+    },
+    {
+      "id": "painful bumps",
+      "node_type": "symptom",
+      "name": "painful bumps",
+      "count": 2
+    },
+    {
+      "id": "abscesses",
+      "node_type": "symptom",
+      "name": "abscesses",
+      "count": 2
+    },
+    {
+      "id": "sinus tracts",
+      "node_type": "symptom",
+      "name": "sinus tracts",
+      "count": 2
+    },
+    {
+      "id": "adults with eczema should watch for eye problems",
+      "node_type": "disease",
+      "name": "adults with eczema should watch for eye problems",
+      "count": 2
+    },
+    {
+      "id": "itchy eyes",
+      "node_type": "symptom",
+      "name": "itchy eyes",
+      "count": 2
+    },
+    {
+      "id": "red eyes",
+      "node_type": "symptom",
+      "name": "red eyes",
+      "count": 2
+    },
+    {
+      "id": "swollen eyes",
+      "node_type": "symptom",
+      "name": "swollen eyes",
+      "count": 2
+    },
+    {
+      "id": "eye discomfort",
+      "node_type": "symptom",
+      "name": "eye discomfort",
+      "count": 2
+    },
+    {
+      "id": "watery discharge",
+      "node_type": "symptom",
+      "name": "watery discharge",
+      "count": 2
+    },
+    {
+      "id": "sticky discharge",
+      "node_type": "symptom",
+      "name": "sticky discharge",
+      "count": 2
+    },
+    {
+      "id": "nearsightedness",
+      "node_type": "symptom",
+      "name": "nearsightedness",
+      "count": 2
+    },
+    {
+      "id": "heart medicine can clear strawberry birthmarks",
+      "node_type": "disease",
+      "name": "heart medicine can clear strawberry birthmarks",
+      "count": 2
+    },
+    {
+      "id": "sleep problems",
+      "node_type": "symptom",
+      "name": "sleep problems",
+      "count": 2
+    },
+    {
+      "id": "cold hands",
+      "node_type": "symptom",
+      "name": "cold hands",
+      "count": 2
+    },
+    {
+      "id": "low blood sugar",
+      "node_type": "symptom",
+      "name": "low blood sugar",
+      "count": 2
+    },
+    {
+      "id": "what does psoriasis look like?",
+      "node_type": "disease",
+      "name": "what does psoriasis look like?",
+      "count": 2
+    },
+    {
+      "id": "thick skin",
+      "node_type": "symptom",
+      "name": "thick skin",
+      "count": 2
+    },
+    {
+      "id": "silvery scales",
+      "node_type": "symptom",
+      "name": "silvery scales",
+      "count": 2
+    },
+    {
+      "id": "yellow spots",
+      "node_type": "symptom",
+      "name": "yellow spots",
+      "count": 2
+    },
+    {
+      "id": "pitting",
+      "node_type": "symptom",
+      "name": "pitting",
+      "count": 2
+    },
+    {
+      "id": "crumbling nails",
+      "node_type": "symptom",
+      "name": "crumbling nails",
+      "count": 2
+    },
+    {
+      "id": "scaly spots",
+      "node_type": "symptom",
+      "name": "scaly spots",
+      "count": 2
+    },
+    {
+      "id": "red patches",
+      "node_type": "symptom",
+      "name": "red patches",
+      "count": 4
+    },
+    {
+      "id": "cracking skin",
+      "node_type": "symptom",
+      "name": "cracking skin",
+      "count": 2
+    },
+    {
+      "id": "burnt skin",
+      "node_type": "symptom",
+      "name": "burnt skin",
+      "count": 2
+    },
+    {
+      "id": "can the right diet get rid of acne?",
+      "node_type": "disease",
+      "name": "can the right diet get rid of acne?",
+      "count": 2
+    },
+    {
+      "id": "breakouts",
+      "node_type": "symptom",
+      "name": "breakouts",
+      "count": 2
+    },
+    {
+      "id": "excess sebum",
+      "node_type": "symptom",
+      "name": "excess sebum",
+      "count": 2
+    },
+    {
+      "id": "genital warts: overview",
+      "node_type": "disease",
+      "name": "genital warts: overview",
+      "count": 2
+    },
+    {
+      "id": "infection of open wound",
+      "node_type": "disease",
+      "name": "infection of open wound",
+      "count": 2
+    },
+    {
+      "id": "warmth",
+      "node_type": "symptom",
+      "name": "warmth",
+      "count": 2
+    },
+    {
+      "id": "pus",
+      "node_type": "symptom",
+      "name": "pus",
+      "count": 2
+    },
+    {
+      "id": "malaise",
+      "node_type": "symptom",
+      "name": "malaise",
+      "count": 2
+    },
+    {
+      "id": "diverticulosis",
+      "node_type": "disease",
+      "name": "diverticulosis",
+      "count": 2
+    },
+    {
+      "id": "bloating",
+      "node_type": "symptom",
+      "name": "bloating",
+      "count": 2
+    },
+    {
+      "id": "bowel changes",
+      "node_type": "symptom",
+      "name": "bowel changes",
+      "count": 4
+    },
+    {
+      "id": "mittelschmerz",
+      "node_type": "disease",
+      "name": "mittelschmerz",
+      "count": 2
+    },
+    {
+      "id": "lower abdominal pain",
+      "node_type": "symptom",
+      "name": "lower abdominal pain",
+      "count": 2
+    },
+    {
+      "id": "causes of hair loss",
+      "node_type": "disease",
+      "name": "causes of hair loss",
+      "count": 2
+    },
+    {
+      "id": "telogen effluvium",
+      "node_type": "symptom",
+      "name": "telogen effluvium",
+      "count": 2
+    },
+    {
+      "id": "endometriosis",
+      "node_type": "disease",
+      "name": "endometriosis",
+      "count": 2
+    },
+    {
+      "id": "pelvic pain",
+      "node_type": "symptom",
+      "name": "pelvic pain",
+      "count": 6
+    },
+    {
+      "id": "heavy bleeding",
+      "node_type": "symptom",
+      "name": "heavy bleeding",
+      "count": 2
+    },
+    {
+      "id": "infertility",
+      "node_type": "symptom",
+      "name": "infertility",
+      "count": 2
+    },
+    {
+      "id": "painful periods",
+      "node_type": "symptom",
+      "name": "painful periods",
+      "count": 2
+    },
+    {
+      "id": "impetigo: overview",
+      "node_type": "disease",
+      "name": "impetigo: overview",
+      "count": 2
+    },
+    {
+      "id": "blisters",
+      "node_type": "symptom",
+      "name": "blisters",
+      "count": 4
+    },
+    {
+      "id": "crusts",
+      "node_type": "symptom",
+      "name": "crusts",
+      "count": 2
+    },
+    {
+      "id": "skin infection",
+      "node_type": "symptom",
+      "name": "skin infection",
+      "count": 2
+    },
+    {
+      "id": "cuts",
+      "node_type": "symptom",
+      "name": "cuts",
+      "count": 2
+    },
+    {
+      "id": "scratches",
+      "node_type": "symptom",
+      "name": "scratches",
+      "count": 2
+    },
+    {
+      "id": "insect bites",
+      "node_type": "symptom",
+      "name": "insect bites",
+      "count": 2
+    },
+    {
+      "id": "eczema",
+      "node_type": "symptom",
+      "name": "eczema",
+      "count": 2
+    },
+    {
+      "id": "skin cancer types: sebaceous carcinoma causes",
+      "node_type": "disease",
+      "name": "skin cancer types: sebaceous carcinoma causes",
+      "count": 2
+    },
+    {
+      "id": "growth on eyelid",
+      "node_type": "symptom",
+      "name": "growth on eyelid",
+      "count": 2
+    },
+    {
+      "id": "congenital rubella",
+      "node_type": "disease",
+      "name": "congenital rubella",
+      "count": 2
+    },
+    {
+      "id": "developmental delays",
+      "node_type": "symptom",
+      "name": "developmental delays",
+      "count": 2
+    },
+    {
+      "id": "intellectual disability",
+      "node_type": "symptom",
+      "name": "intellectual disability",
+      "count": 2
+    },
+    {
+      "id": "vision problems",
+      "node_type": "symptom",
+      "name": "vision problems",
+      "count": 2
+    },
+    {
+      "id": "heart defects",
+      "node_type": "symptom",
+      "name": "heart defects",
+      "count": 2
+    },
+    {
+      "id": "liver enlargement",
+      "node_type": "symptom",
+      "name": "liver enlargement",
+      "count": 2
+    },
+    {
+      "id": "spleen enlargement",
+      "node_type": "symptom",
+      "name": "spleen enlargement",
+      "count": 2
+    },
+    {
+      "id": "why you need sun protection in the winter",
+      "node_type": "disease",
+      "name": "why you need sun protection in the winter",
+      "count": 2
+    },
+    {
+      "id": "sunburn",
+      "node_type": "symptom",
+      "name": "sunburn",
+      "count": 6
+    },
+    {
+      "id": "lichen planus: signs and symptoms",
+      "node_type": "disease",
+      "name": "lichen planus: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "white dots",
+      "node_type": "symptom",
+      "name": "white dots",
+      "count": 2
+    },
+    {
+      "id": "scaly patches",
+      "node_type": "symptom",
+      "name": "scaly patches",
+      "count": 2
+    },
+    {
+      "id": "hair thinning",
+      "node_type": "symptom",
+      "name": "hair thinning",
+      "count": 2
+    },
+    {
+      "id": "irritation",
+      "node_type": "symptom",
+      "name": "irritation",
+      "count": 2
+    },
+    {
+      "id": "hair loss types: frontal fibrosing alopecia overview",
+      "node_type": "disease",
+      "name": "hair loss types: frontal fibrosing alopecia overview",
+      "count": 2
+    },
+    {
+      "id": "bald skin",
+      "node_type": "symptom",
+      "name": "bald skin",
+      "count": 2
+    },
+    {
+      "id": "patches of hair loss",
+      "node_type": "symptom",
+      "name": "patches of hair loss",
+      "count": 2
+    },
+    {
+      "id": "endometrial cancer",
+      "node_type": "disease",
+      "name": "endometrial cancer",
+      "count": 2
+    },
+    {
+      "id": "abnormal vaginal bleeding",
+      "node_type": "symptom",
+      "name": "abnormal vaginal bleeding",
+      "count": 2
+    },
+    {
+      "id": "bladder changes",
+      "node_type": "symptom",
+      "name": "bladder changes",
+      "count": 2
+    },
+    {
+      "id": "pleomorphic adenoma",
+      "node_type": "disease",
+      "name": "pleomorphic adenoma",
+      "count": 2
+    },
+    {
+      "id": "painless lump",
+      "node_type": "symptom",
+      "name": "painless lump",
+      "count": 2
+    },
+    {
+      "id": "how to treat eczema in babies",
+      "node_type": "disease",
+      "name": "how to treat eczema in babies",
+      "count": 2
+    },
+    {
+      "id": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "node_type": "disease",
+      "name": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "count": 2
+    },
+    {
+      "id": "painless spot",
+      "node_type": "symptom",
+      "name": "painless spot",
+      "count": 2
+    },
+    {
+      "id": "sore",
+      "node_type": "symptom",
+      "name": "sore",
+      "count": 2
+    },
+    {
+      "id": "tender skin",
+      "node_type": "symptom",
+      "name": "tender skin",
+      "count": 2
+    },
+    {
+      "id": "purple spot",
+      "node_type": "symptom",
+      "name": "purple spot",
+      "count": 2
+    },
+    {
+      "id": "pink spot",
+      "node_type": "symptom",
+      "name": "pink spot",
+      "count": 2
+    },
+    {
+      "id": "pregnancy-related back pain",
+      "node_type": "disease",
+      "name": "pregnancy-related back pain",
+      "count": 2
+    },
+    {
+      "id": "lower back pain",
+      "node_type": "symptom",
+      "name": "lower back pain",
+      "count": 2
+    },
+    {
+      "id": "pelvic discomfort",
+      "node_type": "symptom",
+      "name": "pelvic discomfort",
+      "count": 2
+    },
+    {
+      "id": "melasma: signs and symptoms",
+      "node_type": "disease",
+      "name": "melasma: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "dark patches",
+      "node_type": "symptom",
+      "name": "dark patches",
+      "count": 4
+    },
+    {
+      "id": "blotchy skin",
+      "node_type": "symptom",
+      "name": "blotchy skin",
+      "count": 2
+    },
+    {
+      "id": "are triggers causing your psoriasis flare-ups?",
+      "node_type": "disease",
+      "name": "are triggers causing your psoriasis flare-ups?",
+      "count": 2
+    },
+    {
+      "id": "skin injuries",
+      "node_type": "symptom",
+      "name": "skin injuries",
+      "count": 2
+    },
+    {
+      "id": "cold weather",
+      "node_type": "symptom",
+      "name": "cold weather",
+      "count": 2
+    },
+    {
+      "id": "stress",
+      "node_type": "symptom",
+      "name": "stress",
+      "count": 2
+    },
+    {
+      "id": "cellulite treatments: what really works?",
+      "node_type": "disease",
+      "name": "cellulite treatments: what really works?",
+      "count": 2
+    },
+    {
+      "id": "dimples",
+      "node_type": "symptom",
+      "name": "dimples",
+      "count": 2
+    },
+    {
+      "id": "fat deposits",
+      "node_type": "symptom",
+      "name": "fat deposits",
+      "count": 2
+    },
+    {
+      "id": "vitiligo: signs and symptoms",
+      "node_type": "disease",
+      "name": "vitiligo: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "loss of skin color",
+      "node_type": "symptom",
+      "name": "loss of skin color",
+      "count": 3
+    },
+    {
+      "id": "lighter skin patches",
+      "node_type": "symptom",
+      "name": "lighter skin patches",
+      "count": 2
+    },
+    {
+      "id": "premature hair graying",
+      "node_type": "symptom",
+      "name": "premature hair graying",
+      "count": 2
+    },
+    {
+      "id": "eye color change",
+      "node_type": "symptom",
+      "name": "eye color change",
+      "count": 2
+    },
+    {
+      "id": "emphysema",
+      "node_type": "disease",
+      "name": "emphysema",
+      "count": 2
+    },
+    {
+      "id": "shortness of breath",
+      "node_type": "symptom",
+      "name": "shortness of breath",
+      "count": 2
+    },
+    {
+      "id": "wheezing",
+      "node_type": "symptom",
+      "name": "wheezing",
+      "count": 2
+    },
+    {
+      "id": "chronic cough",
+      "node_type": "symptom",
+      "name": "chronic cough",
+      "count": 2
+    },
+    {
+      "id": "chest tightness",
+      "node_type": "symptom",
+      "name": "chest tightness",
+      "count": 2
+    },
+    {
+      "id": "weight loss",
+      "node_type": "symptom",
+      "name": "weight loss",
+      "count": 4
+    },
+    {
+      "id": "hand-foot-and-mouth disease: signs and symptoms",
+      "node_type": "disease",
+      "name": "hand-foot-and-mouth disease: signs and symptoms",
+      "count": 2
+    },
+    {
+      "id": "mild fever",
+      "node_type": "symptom",
+      "name": "mild fever",
+      "count": 2
+    },
+    {
+      "id": "sore throat",
+      "node_type": "symptom",
+      "name": "sore throat",
+      "count": 2
+    },
+    {
+      "id": "stomach pain",
+      "node_type": "symptom",
+      "name": "stomach pain",
+      "count": 2
+    },
+    {
+      "id": "decreased appetite",
+      "node_type": "symptom",
+      "name": "decreased appetite",
+      "count": 2
+    },
+    {
+      "id": "painful mouth sores",
+      "node_type": "symptom",
+      "name": "painful mouth sores",
+      "count": 2
+    },
+    {
+      "id": "itchy rash",
+      "node_type": "symptom",
+      "name": "itchy rash",
+      "count": 2
+    },
+    {
+      "id": "dengue fever",
+      "node_type": "disease",
+      "name": "dengue fever",
+      "count": 2
+    },
+    {
+      "id": "high fever",
+      "node_type": "symptom",
+      "name": "high fever",
+      "count": 2
+    },
+    {
+      "id": "severe headache",
+      "node_type": "symptom",
+      "name": "severe headache",
+      "count": 2
+    },
+    {
+      "id": "muscle pain",
+      "node_type": "symptom",
+      "name": "muscle pain",
+      "count": 4
+    },
+    {
+      "id": "how to care for your baby's skin, hair, and nails",
+      "node_type": "disease",
+      "name": "how to care for your baby's skin, hair, and nails",
+      "count": 2
+    },
+    {
+      "id": "diaper rash",
+      "node_type": "symptom",
+      "name": "diaper rash",
+      "count": 2
+    },
+    {
+      "id": "sharp nails",
+      "node_type": "symptom",
+      "name": "sharp nails",
+      "count": 2
+    },
+    {
+      "id": "skin scratches",
+      "node_type": "symptom",
+      "name": "skin scratches",
+      "count": 2
+    },
+    {
+      "id": "mastoiditis",
+      "node_type": "disease",
+      "name": "mastoiditis",
+      "count": 2
+    },
+    {
+      "id": "earache",
+      "node_type": "symptom",
+      "name": "earache",
+      "count": 2
+    },
+    {
+      "id": "irritability",
+      "node_type": "symptom",
+      "name": "irritability",
+      "count": 2
+    },
+    {
+      "id": "adenoid cystic carcinoma",
+      "node_type": "disease",
+      "name": "adenoid cystic carcinoma",
+      "count": 2
+    },
+    {
+      "id": "facial numbness",
+      "node_type": "symptom",
+      "name": "facial numbness",
+      "count": 2
+    },
+    {
+      "id": "tingling",
+      "node_type": "symptom",
+      "name": "tingling",
+      "count": 4
+    },
+    {
+      "id": "gout",
+      "node_type": "disease",
+      "name": "gout",
+      "count": 2
+    },
+    {
+      "id": "skin cancer types: merkel cell carcinoma self-care",
+      "node_type": "disease",
+      "name": "skin cancer types: merkel cell carcinoma self-care",
+      "count": 2
+    },
+    {
+      "id": "skin growths",
+      "node_type": "symptom",
+      "name": "skin growths",
+      "count": 4
+    },
+    {
+      "id": "warts: overview",
+      "node_type": "disease",
+      "name": "warts: overview",
+      "count": 2
+    },
+    {
+      "id": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "node_type": "disease",
+      "name": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "count": 2
+    },
+    {
+      "id": "discoloration",
+      "node_type": "symptom",
+      "name": "discoloration",
+      "count": 4
+    },
+    {
+      "id": "sores",
+      "node_type": "symptom",
+      "name": "sores",
+      "count": 2
+    },
+    {
+      "id": "poor blood flow",
+      "node_type": "symptom",
+      "name": "poor blood flow",
+      "count": 2
+    },
+    {
+      "id": "sarcoidosis and your skin: diagnosis and treatment",
+      "node_type": "disease",
+      "name": "sarcoidosis and your skin: diagnosis and treatment",
+      "count": 2
+    },
+    {
+      "id": "lumps",
+      "node_type": "symptom",
+      "name": "lumps",
+      "count": 2
+    },
+    {
+      "id": "rashes",
+      "node_type": "symptom",
+      "name": "rashes",
+      "count": 3
+    },
+    {
+      "id": "vision changes",
+      "node_type": "symptom",
+      "name": "vision changes",
+      "count": 2
+    },
+    {
+      "id": "cough",
+      "node_type": "symptom",
+      "name": "cough",
+      "count": 2
+    },
+    {
+      "id": "difficulty breathing",
+      "node_type": "symptom",
+      "name": "difficulty breathing",
+      "count": 4
+    },
+    {
+      "id": "abnormal heart rhythms",
+      "node_type": "symptom",
+      "name": "abnormal heart rhythms",
+      "count": 2
+    },
+    {
+      "id": "manicures and pedicures",
+      "node_type": "disease",
+      "name": "manicures and pedicures",
+      "count": 2
+    },
+    {
+      "id": "nail damage",
+      "node_type": "symptom",
+      "name": "nail damage",
+      "count": 2
+    },
+    {
+      "id": "cutaneous t-cell lymphoma: overview",
+      "node_type": "disease",
+      "name": "cutaneous t-cell lymphoma: overview",
+      "count": 2
+    },
+    {
+      "id": "pink patches",
+      "node_type": "symptom",
+      "name": "pink patches",
+      "count": 2
+    },
+    {
+      "id": "raised plaques",
+      "node_type": "symptom",
+      "name": "raised plaques",
+      "count": 2
+    },
+    {
+      "id": "light spots",
+      "node_type": "symptom",
+      "name": "light spots",
+      "count": 2
+    },
+    {
+      "id": "bladder cancer",
+      "node_type": "disease",
+      "name": "bladder cancer",
+      "count": 2
+    },
+    {
+      "id": "blood in urine",
+      "node_type": "symptom",
+      "name": "blood in urine",
+      "count": 2
+    },
+    {
+      "id": "frequent urination",
+      "node_type": "symptom",
+      "name": "frequent urination",
+      "count": 2
+    },
+    {
+      "id": "myofascial pain syndrome",
+      "node_type": "disease",
+      "name": "myofascial pain syndrome",
+      "count": 2
+    },
+    {
+      "id": "trigger points",
+      "node_type": "symptom",
+      "name": "trigger points",
+      "count": 2
+    },
+    {
+      "id": "chemical peels: overview",
+      "node_type": "disease",
+      "name": "chemical peels: overview",
+      "count": 2
+    },
+    {
+      "id": "hypocalcemia",
+      "node_type": "disease",
+      "name": "hypocalcemia",
+      "count": 2
+    },
+    {
+      "id": "muscle cramps",
+      "node_type": "symptom",
+      "name": "muscle cramps",
+      "count": 2
+    },
+    {
+      "id": "psoriatic arthritis: causes",
+      "node_type": "disease",
+      "name": "psoriatic arthritis: causes",
+      "count": 2
+    },
+    {
+      "id": "swollen joints",
+      "node_type": "symptom",
+      "name": "swollen joints",
+      "count": 2
+    },
+    {
+      "id": "how dermatologists treat sun-damaged skin",
+      "node_type": "disease",
+      "name": "how dermatologists treat sun-damaged skin",
+      "count": 2
+    },
+    {
+      "id": "loose skin",
+      "node_type": "symptom",
+      "name": "loose skin",
+      "count": 2
+    },
+    {
+      "id": "blotchy complexion",
+      "node_type": "symptom",
+      "name": "blotchy complexion",
+      "count": 2
+    },
+    {
+      "id": "fillers: faqs",
+      "node_type": "disease",
+      "name": "fillers: faqs",
+      "count": 2
+    },
+    {
+      "id": "transient ischemic attack",
+      "node_type": "disease",
+      "name": "transient ischemic attack",
+      "count": 2
+    },
+    {
+      "id": "sudden onset",
+      "node_type": "symptom",
+      "name": "sudden onset",
+      "count": 2
+    },
+    {
+      "id": "neurological symptoms",
+      "node_type": "symptom",
+      "name": "neurological symptoms",
+      "count": 2
+    },
+    {
+      "id": "glucocorticoid deficiency",
+      "node_type": "disease",
+      "name": "glucocorticoid deficiency",
+      "count": 2
+    },
+    {
+      "id": "weakness",
+      "node_type": "symptom",
+      "name": "weakness",
+      "count": 2
+    },
+    {
+      "id": "poison ivy, oak, and sumac",
+      "node_type": "disease",
+      "name": "poison ivy, oak, and sumac",
+      "count": 2
+    },
+    {
+      "id": "red rash",
+      "node_type": "symptom",
+      "name": "red rash",
+      "count": 2
+    },
+    {
+      "id": "blistered skin",
+      "node_type": "symptom",
+      "name": "blistered skin",
+      "count": 2
+    },
+    {
+      "id": "dip powder manicure: 5 tips to keep your nails healthy",
+      "node_type": "disease",
+      "name": "dip powder manicure: 5 tips to keep your nails healthy",
+      "count": 2
+    },
+    {
+      "id": "infection",
+      "node_type": "symptom",
+      "name": "infection",
+      "count": 2
+    },
+    {
+      "id": "thinning nails",
+      "node_type": "symptom",
+      "name": "thinning nails",
+      "count": 2
+    },
+    {
+      "id": "damage",
+      "node_type": "symptom",
+      "name": "damage",
+      "count": 2
+    },
+    {
+      "id": "lichen planus: overview",
+      "node_type": "disease",
+      "name": "lichen planus: overview",
+      "count": 2
+    },
+    {
+      "id": "skin changes",
+      "node_type": "symptom",
+      "name": "skin changes",
+      "count": 2
+    },
+    {
+      "id": "nail changes",
+      "node_type": "symptom",
+      "name": "nail changes",
+      "count": 2
+    },
+    {
+      "id": "skin lesions",
+      "node_type": "symptom",
+      "name": "skin lesions",
+      "count": 2
+    },
+    {
+      "id": "coloring and perming tips for healthier-looking hair",
+      "node_type": "disease",
+      "name": "coloring and perming tips for healthier-looking hair",
+      "count": 2
+    },
+    {
+      "id": "weak hair",
+      "node_type": "symptom",
+      "name": "weak hair",
+      "count": 2
+    },
+    {
+      "id": "dry hair",
+      "node_type": "symptom",
+      "name": "dry hair",
+      "count": 2
+    },
+    {
+      "id": "rough hair",
+      "node_type": "symptom",
+      "name": "rough hair",
+      "count": 2
+    },
+    {
+      "id": "faded hair",
+      "node_type": "symptom",
+      "name": "faded hair",
+      "count": 2
+    },
+    {
+      "id": "brittle hair",
+      "node_type": "symptom",
+      "name": "brittle hair",
+      "count": 2
+    },
+    {
+      "id": "polycystic kidney disease",
+      "node_type": "disease",
+      "name": "polycystic kidney disease",
+      "count": 2
+    },
+    {
+      "id": "high blood pressure",
+      "node_type": "symptom",
+      "name": "high blood pressure",
+      "count": 2
+    },
+    {
+      "id": "kidney cysts",
+      "node_type": "symptom",
+      "name": "kidney cysts",
+      "count": 2
+    },
+    {
+      "id": "dysthymic disorder",
+      "node_type": "disease",
+      "name": "dysthymic disorder",
+      "count": 2
+    },
+    {
+      "id": "low mood",
+      "node_type": "symptom",
+      "name": "low mood",
+      "count": 2
+    },
+    {
+      "id": "lack of interest",
+      "node_type": "symptom",
+      "name": "lack of interest",
+      "count": 2
+    },
+    {
+      "id": "sleep changes",
+      "node_type": "symptom",
+      "name": "sleep changes",
+      "count": 2
+    },
+    {
+      "id": "appetite changes",
+      "node_type": "symptom",
+      "name": "appetite changes",
+      "count": 2
+    },
+    {
+      "id": "melasma: diagnosis and treatment",
+      "node_type": "disease",
+      "name": "melasma: diagnosis and treatment",
+      "count": 2
+    },
+    {
+      "id": "brown patches",
+      "node_type": "symptom",
+      "name": "brown patches",
+      "count": 2
+    },
+    {
+      "id": "skin darkening",
+      "node_type": "symptom",
+      "name": "skin darkening",
+      "count": 2
+    },
+    {
+      "id": "urge incontinence",
+      "node_type": "disease",
+      "name": "urge incontinence",
+      "count": 2
+    },
+    {
+      "id": "sudden urination urge",
+      "node_type": "symptom",
+      "name": "sudden urination urge",
+      "count": 2
+    },
+    {
+      "id": "involuntary urine leakage",
+      "node_type": "symptom",
+      "name": "involuntary urine leakage",
+      "count": 2
+    },
+    {
+      "id": "fracture of the rib",
+      "node_type": "disease",
+      "name": "fracture of the rib",
+      "count": 2
+    },
+    {
+      "id": "chest pain",
+      "node_type": "symptom",
+      "name": "chest pain",
+      "count": 2
+    },
+    {
+      "id": "bell palsy",
+      "node_type": "disease",
+      "name": "bell palsy",
+      "count": 2
+    },
+    {
+      "id": "facial weakness",
+      "node_type": "symptom",
+      "name": "facial weakness",
+      "count": 2
+    },
+    {
+      "id": "paralysis",
+      "node_type": "symptom",
+      "name": "paralysis",
+      "count": 2
+    },
+    {
+      "id": "drooping eyelid",
+      "node_type": "symptom",
+      "name": "drooping eyelid",
+      "count": 2
+    },
+    {
+      "id": "drooping mouth",
+      "node_type": "symptom",
+      "name": "drooping mouth",
+      "count": 2
+    },
+    {
+      "id": "pimples",
+      "node_type": "symptom",
+      "name": "pimples",
+      "count": 1
+    },
+    {
+      "id": "skin inflammation",
+      "node_type": "symptom",
+      "name": "skin inflammation",
+      "count": 1
+    },
+    {
+      "id": "fungal nail infection",
+      "node_type": "disease",
+      "name": "fungal nail infection",
+      "count": 1
+    },
+    {
+      "id": "thickened nails",
+      "node_type": "symptom",
+      "name": "thickened nails",
+      "count": 1
+    },
+    {
+      "id": "discolored nails",
+      "node_type": "symptom",
+      "name": "discolored nails",
+      "count": 1
+    },
+    {
+      "id": "nail odor",
+      "node_type": "symptom",
+      "name": "nail odor",
+      "count": 1
+    },
+    {
+      "id": "vitiligo",
+      "node_type": "disease",
+      "name": "vitiligo",
+      "count": 1
+    },
+    {
+      "id": "white patches",
+      "node_type": "symptom",
+      "name": "white patches",
+      "count": 1
+    },
+    {
+      "id": "premature hair whitening",
+      "node_type": "symptom",
+      "name": "premature hair whitening",
+      "count": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "antihypertensives poisoning",
+      "target": "dizziness",
+      "weight": 2
+    },
+    {
+      "source": "antihypertensives poisoning",
+      "target": "low blood pressure",
+      "weight": 2
+    },
+    {
+      "source": "antihypertensives poisoning",
+      "target": "slow heart rate",
+      "weight": 2
+    },
+    {
+      "source": "antihypertensives poisoning",
+      "target": "nausea",
+      "weight": 2
+    },
+    {
+      "source": "antihypertensives poisoning",
+      "target": "vomiting",
+      "weight": 2
+    },
+    {
+      "source": "granuloma annulare: overview",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "granuloma annulare: overview",
+      "target": "ring-shaped patch",
+      "weight": 2
+    },
+    {
+      "source": "granuloma annulare: overview",
+      "target": "raised skin",
+      "weight": 2
+    },
+    {
+      "source": "granuloma annulare: overview",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "granuloma annulare: overview",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "dry shampoo: dermatologists' tips for getting your best results",
+      "target": "scalp irritation",
+      "weight": 2
+    },
+    {
+      "source": "are you ready to manage your child's eczema triggers?",
+      "target": "itchy skin",
+      "weight": 2
+    },
+    {
+      "source": "are you ready to manage your child's eczema triggers?",
+      "target": "red skin",
+      "weight": 2
+    },
+    {
+      "source": "are you ready to manage your child's eczema triggers?",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "rosacea: insider secrets",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "rosacea: insider secrets",
+      "target": "bumps",
+      "weight": 2
+    },
+    {
+      "source": "rosacea: insider secrets",
+      "target": "visible blood vessels",
+      "weight": 2
+    },
+    {
+      "source": "coagulation (bleeding) disorder",
+      "target": "easy bruising",
+      "weight": 2
+    },
+    {
+      "source": "coagulation (bleeding) disorder",
+      "target": "prolonged bleeding",
+      "weight": 2
+    },
+    {
+      "source": "coagulation (bleeding) disorder",
+      "target": "excessive bleeding",
+      "weight": 2
+    },
+    {
+      "source": "coagulation (bleeding) disorder",
+      "target": "nosebleeds",
+      "weight": 2
+    },
+    {
+      "source": "coagulation (bleeding) disorder",
+      "target": "heavy menstrual bleeding",
+      "weight": 2
+    },
+    {
+      "source": "acinic cell carcinoma",
+      "target": "facial changes",
+      "weight": 2
+    },
+    {
+      "source": "acinic cell carcinoma",
+      "target": "lump",
+      "weight": 2
+    },
+    {
+      "source": "acinic cell carcinoma",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "rough skin",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "reddish skin",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "scaly area",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "open sore",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "brown spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "firm growth",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "wart-like growth",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "horn-like growth",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "soreness",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "tenderness",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "numbness",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "pins-and-needles sensation",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: squamous cell carcinoma symptoms",
+      "target": "skin discoloration",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "skin irritation",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "peeling",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "dryness",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: synthetic vitamin d",
+      "target": "high calcium levels",
+      "weight": 2
+    },
+    {
+      "source": "should i treat my psoriasis?",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "should i treat my psoriasis?",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "bronchitis",
+      "target": "persistent cough",
+      "weight": 2
+    },
+    {
+      "source": "bronchitis",
+      "target": "chest congestion",
+      "weight": 2
+    },
+    {
+      "source": "bronchitis",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "stinging",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "throbbing",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "prickling sensation",
+      "weight": 2
+    },
+    {
+      "source": "how to prevent and treat frostbite",
+      "target": "numbness",
+      "weight": 2
+    },
+    {
+      "source": "pseudohypoparathyroidism",
+      "target": "low calcium levels",
+      "weight": 2
+    },
+    {
+      "source": "pseudohypoparathyroidism",
+      "target": "muscle spasms",
+      "weight": 2
+    },
+    {
+      "source": "pseudohypoparathyroidism",
+      "target": "short stature",
+      "weight": 2
+    },
+    {
+      "source": "pseudohypoparathyroidism",
+      "target": "rounded face",
+      "weight": 2
+    },
+    {
+      "source": "acute otitis media",
+      "target": "ear pain",
+      "weight": 2
+    },
+    {
+      "source": "acute otitis media",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "acute otitis media",
+      "target": "fluid drainage",
+      "weight": 2
+    },
+    {
+      "source": "acute otitis media",
+      "target": "hearing loss",
+      "weight": 2
+    },
+    {
+      "source": "cyst of the eyelid",
+      "target": "painful lump",
+      "weight": 2
+    },
+    {
+      "source": "cyst of the eyelid",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "cyst of the eyelid",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "cyst of the eyelid",
+      "target": "tenderness",
+      "weight": 2
+    },
+    {
+      "source": "chancroid",
+      "target": "painful ulcers",
+      "weight": 2
+    },
+    {
+      "source": "chancroid",
+      "target": "swollen lymph nodes",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "headache",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "dizziness",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "nausea",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "vomiting",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "confusion",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "memory problems",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "sensitivity to light",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "sensitivity to noise",
+      "weight": 2
+    },
+    {
+      "source": "concussion",
+      "target": "mood changes",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "itchy bumps",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "intense itching",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "burning sensation",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "stinging sensation",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "bugs crawling sensation",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "raised patches",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "itchy skin",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "dark spots",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "pebbly texture",
+      "weight": 2
+    },
+    {
+      "source": "prurigo nodularis: signs and symptoms",
+      "target": "thickening skin",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: basal cell carcinoma overview",
+      "target": "slowly growing spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: basal cell carcinoma overview",
+      "target": "non-healing spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: basal cell carcinoma overview",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "blistering",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "open wounds",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "anemia",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "constipation",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "dehydration",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "eye problems",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "itchiness",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "malnutrition",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "mouth sores",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "nail loss",
+      "weight": 2
+    },
+    {
+      "source": "epidermolysis bullosa: signs and symptoms",
+      "target": "skin infections",
+      "weight": 2
+    },
+    {
+      "source": "melanoma survivor? you really need to check your skin!",
+      "target": "asymmetry",
+      "weight": 2
+    },
+    {
+      "source": "melanoma survivor? you really need to check your skin!",
+      "target": "border change",
+      "weight": 2
+    },
+    {
+      "source": "melanoma survivor? you really need to check your skin!",
+      "target": "color change",
+      "weight": 2
+    },
+    {
+      "source": "melanoma survivor? you really need to check your skin!",
+      "target": "diameter change",
+      "weight": 2
+    },
+    {
+      "source": "melanoma survivor? you really need to check your skin!",
+      "target": "evolving spot",
+      "weight": 2
+    },
+    {
+      "source": "osteoarthritis",
+      "target": "joint pain",
+      "weight": 2
+    },
+    {
+      "source": "osteoarthritis",
+      "target": "stiffness",
+      "weight": 2
+    },
+    {
+      "source": "osteoarthritis",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "gastroenteritis (stomach flu)",
+      "target": "nausea",
+      "weight": 2
+    },
+    {
+      "source": "gastroenteritis (stomach flu)",
+      "target": "vomiting",
+      "weight": 2
+    },
+    {
+      "source": "gastroenteritis (stomach flu)",
+      "target": "diarrhea",
+      "weight": 2
+    },
+    {
+      "source": "gastroenteritis (stomach flu)",
+      "target": "abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "gastroenteritis (stomach flu)",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "how to treat psoriasis at age 65 and beyond",
+      "target": "thinning skin",
+      "weight": 2
+    },
+    {
+      "source": "how to treat psoriasis at age 65 and beyond",
+      "target": "bruising",
+      "weight": 2
+    },
+    {
+      "source": "how to treat psoriasis at age 65 and beyond",
+      "target": "infections",
+      "weight": 2
+    },
+    {
+      "source": "how to get rid of head lice when treatment fails",
+      "target": "irritated skin",
+      "weight": 2
+    },
+    {
+      "source": "marijuana abuse",
+      "target": "impaired memory",
+      "weight": 2
+    },
+    {
+      "source": "marijuana abuse",
+      "target": "altered judgment",
+      "weight": 2
+    },
+    {
+      "source": "marijuana abuse",
+      "target": "anxiety",
+      "weight": 2
+    },
+    {
+      "source": "extrapyramidal effect of drugs",
+      "target": "muscle stiffness",
+      "weight": 2
+    },
+    {
+      "source": "extrapyramidal effect of drugs",
+      "target": "tremors",
+      "weight": 2
+    },
+    {
+      "source": "extrapyramidal effect of drugs",
+      "target": "involuntary movements",
+      "weight": 2
+    },
+    {
+      "source": "myasthenia gravis",
+      "target": "muscle weakness",
+      "weight": 2
+    },
+    {
+      "source": "myasthenia gravis",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "myasthenia gravis",
+      "target": "difficulty speaking",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: contact dermatitis diagnosis and treatment",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: contact dermatitis diagnosis and treatment",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "gastrointestinal hemorrhage",
+      "target": "abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "gastrointestinal hemorrhage",
+      "target": "vomiting blood",
+      "weight": 2
+    },
+    {
+      "source": "gastrointestinal hemorrhage",
+      "target": "bloody stools",
+      "weight": 2
+    },
+    {
+      "source": "gastrointestinal hemorrhage",
+      "target": "black stools",
+      "weight": 2
+    },
+    {
+      "source": "wrinkles",
+      "target": "lines",
+      "weight": 2
+    },
+    {
+      "source": "wrinkles",
+      "target": "skin damage",
+      "weight": 2
+    },
+    {
+      "source": "types of hair loss",
+      "target": "patchy hair loss",
+      "weight": 2
+    },
+    {
+      "source": "types of hair loss",
+      "target": "thinning hair",
+      "weight": 2
+    },
+    {
+      "source": "types of hair loss",
+      "target": "receding hairline",
+      "weight": 2
+    },
+    {
+      "source": "types of hair loss",
+      "target": "eyebrow loss",
+      "weight": 2
+    },
+    {
+      "source": "types of hair loss",
+      "target": "hair loss on scalp",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: overview",
+      "target": "darkened skin",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: overview",
+      "target": "thickened skin",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: overview",
+      "target": "velvety skin",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "clogged pores",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "red bumps",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "blackheads",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "whiteheads",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "papules",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "pustules",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "inflamed blemishes",
+      "weight": 2
+    },
+    {
+      "source": "how to treat different types of acne",
+      "target": "permanent scarring",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: melanoma overview",
+      "target": "new mole",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: melanoma overview",
+      "target": "changing mole",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: melanoma overview",
+      "target": "different mole",
+      "weight": 2
+    },
+    {
+      "source": "idiopathic absence of menstruation",
+      "target": "absent periods",
+      "weight": 2
+    },
+    {
+      "source": "how natalie finally got rid of her adult acne",
+      "target": "painful cysts",
+      "weight": 2
+    },
+    {
+      "source": "how natalie finally got rid of her adult acne",
+      "target": "acne scars",
+      "weight": 2
+    },
+    {
+      "source": "how natalie finally got rid of her adult acne",
+      "target": "cystic acne",
+      "weight": 2
+    },
+    {
+      "source": "bulimia nervosa",
+      "target": "binge eating",
+      "weight": 2
+    },
+    {
+      "source": "bulimia nervosa",
+      "target": "purging behaviors",
+      "weight": 2
+    },
+    {
+      "source": "skin biopsy: dermatologist-recommended wound care",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "skin biopsy: dermatologist-recommended wound care",
+      "target": "dryness",
+      "weight": 2
+    },
+    {
+      "source": "skin biopsy: dermatologist-recommended wound care",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "skin biopsy: dermatologist-recommended wound care",
+      "target": "allergic reaction",
+      "weight": 2
+    },
+    {
+      "source": "acute glaucoma",
+      "target": "severe eye pain",
+      "weight": 2
+    },
+    {
+      "source": "acute glaucoma",
+      "target": "blurred vision",
+      "weight": 2
+    },
+    {
+      "source": "acute glaucoma",
+      "target": "halos around lights",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "age spots",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "wrinkles",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "sagging skin",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "spider veins",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "varicose veins",
+      "weight": 2
+    },
+    {
+      "source": "younger-looking skin",
+      "target": "fine lines",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "pain in tailbone",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "pus drainage",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "blood drainage",
+      "weight": 2
+    },
+    {
+      "source": "pilonidal cyst",
+      "target": "abscess formation",
+      "weight": 2
+    },
+    {
+      "source": "can covid-19 cause hair loss?",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "can covid-19 cause hair loss?",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "can covid-19 cause hair loss?",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "can covid-19 cause hair loss?",
+      "target": "itchy scalp",
+      "weight": 2
+    },
+    {
+      "source": "can covid-19 cause hair loss?",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+      "target": "new spots",
+      "weight": 2
+    },
+    {
+      "source": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+      "target": "itchy skin",
+      "weight": 2
+    },
+    {
+      "source": "detectar c\u00e3\u00a1ncer de piel: c\u00e3\u00b3mo realizar un autoexamen de piel",
+      "target": "bleeding spots",
+      "weight": 2
+    },
+    {
+      "source": "lymphoma",
+      "target": "swollen lymph nodes",
+      "weight": 2
+    },
+    {
+      "source": "lymphoma",
+      "target": "unexplained weight loss",
+      "weight": 2
+    },
+    {
+      "source": "lymphoma",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "ludwig's angina",
+      "target": "severe swelling",
+      "weight": 2
+    },
+    {
+      "source": "ludwig's angina",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "ludwig's angina",
+      "target": "difficulty swallowing",
+      "weight": 2
+    },
+    {
+      "source": "ludwig's angina",
+      "target": "drooling",
+      "weight": 2
+    },
+    {
+      "source": "6 ways to remove unwanted hair",
+      "target": "ingrown hairs",
+      "weight": 2
+    },
+    {
+      "source": "6 ways to remove unwanted hair",
+      "target": "irritated skin",
+      "weight": 2
+    },
+    {
+      "source": "6 ways to remove unwanted hair",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "sensitive skin",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "oily skin",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "acne",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "dark spots",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "open wounds",
+      "weight": 2
+    },
+    {
+      "source": "how to safely exfoliate at home",
+      "target": "sunburned skin",
+      "weight": 2
+    },
+    {
+      "source": "acne",
+      "target": "itching",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "rashes",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "red skin",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "pimples",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "blackheads",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "whiteheads",
+      "weight": 1
+    },
+    {
+      "source": "acne",
+      "target": "skin inflammation",
+      "weight": 1
+    },
+    {
+      "source": "autism",
+      "target": "social interaction issues",
+      "weight": 2
+    },
+    {
+      "source": "autism",
+      "target": "communication difficulties",
+      "weight": 2
+    },
+    {
+      "source": "autism",
+      "target": "restricted interests",
+      "weight": 2
+    },
+    {
+      "source": "autism",
+      "target": "repetitive behaviors",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: diagnosis and treatment",
+      "target": "skin thickening",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: diagnosis and treatment",
+      "target": "dark skin",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: diagnosis and treatment",
+      "target": "discomfort",
+      "weight": 2
+    },
+    {
+      "source": "acanthosis nigricans: diagnosis and treatment",
+      "target": "odor",
+      "weight": 2
+    },
+    {
+      "source": "acne scars: causes",
+      "target": "depressed scars",
+      "weight": 2
+    },
+    {
+      "source": "acne scars: causes",
+      "target": "raised scars",
+      "weight": 2
+    },
+    {
+      "source": "acne scars: causes",
+      "target": "inflammation",
+      "weight": 2
+    },
+    {
+      "source": "eczema treatment: corticosteroids applied to the skin",
+      "target": "inflammation",
+      "weight": 2
+    },
+    {
+      "source": "eczema treatment: corticosteroids applied to the skin",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "eczema treatment: corticosteroids applied to the skin",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "eczema treatment: corticosteroids applied to the skin",
+      "target": "heat",
+      "weight": 2
+    },
+    {
+      "source": "eczema treatment: corticosteroids applied to the skin",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "how to control oily skin",
+      "target": "acne",
+      "weight": 2
+    },
+    {
+      "source": "how to control oily skin",
+      "target": "excess oil",
+      "weight": 2
+    },
+    {
+      "source": "face mask skin care made simple: infographic",
+      "target": "acne",
+      "weight": 2
+    },
+    {
+      "source": "face mask skin care made simple: infographic",
+      "target": "dryness",
+      "weight": 2
+    },
+    {
+      "source": "stress incontinence",
+      "target": "unintentional urine leakage",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "bullseye rash",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "red spot",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "itchy skin",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "warm skin",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "painful skin",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "chills",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "muscle aches",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "headache",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "bluish-red lump",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "skin swelling",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "hardening",
+      "weight": 2
+    },
+    {
+      "source": "signs of lyme disease that appear on your skin",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "goiter",
+      "target": "enlarged thyroid",
+      "weight": 2
+    },
+    {
+      "source": "goiter",
+      "target": "neck swelling",
+      "weight": 2
+    },
+    {
+      "source": "goiter",
+      "target": "difficulty swallowing",
+      "weight": 2
+    },
+    {
+      "source": "goiter",
+      "target": "breathing difficulty",
+      "weight": 2
+    },
+    {
+      "source": "ichthyosis vulgaris: overview",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "ichthyosis vulgaris: overview",
+      "target": "scaly skin",
+      "weight": 2
+    },
+    {
+      "source": "chorioretinitis",
+      "target": "eye pain",
+      "weight": 2
+    },
+    {
+      "source": "chorioretinitis",
+      "target": "blurred vision",
+      "weight": 2
+    },
+    {
+      "source": "chorioretinitis",
+      "target": "sensitivity to light",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "intense itching",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "raised skin",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "rough skin",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "discolored skin",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "thickened skin",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "open sores",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "eczema types: neurodermatitis signs and symptoms",
+      "target": "scarring",
+      "weight": 2
+    },
+    {
+      "source": "artificial nails: dermatologists' tips for reducing nail damage",
+      "target": "thin nails",
+      "weight": 2
+    },
+    {
+      "source": "artificial nails: dermatologists' tips for reducing nail damage",
+      "target": "brittle nails",
+      "weight": 2
+    },
+    {
+      "source": "artificial nails: dermatologists' tips for reducing nail damage",
+      "target": "weak nails",
+      "weight": 2
+    },
+    {
+      "source": "warts: who gets and causes",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "warts: who gets and causes",
+      "target": "discomfort",
+      "weight": 2
+    },
+    {
+      "source": "see how the sun damages your skin",
+      "target": "skin cancer",
+      "weight": 2
+    },
+    {
+      "source": "see how the sun damages your skin",
+      "target": "premature aging",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "depression",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "anxiety",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "low self-esteem",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "isolation",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "emotional distress",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "scarring",
+      "weight": 2
+    },
+    {
+      "source": "acne can affect more than your skin",
+      "target": "discolored skin",
+      "weight": 2
+    },
+    {
+      "source": "headache after lumbar puncture",
+      "target": "throbbing headache",
+      "weight": 2
+    },
+    {
+      "source": "pityriasis rosea: tips for managing",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "pityriasis rosea: tips for managing",
+      "target": "itchiness",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "itch",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "acne",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "skin irritation",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "stinging",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "psoriasis treatment: coal tar",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "herpes simplex: overview",
+      "target": "cold sores",
+      "weight": 2
+    },
+    {
+      "source": "herpes simplex: overview",
+      "target": "fever blisters",
+      "weight": 2
+    },
+    {
+      "source": "herpes simplex: overview",
+      "target": "mouth sores",
+      "weight": 2
+    },
+    {
+      "source": "moles: tips for managing",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "moles: tips for managing",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "moles: tips for managing",
+      "target": "size change",
+      "weight": 2
+    },
+    {
+      "source": "moles: tips for managing",
+      "target": "shape change",
+      "weight": 2
+    },
+    {
+      "source": "syringomyelia",
+      "target": "muscle weakness",
+      "weight": 2
+    },
+    {
+      "source": "syringomyelia",
+      "target": "loss of sensation",
+      "weight": 2
+    },
+    {
+      "source": "syringomyelia",
+      "target": "chronic pain",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "headache",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "anxiety",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "confusion",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "hallucinations",
+      "weight": 2
+    },
+    {
+      "source": "rabies",
+      "target": "difficulty swallowing",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "acne like breakouts",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "bumps on neck",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "bumps on scalp",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "inflammation",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "scarring",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: overview",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "treating acne? is it time to see a dermatologist?",
+      "target": "persistent breakouts",
+      "weight": 2
+    },
+    {
+      "source": "treating acne? is it time to see a dermatologist?",
+      "target": "deep acne",
+      "weight": 2
+    },
+    {
+      "source": "treating acne? is it time to see a dermatologist?",
+      "target": "painful acne",
+      "weight": 2
+    },
+    {
+      "source": "treating acne? is it time to see a dermatologist?",
+      "target": "acne scars",
+      "weight": 2
+    },
+    {
+      "source": "treating acne? is it time to see a dermatologist?",
+      "target": "dark spots",
+      "weight": 2
+    },
+    {
+      "source": "pemphigus",
+      "target": "painful blisters",
+      "weight": 2
+    },
+    {
+      "source": "pemphigus",
+      "target": "skin blisters",
+      "weight": 2
+    },
+    {
+      "source": "pemphigus",
+      "target": "mucous membrane blisters",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "firm bumps",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "painful bumps",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "raised scars",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "abscesses",
+      "weight": 2
+    },
+    {
+      "source": "acne keloidalis nuchae: signs and symptoms",
+      "target": "sinus tracts",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "itchy eyes",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "red eyes",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "swollen eyes",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "eye discomfort",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "itchiness",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "sensitivity to light",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "watery discharge",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "sticky discharge",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "blurred vision",
+      "weight": 2
+    },
+    {
+      "source": "adults with eczema should watch for eye problems",
+      "target": "nearsightedness",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "diarrhea",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "sleep problems",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "cold hands",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "low blood pressure",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "slow heart rate",
+      "weight": 2
+    },
+    {
+      "source": "heart medicine can clear strawberry birthmarks",
+      "target": "low blood sugar",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "thick skin",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "raised patches",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "silvery scales",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "yellow spots",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "pitting",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "crumbling nails",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "scaly spots",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "red patches",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "painful blisters",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "cracking skin",
+      "weight": 2
+    },
+    {
+      "source": "what does psoriasis look like?",
+      "target": "burnt skin",
+      "weight": 2
+    },
+    {
+      "source": "can the right diet get rid of acne?",
+      "target": "breakouts",
+      "weight": 2
+    },
+    {
+      "source": "can the right diet get rid of acne?",
+      "target": "inflammation",
+      "weight": 2
+    },
+    {
+      "source": "can the right diet get rid of acne?",
+      "target": "excess sebum",
+      "weight": 2
+    },
+    {
+      "source": "genital warts: overview",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "genital warts: overview",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "genital warts: overview",
+      "target": "discomfort",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "warmth",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "pus",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "infection of open wound",
+      "target": "malaise",
+      "weight": 2
+    },
+    {
+      "source": "diverticulosis",
+      "target": "abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "diverticulosis",
+      "target": "bloating",
+      "weight": 2
+    },
+    {
+      "source": "diverticulosis",
+      "target": "bowel changes",
+      "weight": 2
+    },
+    {
+      "source": "mittelschmerz",
+      "target": "lower abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "mittelschmerz",
+      "target": "discomfort",
+      "weight": 2
+    },
+    {
+      "source": "causes of hair loss",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "causes of hair loss",
+      "target": "telogen effluvium",
+      "weight": 2
+    },
+    {
+      "source": "endometriosis",
+      "target": "pelvic pain",
+      "weight": 2
+    },
+    {
+      "source": "endometriosis",
+      "target": "heavy bleeding",
+      "weight": 2
+    },
+    {
+      "source": "endometriosis",
+      "target": "infertility",
+      "weight": 2
+    },
+    {
+      "source": "endometriosis",
+      "target": "painful periods",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "blisters",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "crusts",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "skin infection",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "cuts",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "scratches",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "insect bites",
+      "weight": 2
+    },
+    {
+      "source": "impetigo: overview",
+      "target": "eczema",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: sebaceous carcinoma causes",
+      "target": "growth on eyelid",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "developmental delays",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "intellectual disability",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "hearing loss",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "vision problems",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "heart defects",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "liver enlargement",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "spleen enlargement",
+      "weight": 2
+    },
+    {
+      "source": "congenital rubella",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "why you need sun protection in the winter",
+      "target": "sunburn",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "blisters",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "pain",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "open sores",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "white dots",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "scaly patches",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "hair thinning",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: signs and symptoms",
+      "target": "irritation",
+      "weight": 2
+    },
+    {
+      "source": "hair loss types: frontal fibrosing alopecia overview",
+      "target": "receding hairline",
+      "weight": 2
+    },
+    {
+      "source": "hair loss types: frontal fibrosing alopecia overview",
+      "target": "bald skin",
+      "weight": 2
+    },
+    {
+      "source": "hair loss types: frontal fibrosing alopecia overview",
+      "target": "hair loss",
+      "weight": 2
+    },
+    {
+      "source": "hair loss types: frontal fibrosing alopecia overview",
+      "target": "patches of hair loss",
+      "weight": 2
+    },
+    {
+      "source": "endometrial cancer",
+      "target": "abnormal vaginal bleeding",
+      "weight": 2
+    },
+    {
+      "source": "endometrial cancer",
+      "target": "pelvic pain",
+      "weight": 2
+    },
+    {
+      "source": "endometrial cancer",
+      "target": "discomfort",
+      "weight": 2
+    },
+    {
+      "source": "endometrial cancer",
+      "target": "bowel changes",
+      "weight": 2
+    },
+    {
+      "source": "endometrial cancer",
+      "target": "bladder changes",
+      "weight": 2
+    },
+    {
+      "source": "pleomorphic adenoma",
+      "target": "painless lump",
+      "weight": 2
+    },
+    {
+      "source": "pleomorphic adenoma",
+      "target": "facial changes",
+      "weight": 2
+    },
+    {
+      "source": "pleomorphic adenoma",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "how to treat eczema in babies",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "how to treat eczema in babies",
+      "target": "inflammation",
+      "weight": 2
+    },
+    {
+      "source": "how to treat eczema in babies",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "painless spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "sore",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "tender skin",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "red spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "purple spot",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma signs & symptoms",
+      "target": "pink spot",
+      "weight": 2
+    },
+    {
+      "source": "pregnancy-related back pain",
+      "target": "lower back pain",
+      "weight": 2
+    },
+    {
+      "source": "pregnancy-related back pain",
+      "target": "pelvic discomfort",
+      "weight": 2
+    },
+    {
+      "source": "melasma: signs and symptoms",
+      "target": "dark patches",
+      "weight": 2
+    },
+    {
+      "source": "melasma: signs and symptoms",
+      "target": "blotchy skin",
+      "weight": 2
+    },
+    {
+      "source": "melasma: signs and symptoms",
+      "target": "skin discoloration",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "skin injuries",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "sunburn",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "infections",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "cold weather",
+      "weight": 2
+    },
+    {
+      "source": "are triggers causing your psoriasis flare-ups?",
+      "target": "stress",
+      "weight": 2
+    },
+    {
+      "source": "cellulite treatments: what really works?",
+      "target": "dimples",
+      "weight": 2
+    },
+    {
+      "source": "cellulite treatments: what really works?",
+      "target": "fat deposits",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "loss of skin color",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "lighter skin patches",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "premature hair graying",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "eye color change",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "hearing loss",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "sunburn",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "anxiety",
+      "weight": 2
+    },
+    {
+      "source": "vitiligo: signs and symptoms",
+      "target": "depression",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "shortness of breath",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "wheezing",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "chronic cough",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "chest tightness",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "emphysema",
+      "target": "weight loss",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "mild fever",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "sore throat",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "stomach pain",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "decreased appetite",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "painful mouth sores",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "itchy rash",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "swollen lymph nodes",
+      "weight": 2
+    },
+    {
+      "source": "hand-foot-and-mouth disease: signs and symptoms",
+      "target": "dehydration",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "high fever",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "severe headache",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "joint pain",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "muscle pain",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "nausea",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "vomiting",
+      "weight": 2
+    },
+    {
+      "source": "dengue fever",
+      "target": "bleeding",
+      "weight": 2
+    },
+    {
+      "source": "how to care for your baby's skin, hair, and nails",
+      "target": "diaper rash",
+      "weight": 2
+    },
+    {
+      "source": "how to care for your baby's skin, hair, and nails",
+      "target": "sharp nails",
+      "weight": 2
+    },
+    {
+      "source": "how to care for your baby's skin, hair, and nails",
+      "target": "skin scratches",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "ear pain",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "fever",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "headache",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "hearing loss",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "fluid drainage",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "earache",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "irritability",
+      "weight": 2
+    },
+    {
+      "source": "mastoiditis",
+      "target": "tenderness",
+      "weight": 2
+    },
+    {
+      "source": "adenoid cystic carcinoma",
+      "target": "facial numbness",
+      "weight": 2
+    },
+    {
+      "source": "adenoid cystic carcinoma",
+      "target": "lump",
+      "weight": 2
+    },
+    {
+      "source": "adenoid cystic carcinoma",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "adenoid cystic carcinoma",
+      "target": "tingling",
+      "weight": 2
+    },
+    {
+      "source": "gout",
+      "target": "joint pain",
+      "weight": 2
+    },
+    {
+      "source": "gout",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "gout",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma self-care",
+      "target": "new spots",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma self-care",
+      "target": "swollen lymph nodes",
+      "weight": 2
+    },
+    {
+      "source": "skin cancer types: merkel cell carcinoma self-care",
+      "target": "skin growths",
+      "weight": 2
+    },
+    {
+      "source": "warts: overview",
+      "target": "rough skin",
+      "weight": 2
+    },
+    {
+      "source": "warts: overview",
+      "target": "skin growths",
+      "weight": 2
+    },
+    {
+      "source": "warts: overview",
+      "target": "dark spots",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "dry skin",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "discoloration",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "thickened skin",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "sores",
+      "weight": 2
+    },
+    {
+      "source": "self-care: 10 ways to relieve discomfort from scleroderma",
+      "target": "poor blood flow",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "lumps",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "bumps",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "rashes",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "swollen lymph nodes",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "vision changes",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "cough",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "difficulty breathing",
+      "weight": 2
+    },
+    {
+      "source": "sarcoidosis and your skin: diagnosis and treatment",
+      "target": "abnormal heart rhythms",
+      "weight": 2
+    },
+    {
+      "source": "manicures and pedicures",
+      "target": "nail damage",
+      "weight": 2
+    },
+    {
+      "source": "cutaneous t-cell lymphoma: overview",
+      "target": "pink patches",
+      "weight": 2
+    },
+    {
+      "source": "cutaneous t-cell lymphoma: overview",
+      "target": "red patches",
+      "weight": 2
+    },
+    {
+      "source": "cutaneous t-cell lymphoma: overview",
+      "target": "dark patches",
+      "weight": 2
+    },
+    {
+      "source": "cutaneous t-cell lymphoma: overview",
+      "target": "raised plaques",
+      "weight": 2
+    },
+    {
+      "source": "cutaneous t-cell lymphoma: overview",
+      "target": "light spots",
+      "weight": 2
+    },
+    {
+      "source": "bladder cancer",
+      "target": "blood in urine",
+      "weight": 2
+    },
+    {
+      "source": "bladder cancer",
+      "target": "frequent urination",
+      "weight": 2
+    },
+    {
+      "source": "bladder cancer",
+      "target": "pelvic pain",
+      "weight": 2
+    },
+    {
+      "source": "myofascial pain syndrome",
+      "target": "muscle pain",
+      "weight": 2
+    },
+    {
+      "source": "myofascial pain syndrome",
+      "target": "trigger points",
+      "weight": 2
+    },
+    {
+      "source": "chemical peels: overview",
+      "target": "wrinkles",
+      "weight": 2
+    },
+    {
+      "source": "chemical peels: overview",
+      "target": "fine lines",
+      "weight": 2
+    },
+    {
+      "source": "chemical peels: overview",
+      "target": "acne",
+      "weight": 2
+    },
+    {
+      "source": "chemical peels: overview",
+      "target": "age spots",
+      "weight": 2
+    },
+    {
+      "source": "chemical peels: overview",
+      "target": "discoloration",
+      "weight": 2
+    },
+    {
+      "source": "hypocalcemia",
+      "target": "numbness",
+      "weight": 2
+    },
+    {
+      "source": "hypocalcemia",
+      "target": "tingling",
+      "weight": 2
+    },
+    {
+      "source": "hypocalcemia",
+      "target": "muscle cramps",
+      "weight": 2
+    },
+    {
+      "source": "psoriatic arthritis: causes",
+      "target": "joint pain",
+      "weight": 2
+    },
+    {
+      "source": "psoriatic arthritis: causes",
+      "target": "stiffness",
+      "weight": 2
+    },
+    {
+      "source": "psoriatic arthritis: causes",
+      "target": "swollen joints",
+      "weight": 2
+    },
+    {
+      "source": "how dermatologists treat sun-damaged skin",
+      "target": "wrinkles",
+      "weight": 2
+    },
+    {
+      "source": "how dermatologists treat sun-damaged skin",
+      "target": "age spots",
+      "weight": 2
+    },
+    {
+      "source": "how dermatologists treat sun-damaged skin",
+      "target": "loose skin",
+      "weight": 2
+    },
+    {
+      "source": "how dermatologists treat sun-damaged skin",
+      "target": "spider veins",
+      "weight": 2
+    },
+    {
+      "source": "how dermatologists treat sun-damaged skin",
+      "target": "blotchy complexion",
+      "weight": 2
+    },
+    {
+      "source": "fillers: faqs",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "fillers: faqs",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "fillers: faqs",
+      "target": "stinging sensation",
+      "weight": 2
+    },
+    {
+      "source": "fillers: faqs",
+      "target": "burning sensation",
+      "weight": 2
+    },
+    {
+      "source": "transient ischemic attack",
+      "target": "sudden onset",
+      "weight": 2
+    },
+    {
+      "source": "transient ischemic attack",
+      "target": "neurological symptoms",
+      "weight": 2
+    },
+    {
+      "source": "glucocorticoid deficiency",
+      "target": "fatigue",
+      "weight": 2
+    },
+    {
+      "source": "glucocorticoid deficiency",
+      "target": "weakness",
+      "weight": 2
+    },
+    {
+      "source": "glucocorticoid deficiency",
+      "target": "weight loss",
+      "weight": 2
+    },
+    {
+      "source": "glucocorticoid deficiency",
+      "target": "low blood pressure",
+      "weight": 2
+    },
+    {
+      "source": "glucocorticoid deficiency",
+      "target": "abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "poison ivy, oak, and sumac",
+      "target": "itchy skin",
+      "weight": 2
+    },
+    {
+      "source": "poison ivy, oak, and sumac",
+      "target": "red rash",
+      "weight": 2
+    },
+    {
+      "source": "poison ivy, oak, and sumac",
+      "target": "blistered skin",
+      "weight": 2
+    },
+    {
+      "source": "dip powder manicure: 5 tips to keep your nails healthy",
+      "target": "infection",
+      "weight": 2
+    },
+    {
+      "source": "dip powder manicure: 5 tips to keep your nails healthy",
+      "target": "allergic reaction",
+      "weight": 2
+    },
+    {
+      "source": "dip powder manicure: 5 tips to keep your nails healthy",
+      "target": "thinning nails",
+      "weight": 2
+    },
+    {
+      "source": "dip powder manicure: 5 tips to keep your nails healthy",
+      "target": "damage",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: overview",
+      "target": "skin changes",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: overview",
+      "target": "nail changes",
+      "weight": 2
+    },
+    {
+      "source": "lichen planus: overview",
+      "target": "skin lesions",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "rash",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "redness",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "burning",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "itching",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "weak hair",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "dry hair",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "rough hair",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "faded hair",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "brittle hair",
+      "weight": 2
+    },
+    {
+      "source": "coloring and perming tips for healthier-looking hair",
+      "target": "stinging",
+      "weight": 2
+    },
+    {
+      "source": "polycystic kidney disease",
+      "target": "abdominal pain",
+      "weight": 2
+    },
+    {
+      "source": "polycystic kidney disease",
+      "target": "high blood pressure",
+      "weight": 2
+    },
+    {
+      "source": "polycystic kidney disease",
+      "target": "kidney cysts",
+      "weight": 2
+    },
+    {
+      "source": "dysthymic disorder",
+      "target": "low mood",
+      "weight": 2
+    },
+    {
+      "source": "dysthymic disorder",
+      "target": "lack of interest",
+      "weight": 2
+    },
+    {
+      "source": "dysthymic disorder",
+      "target": "sleep changes",
+      "weight": 2
+    },
+    {
+      "source": "dysthymic disorder",
+      "target": "appetite changes",
+      "weight": 2
+    },
+    {
+      "source": "melasma: diagnosis and treatment",
+      "target": "brown patches",
+      "weight": 2
+    },
+    {
+      "source": "melasma: diagnosis and treatment",
+      "target": "skin darkening",
+      "weight": 2
+    },
+    {
+      "source": "urge incontinence",
+      "target": "sudden urination urge",
+      "weight": 2
+    },
+    {
+      "source": "urge incontinence",
+      "target": "involuntary urine leakage",
+      "weight": 2
+    },
+    {
+      "source": "fracture of the rib",
+      "target": "chest pain",
+      "weight": 2
+    },
+    {
+      "source": "fracture of the rib",
+      "target": "difficulty breathing",
+      "weight": 2
+    },
+    {
+      "source": "fracture of the rib",
+      "target": "tenderness",
+      "weight": 2
+    },
+    {
+      "source": "fracture of the rib",
+      "target": "swelling",
+      "weight": 2
+    },
+    {
+      "source": "bell palsy",
+      "target": "facial weakness",
+      "weight": 2
+    },
+    {
+      "source": "bell palsy",
+      "target": "paralysis",
+      "weight": 2
+    },
+    {
+      "source": "bell palsy",
+      "target": "drooping eyelid",
+      "weight": 2
+    },
+    {
+      "source": "bell palsy",
+      "target": "drooping mouth",
+      "weight": 2
+    },
+    {
+      "source": "fungal nail infection",
+      "target": "thickened nails",
+      "weight": 1
+    },
+    {
+      "source": "fungal nail infection",
+      "target": "brittle nails",
+      "weight": 1
+    },
+    {
+      "source": "fungal nail infection",
+      "target": "discolored nails",
+      "weight": 1
+    },
+    {
+      "source": "fungal nail infection",
+      "target": "nail odor",
+      "weight": 1
+    },
+    {
+      "source": "vitiligo",
+      "target": "loss of skin color",
+      "weight": 1
+    },
+    {
+      "source": "vitiligo",
+      "target": "white patches",
+      "weight": 1
+    },
+    {
+      "source": "vitiligo",
+      "target": "premature hair whitening",
+      "weight": 1
+    }
+  ],
+  "metadata": {
+    "num_diseases": 134,
+    "num_symptoms": 382,
+    "num_edges": 606,
+    "updated_at": "2026-06-11T22:25:20.420251Z"
+  }
+}

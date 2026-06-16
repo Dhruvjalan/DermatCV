@@ -1,0 +1,68 @@
+{
+  "session_id": "20260613_225621",
+  "started_at": "2026-06-13T22:56:21.415152Z",
+  "ml_predictions": [
+    {
+      "disease": "I have red itchy patches on my skin",
+      "confidence": 0.5
+    }
+  ],
+  "hyperparams": {
+    "max_questions": 6,
+    "confidence_threshold": 3.5,
+    "top_k_candidates": 8,
+    "min_score_to_keep": 0.01,
+    "confirmed_weight_mult": 2.0,
+    "denied_weight_mult": 0.15
+  },
+  "confirmed_symptoms": [],
+  "denied_symptoms": [],
+  "qa_log": [],
+  "score_history": [
+    [
+      {
+        "disease": "manicures and pedicures",
+        "score": 1.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "chorioretinitis",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "skin cancer types: basal cell carcinoma overview",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "bronchitis",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "how to care for your baby's skin, hair, and nails",
+        "score": 0.5,
+        "prior": 0.3
+      },
+      {
+        "disease": "skin cancer types: merkel cell carcinoma signs & symptoms",
+        "score": 0.25,
+        "prior": 0.3
+      },
+      {
+        "disease": "vitiligo: signs and symptoms",
+        "score": 0.16667,
+        "prior": 0.3
+      },
+      {
+        "disease": "epidermolysis bullosa: signs and symptoms",
+        "score": 0.11538,
+        "prior": 0.3
+      }
+    ]
+  ],
+  "final_diagnosis": null,
+  "termination_reason": "",
+  "current_turn": 1
+}

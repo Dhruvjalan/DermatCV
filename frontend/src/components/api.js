@@ -1,15 +1,14 @@
 const API_BASE_URL = 'http://localhost:8000/api';
 
-// Helper for handling responses
 const handleResponse = async (response) => {
   if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.detail || 'API request failed');
+    const error = await response.json().catch(() => ({}));
+    throw new Error(error.detail || `API Request Failed: ${response.statusText}`);
   }
   return response.json();
 };
 
-// Store user data in localStorage
+// Store user telemetry in local session
 const setUserSession = (user) => {
   if (user) {
     localStorage.setItem('user_id', user.user_id);
@@ -33,7 +32,10 @@ export const getCurrentUser = () => {
   };
 };
 
-// User Authentication
+// ==========================================
+// User Authentication Engine
+// ==========================================
+
 export const login = async (email, password) => {
   const response = await fetch(`${API_BASE_URL}/login`, {
     method: 'POST',
@@ -45,11 +47,12 @@ export const login = async (email, password) => {
   return user;
 };
 
-export const signup = async (fullName, email, password) => {
+export const signup = async (fullName, email, password,age,height,gender) => {
   const response = await fetch(`${API_BASE_URL}/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ full_name: fullName, email, password })
+    // Payload maps specifically to Pydantic UserCreate schema
+    body: JSON.stringify({ full_name: fullName, email, password,age,height,gender })
   });
   const user = await handleResponse(response);
   setUserSession(user);
@@ -60,13 +63,19 @@ export const logout = () => {
   setUserSession(null);
 };
 
+// ==========================================
 // User Management
+// ==========================================
+
 export const getUserById = async (userId) => {
   const response = await fetch(`${API_BASE_URL}/users/${userId}`);
   return handleResponse(response);
 };
 
-// Scan Analysis
+// ==========================================
+// Computer Vision Analysis Pipeline
+// ==========================================
+
 export const analyzeScan = async (userId, file) => {
   const formData = new FormData();
   formData.append('file', file);
@@ -78,13 +87,19 @@ export const analyzeScan = async (userId, file) => {
   return handleResponse(response);
 };
 
-// History
+// ==========================================
+// Historical Audits
+// ==========================================
+
 export const getUserHistory = async (userId) => {
   const response = await fetch(`${API_BASE_URL}/history/${userId}`);
   return handleResponse(response);
 };
 
-// Admin endpoints
+// ==========================================
+// Admin & System Telemetry
+// ==========================================
+
 export const getAdminRecords = async () => {
   const response = await fetch(`${API_BASE_URL}/admin/records`);
   return handleResponse(response);
@@ -95,8 +110,57 @@ export const getAdminSummary = async () => {
   return handleResponse(response);
 };
 
-// Health check
 export const healthCheck = async () => {
   const response = await fetch(`${API_BASE_URL}/health`);
+  return handleResponse(response);
+};
+
+// ==========================================
+// Diagnostic RL Graph System
+// ==========================================
+
+export const startDiagnostic = async (userId, symptoms) => {
+  const response = await fetch(`${API_BASE_URL}/diagnose/start`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+      symptom_text: symptoms,
+      user_id: userId,
+      hyperparams: { max_questions: 6, confidence_threshold: 3.5 } 
+    })
+  });  
+
+  return handleResponse(response);
+};
+
+// export const answerDiagnosticQuestion = async (sessionId, answer) => {
+//   const response = await fetch(`${API_BASE_URL}/diagnose/answer`, {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({ 
+//       session_id: sessionId,
+//       answer: answer
+//     })
+//   });
+
+//   return handleResponse(response);
+// };
+
+export const answerDiagnosticQuestion = async (sessionId, answer) => {
+  const response = await fetch(`${API_BASE_URL}/diagnose/answer`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+      session_id: sessionId,
+      answer: answer
+    })
+  });
+
+  return handleResponse(response);
+};
+
+// NEW: Fetch previous chat session
+export const getDiagnosticHistory = async (userId) => {
+  const response = await fetch(`${API_BASE_URL}/diagnose/history/${userId}`);
   return handleResponse(response);
 };

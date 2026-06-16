@@ -1,0 +1,71 @@
+==============================================================
+  DIAGNOSTIC SESSION REPORT
+==============================================================
+  Session ID   : 20260611_223024
+  Started      : 2026-06-11T22:30:24.121003Z
+  Completed    : 2026-06-11T22:32:08.865644Z
+  Termination  : Max questions (6) reached.
+  Questions    : 6 / 6
+
+  ML MODEL PRIORS
+  ──────────────────────────────────────────────────
+    • ichthyosis vulgaris: overview  (0.2)
+    • are you ready to manage your child's eczema triggers?  (0.13334)
+    • how to treat eczema in babies  (0.13334)
+    • are triggers causing your psoriasis flare-ups?  (0.06666)
+    • self-care: 10 ways to relieve discomfort from scleroderma  (0.06666)
+
+  CONFIRMED SYMPTOMS
+  ──────────────────────────────────────────────────
+    cold weather, skin injuries, itching, sores
+
+  DENIED SYMPTOMS
+  ──────────────────────────────────────────────────
+    discoloration, thickened skin
+
+  Q&A LOG
+  ──────────────────────────────────────────────────
+    ✅ [cold weather]  Q: Do you find that the weather affects your skin in any way?
+       Patient: "yes. It becomes more irritating when it is humid or hot"
+    ✅ [skin injuries]  Q: Have you ever experienced cuts, scrapes, or other open wounds on your skin that take a long time to heal?
+       Patient: "yes, a few cuts on the skin"
+    ✅ [itching]  Q: Do you often feel an intense urge to scratch your skin?
+       Patient: "Sometimes"
+    ❌ [discoloration]  Q: Have you ever noticed any changes in the color of your skin that don't seem normal?
+       Patient: "No, never noticed any changes in color"
+    ✅ [sores]  Q: Have you ever had any sores on your skin that didn't seem to heal on their own?
+       Patient: "yes. a few"
+    ❌ [thickened skin]  Q: Do you notice that your skin feels any harder or thicker in some areas than it normally would?
+       Patient: "it feels harder than normal"
+
+  FINAL DIFFERENTIAL DIAGNOSIS
+  ──────────────────────────────────────────────────
+     1. How To Treat Eczema In Babies       score=1.5556  ████████████
+     2. Are Triggers Causing Your Psoriasis Flare-Ups? score=1.3889  ███████████
+     3. Self-Care: 10 Ways To Relieve Discomfort From Scleroderma score=1.2889  ██████████
+     4. Ichthyosis Vulgaris: Overview       score=0.5000  ████
+     5. Are You Ready To Manage Your Child'S Eczema Triggers? score=0.2222  █
+     6. How To Safely Exfoliate At Home     score=0.0408  
+
+  CLINICAL NARRATIVE
+  ──────────────────────────────────────────────────
+    The patient presents with a chief complaint of skin
+    irritation, reporting that their skin becomes more
+    irritating in cold weather, and experiences itching,
+    skin injuries, and sores. Key positive findings
+    include the patient's confirmation of cold weather
+    exacerbating their symptoms, a history of skin
+    injuries, occasional itching, and the presence of
+    sores, while negative findings include the denial of
+    skin discoloration and thickened skin. Based on these
+    symptoms, a provisional diagnosis of eczema is
+    considered, given the high ranking of "How To Treat
+    Eczema In Babies" in the differential diagnosis, which
+    aligns with the patient's reported symptoms. A
+    comprehensive clinical evaluation, including a
+    physical examination and potentially diagnostic tests
+    such as skin scrapings or patch testing, is
+    recommended to further confirm the diagnosis and guide
+    treatment.
+
+==============================================================

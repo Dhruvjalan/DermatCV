@@ -1,0 +1,11 @@
+--- AI DIAGNOSTIC WELLNESS REPORT ---
+FINAL DIAGNOSIS: headache after lumbar puncture
+CONFIDENCE SCORE: 5.5
+
+--- DETAILED ASSESSMENT ---
+The final diagnosis of headache after lumbar puncture, despite having a low confidence score of 5.5, suggests that the red itchy patches on the skin, coupled with the patient's reported anxiety, stress, and impulsive behavior, may be indicative of an underlying condition that warrants further investigation. The ML scan context revealing 'dark spots' on the cheek with moderate hydration levels and low stress levels may not be directly related to the primary complaint. However, the patient's admission of experiencing anxiety and stress, which could manifest physically, alongside impulsive decisions, points towards a complex interplay of psychological and possibly neurological factors. The absence of difficulties with memory, normal nail condition, no unintentional urine leakage, and only occasional, mild headaches, helps to rule out certain other conditions but does not fully explain the presenting symptoms. Given the low confidence in the diagnosis, further diagnostic tests, including potentially a lumbar puncture to assess for any cerebrospinal fluid abnormalities, might be necessary to reach a definitive conclusion.
+
+--- ACTIONABLE ADVICE ---
+1. {'tip': 'Maintain Hydration', 'description': 'Drinking plenty of water can help with skin health and possibly reduce the occurrence of headaches'}
+2. {'tip': 'Stress Management', 'description': 'Engaging in stress-reducing activities such as meditation, yoga, or deep breathing exercises can help manage anxiety and impulsive behavior'}
+3. {'tip': 'Skin Care Routine', 'description': 'Establishing a gentle skin care routine, avoiding harsh products, and protecting the skin from the sun can help alleviate red itchy patches'}
